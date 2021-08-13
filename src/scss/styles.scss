@@ -1,8 +1,10 @@
-@import 'vendor';
-@import 'mixins';
-@import 'global';
+@import 'fontface';
 @import 'layout';
-@import 'catalog';
+@import 'mixins';
+@import 'reset';
+@import 'vendor';
+
+@import 'component-test';
 
 
 
