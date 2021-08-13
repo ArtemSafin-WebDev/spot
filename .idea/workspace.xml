@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b8ccfa55-e43f-4a3e-859f-0f5779ae2f59" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/subset-CourierNewPSMT.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/fonts/subset-CourierNewPSMT.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/common/fav.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/partials/components/component-test.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/_fontface.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/_reset.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/assets/js/backend.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/assets/js/ie11CustomProperties.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/css/sourcemaps/styles.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/css/styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/css/styles.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/boy.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/test/boy.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/icons/fb.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/icons/ok.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/icons/twitter.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/img/icons/vk.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/js/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/boy.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/data/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/data/index.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/partials/components/header.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/partials/components/header.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/partials/components/ie-placeholder.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/partials/components/ie-placeholder.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/partials/layouts/layout.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/partials/layouts/layout.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/_catalog.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_component-test.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/_global.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/_layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_layout.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_mixins.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/styles.scss" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1wgaaMZV0tn1R78cJSuGSAoYJka" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/img/common" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\web\spot\src\img\common" />
+      <recent name="E:\web\spot\src\scss" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\web\spot\src\img\test" />
+      <recent name="E:\web\spot\src\assets\fonts" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b8ccfa55-e43f-4a3e-859f-0f5779ae2f59" name="Default Changelist" comment="" />
+      <created>1628882747217</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1628882747217</updated>
+      <workItem from="1628882749297" duration="6390000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
