@@ -23,7 +23,6 @@ html {
 body {
   min-width: 320px;
   font-size: 16px;
-  line-height: 12px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -126,11 +125,9 @@ button {
 a {
   background-color: transparent;
   text-decoration: none;
-  transition: 150ms color;
 
   &:hover {
     @include breakpointMF(small-tablet) {
-      color: var(--third-color) !important;
       text-decoration: underline;
     }
   }
