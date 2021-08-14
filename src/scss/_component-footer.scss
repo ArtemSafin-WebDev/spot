@@ -1,0 +1,44 @@
+.footer {
+  display: grid;
+  align-items: center;
+  height: 84px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  @include breakpoint(tablet) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @include breakpoint(mobile) {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 14px;
+    height: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.footer__social-list {
+  display: flex;
+  align-items: center;
+  margin: 0 -10px;
+}
+
+.footer__social-link {
+  padding: 10px;
+}
+
+.footer__tel {
+  padding: 10px;
+  margin: -10px;
+}
+
+.footer__company-wrapper {
+  display: flex;
+  justify-content: flex-end;
+
+  @include breakpoint(mobile) {
+    justify-content: flex-start;
+  }
+}

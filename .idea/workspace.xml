@@ -2,22 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8ccfa55-e43f-4a3e-859f-0f5779ae2f59" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Courier-New-Bold.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Courier-New-Bold.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/header/line.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/header/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/_component-header.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/_component-footer.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/_sizes.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/subset-CourierNewPSMT.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/fonts/Courier-New.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/subset-CourierNewPSMT.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/fonts/Courier-New.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/common/fav.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/data/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/data/index.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/partials/components/footer.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/partials/components/component-footer.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/partials/components/header.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/partials/components/component-header.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/partials/components/ie-placeholder.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/partials/components/ie-placeholder.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/partials/layouts/layout.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/partials/layouts/layout.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/_fontface.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_fontface.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/partials/components/component-footer.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/partials/components/component-footer.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/partials/components/component-header.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/partials/components/component-header.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/_component-header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_component-header.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/_reset.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_reset.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/styles.scss" afterDir="false" />
     </list>
@@ -45,15 +35,15 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/img/common" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/scss" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\web\spot\src\img\common" />
       <recent name="E:\web\spot\src\scss" />
+      <recent name="E:\web\spot\src\img\common" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\web\spot\src\assets\fonts" />
@@ -69,7 +59,7 @@
       <option name="presentableId" value="Default" />
       <updated>1628882747217</updated>
       <workItem from="1628882749297" duration="6390000" />
-      <workItem from="1628925298580" duration="2907000" />
+      <workItem from="1628925298580" duration="5366000" />
     </task>
     <servers />
   </component>
