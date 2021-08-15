@@ -1,11 +1,13 @@
 @import 'vendor';
 @import 'mixins';
 @import 'reset';
+@import 'fontface';
 @import 'layout';
-@import 'catalog';
+@import 'mixins';
+@import 'reset';
+@import 'sizes';
+@import 'vendor';
 
-
-
-
-
-
+@import 'component-header';
+@import 'component-footer';
+@import 'component-catalog';

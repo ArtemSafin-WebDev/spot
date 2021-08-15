@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b8ccfa55-e43f-4a3e-859f-0f5779ae2f59" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/img/catalog/facebook.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/catalog/image-03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/catalog/image-04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/catalog/image-06.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/catalog/image-07.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/catalog/image-08.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/catalog/image-09.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/catalog/image-11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/catalog/image-12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/catalog/image-13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/catalog/image-14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/catalog/image-15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/catalog/image-inst.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/catalog/inst.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/partials/components/component-catalog.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/test/boy.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/catalog/image-02.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/partials/components/component-test.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/_component-test.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_component-catalog.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/_reset.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_reset.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/styles.scss" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="SCSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1wgaaMZV0tn1R78cJSuGSAoYJka" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/img/catalog" />
+    <property name="list.type.of.created.stylesheet" value="SCSS" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\web\spot\src\img\catalog" />
+      <recent name="E:\web\spot\src\assets\fonts" />
+      <recent name="E:\web\spot\src\scss" />
+      <recent name="E:\web\spot\src\img\common" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\web\spot\src\img\catalog" />
+      <recent name="E:\web\spot\src\img" />
+      <recent name="E:\web\spot\src\assets\fonts" />
+      <recent name="E:\web\spot\src\img\test" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b8ccfa55-e43f-4a3e-859f-0f5779ae2f59" name="Default Changelist" comment="" />
+      <created>1628882747217</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1628882747217</updated>
+      <workItem from="1628882749297" duration="6390000" />
+      <workItem from="1628925298580" duration="15851000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+</project>
