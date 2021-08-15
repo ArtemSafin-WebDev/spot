@@ -2,12 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8ccfa55-e43f-4a3e-859f-0f5779ae2f59" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/scss/_component-footer.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/_sizes.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/catalog/facebook.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/catalog/image-03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/catalog/image-04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/catalog/image-06.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/catalog/image-07.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/catalog/image-08.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/catalog/image-09.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/catalog/image-11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/catalog/image-12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/catalog/image-13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/catalog/image-14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/catalog/image-15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/catalog/image-inst.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/catalog/inst.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/partials/components/component-catalog.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/partials/components/component-footer.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/partials/components/component-footer.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/partials/components/component-header.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/partials/components/component-header.hbs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/_component-header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_component-header.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/img/test/boy.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/catalog/image-02.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/index.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/index.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/partials/components/component-test.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/_component-test.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_component-catalog.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/_reset.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_reset.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/styles.scss" afterDir="false" />
     </list>
@@ -35,17 +49,21 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/scss" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/img/catalog" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\web\spot\src\img\catalog" />
+      <recent name="E:\web\spot\src\assets\fonts" />
       <recent name="E:\web\spot\src\scss" />
       <recent name="E:\web\spot\src\img\common" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\web\spot\src\img\catalog" />
+      <recent name="E:\web\spot\src\img" />
       <recent name="E:\web\spot\src\assets\fonts" />
       <recent name="E:\web\spot\src\img\test" />
     </key>
@@ -59,7 +77,7 @@
       <option name="presentableId" value="Default" />
       <updated>1628882747217</updated>
       <workItem from="1628882749297" duration="6390000" />
-      <workItem from="1628925298580" duration="5366000" />
+      <workItem from="1628925298580" duration="15851000" />
     </task>
     <servers />
   </component>
