@@ -7,32 +7,37 @@
 }
 
 :root {
-    --max-container-width: 154rem;
-    --content-padding: 6rem;
-    --primary-color: #13B17C;
+    --max-container-width: 1640px;
+    --padding-page-content: 20px;
+    --main-color: #fff;
+    --fon-courier-new: 'Courier-New', sans-serif;
 }
 
 html {
     box-sizing: border-box;
     font-size: 10px;
     -webkit-text-size-adjust: 100%;
-  
     @include noHighlight();
 }
 
 body {
     min-width: 320px;
-    font-size: 1.6rem;
-    line-height: 1.2;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    font-family: sans-serif;
-    color: black;
+    color: var(--main-color);
+    font-family: var(--fon-courier-new);
+    overflow-x: hidden;
+    font-size: 14px;
+    line-height: 16px;
 }
 
 main {
     display: block;
+}
+
+h3 {
+    font-weight: normal;
 }
 
 ul,
@@ -42,8 +47,10 @@ ol {
 
 ol {
     counter-reset: ordered-list;
+
     li {
         counter-increment: ordered-list;
+
         &::before {
             content: counter(ordered-list) '.';
         }
@@ -57,7 +64,6 @@ textarea {
     font: inherit;
     outline: none;
     box-shadow: none;
-    border-radius: 0;
     width: 100%;
     background-color: transparent;
     display: block;
@@ -74,7 +80,7 @@ textarea {
     display: block;
     width: 100%;
     overflow: auto;
-    height: 20rem;
+    height: 200px;
     @include customScrollbar();
 }
 
@@ -101,6 +107,7 @@ input[type='search'] {
 input[type='search']::-webkit-search-decoration {
     -webkit-appearance: none;
 }
+
 input[type='search']::-webkit-search-cancel-button {
     -webkit-appearance: none;
     display: none;
@@ -123,13 +130,18 @@ button {
 a {
     background-color: transparent;
     text-decoration: none;
-    transition: color .2s;
+
+    &:hover {
+        @include breakpointMF(small-tablet) {
+            text-decoration: underline;
+        }
+    }
+
     &:link,
     &:visited {
         color: inherit;
     }
 }
-
 
 
 svg {
@@ -172,6 +184,7 @@ td, th {
 .lazyloading {
     opacity: 0;
 }
+
 .lazyloaded {
     opacity: 1;
     transition: opacity 300ms;
@@ -195,6 +208,7 @@ td, th {
     height: 100%;
     left: 0;
     top: 0;
+
     body {
         height: auto;
         overflow: hidden;
@@ -202,10 +216,9 @@ td, th {
 }
 
 
-
 ::selection {
     color: white;
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
 }
 
 input:-webkit-autofill,
