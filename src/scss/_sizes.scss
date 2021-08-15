@@ -1,0 +1,101 @@
+.gl-lg-desk-hide {
+  @include breakpoint(large-desktop) {
+    display: none !important;
+  }
+}
+
+.gl-desk-show {
+  @include breakpointMF(large-desktop) {
+    display: none !important;
+  }
+}
+
+.gl-desk-hide {
+  @include breakpoint(desktop) {
+    display: none !important;
+  }
+}
+
+.gl-laptop-show {
+  @include breakpointMF(desktop) {
+    display: none !important;
+  }
+}
+
+.gl-laptop-hide {
+  @include breakpoint(laptop) {
+    display: none !important;
+  }
+}
+
+.gl-tablet-show {
+  @include breakpointMF(laptop) {
+    display: none !important;
+  }
+}
+
+.gl-tablet-hide {
+  @include breakpoint(tablet) {
+    display: none !important;
+  }
+}
+
+.gl-sm-tablet-show {
+  @include breakpointMF(tablet) {
+    display: none !important;
+  }
+}
+
+.gl-sm-tablet-hide {
+  @include breakpoint(small-tablet) {
+    display: none !important;
+  }
+}
+
+.gl-mobile-show {
+  @include breakpointMF(small-tablet) {
+    display: none !important;
+  }
+}
+
+.gl-mobile-hide {
+  @include breakpoint(mobile) {
+    display: none !important;
+  }
+}
+
+.gl-small-mobile-show {
+  @include breakpointMF(mobile) {
+    display: none !important;
+  }
+}
+
+.gl-small-mobile-hide {
+  @include breakpoint(small-mobile) {
+    display: none !important;
+  }
+}
+
+.gl-xx-mobile-show {
+  @include breakpointMF(small-mobile) {
+    display: none !important;
+  }
+}
+
+.gl-xx-mobile-hide {
+  @include breakpoint(xx-mobile) {
+    display: none !important;
+  }
+}
+
+.gl-supersmall-mobile-show {
+  @include breakpointMF(xx-mobile) {
+    display: none !important;
+  }
+}
+
+.gl-supersmall-mobile-hide {
+  @include breakpoint(supersmall-mobile) {
+    display: none !important;
+  }
+}
