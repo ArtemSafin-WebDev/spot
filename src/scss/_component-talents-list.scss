@@ -1,10 +1,14 @@
 .talents {
   padding-top: 60px;
   padding-bottom: 60px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.talents__content {
+  grid-column-start: 2;
+  grid-column-end: 4;
 }
 
 .talents__block-wrapper {
