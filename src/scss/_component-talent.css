@@ -1,0 +1,31 @@
+.talent {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.talent__description-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-gap: 80px;
+  margin-bottom: 20px;
+}
+
+.talent__description-name {
+  font-size: 56px;
+  line-height: 60px;
+  margin-bottom: 20px;
+}
+
+.talent__description-role {
+  opacity: 0.5;
+}
+
+.talent__description-text {
+  font-size: 26px;
+  line-height: 36px;
+}
+
+.talent__description-photo {
+  height: 500px;
+  object-fit: cover;
+}

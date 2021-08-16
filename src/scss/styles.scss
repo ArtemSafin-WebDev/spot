@@ -8,7 +8,10 @@
 @import 'sizes';
 @import 'vendor';
 
+@import 'gl-catalog';
+
 @import 'component-header';
 @import 'component-footer';
-@import 'component-catalog';
+@import 'component-main-catalog';
 @import 'component-talents-list';
+@import 'component-talent';
