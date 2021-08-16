@@ -9,6 +9,7 @@ import onlyNumeric from './onlyNumeric';
 import fileUpload from './fileUpload';
 import componentTalentsList from './componentTalentsList';
 import componentMainCatalog from './componentMainCatalog';
+import componentTalents from './componentTalents';
 
 document.addEventListener('DOMContentLoaded', function () {
   polyfills();
@@ -22,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   componentTalentsList();
   componentMainCatalog();
+  componentTalents();
 });
 
 window.addEventListener('load', function () {
