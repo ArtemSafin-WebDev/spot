@@ -6,18 +6,18 @@
 
 .gl-catalog__list {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  //grid-template-columns: repeat(3, minmax(0, 500px));
+  //grid-auto-rows: minmax(0, 90px);
   grid-gap: 20px;
   grid-auto-flow: dense;
-  grid-auto-rows: minmax(0, 80px);
 
-  @include breakpoint(tablet) {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  @include breakpoint(small-mobile) {
-    grid-template-columns: 1fr;
-  }
+  //@include breakpoint(tablet) {
+  //  grid-template-columns: repeat(2, minmax(0, 1fr));
+  //}
+  //
+  //@include breakpoint(small-mobile) {
+  //  grid-template-columns: 1fr;
+  //}
 }
 
 .gl-catalog__item {
@@ -25,47 +25,39 @@
   flex-direction: column;
   grid-row: span 3;
 
-  &--row-3 {
-    grid-row: span 3;
-  }
-
-  &--row-4 {
-    grid-row: span 4;
-  }
-
-  &--row-5 {
-    grid-row: span 5;
-  }
-
-  &--row-6 {
-    grid-row: span 6;
-  }
-
-  &--row-7 {
+  &--poster-vertical {
     grid-row: span 7;
   }
 
-  &--row-8 {
-    grid-row: span 8;
+  &--poster-square {
+    grid-row: span 5;
+
+    @include breakpoint(small-mobile) {
+      grid-row: span 3;
+    }
   }
 
-  &--row-9 {
-    grid-row: span 9;
+  &--video-small {
+    grid-row: span 3;
   }
 
-  &--col-2 {
+  &--video-medium {
+    grid-row: span 6;
     grid-column: span 2;
 
-    @include breakpoint(tablet) {
-      grid-column: span 1;
+    @include breakpoint(small-mobile) {
+      grid-row: span 6;
+      grid-column: auto;
     }
 
     @include breakpoint(small-mobile) {
+      grid-row: span 3;
       grid-column: auto;
     }
   }
 
-  &--col-3 {
+  &--video-large {
+    grid-row: span 9;
     grid-column: span 3;
 
     @include breakpoint(tablet) {
@@ -73,6 +65,7 @@
     }
 
     @include breakpoint(small-mobile) {
+      grid-row: span 3;
       grid-column: auto;
     }
   }
@@ -96,7 +89,7 @@
 
 .gl-catalog__card-image-wrapper {
   position: relative;
-  height: 100px;
+  height: 100%;
   flex-grow: 1;
   overflow: hidden;
 }
@@ -127,10 +120,11 @@
 }
 
 .gl-catalog__card-title-wrapper {
-  margin-top: 12px;
+  padding-top: 12px;
 
   &.no-content {
     height: 16px; // line-height обычного шрифта
+    box-sizing: content-box;
   }
 }
 

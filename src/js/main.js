@@ -8,6 +8,7 @@ import phoneMask from './phoneMask';
 import onlyNumeric from './onlyNumeric';
 import fileUpload from './fileUpload';
 import componentTalentsList from './componentTalentsList';
+import componentMainCatalog from './componentMainCatalog';
 
 document.addEventListener('DOMContentLoaded', function () {
   polyfills();
@@ -20,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
   fileUpload();
 
   componentTalentsList();
+  componentMainCatalog();
 });
 
 window.addEventListener('load', function () {
