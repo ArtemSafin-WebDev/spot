@@ -46,6 +46,12 @@
     }
   }
 
+  &:nth-child(1) {
+    .talents__item-photo {
+      top: -106%;
+    }
+  }
+
   &:nth-last-child(1) {
     .talents__item-photo {
       top: auto;

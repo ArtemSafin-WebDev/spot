@@ -2861,6 +2861,8 @@ button.swiper-pagination-bullet {
       opacity: 1; }
     .talents__item-wrapper:hover:nth-last-child(1) .talents__item-photo, .talents__item-wrapper:hover:nth-last-child(2) .talents__item-photo {
       top: auto; }
+  .talents__item-wrapper:nth-child(1) .talents__item-photo {
+    top: -106%; }
   .talents__item-wrapper:nth-last-child(1) .talents__item-photo {
     top: auto;
     bottom: 0; }

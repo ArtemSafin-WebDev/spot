@@ -2,29 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8ccfa55-e43f-4a3e-859f-0f5779ae2f59" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/img/talents/photo-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/js/componentTalentsList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/data/talents-page.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/talents-page.hbs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/partials/components/component-talents-list.hbs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scss/_component-talents-list.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/css/sourcemaps/styles.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/build/css/sourcemaps/styles.min.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/css/styles.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/css/styles.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/img/catalog/scribble-1.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/img/catalog/scribble-2.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/img/catalog/scribble-crossed-svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/catalog/image-02.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/talents/photo-2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/catalog/image-03.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/talents/photo-3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/catalog/image-04.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/talents/photo-4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/catalog/image-06.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/talents/photo-5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/catalog/image-07.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/talents/photo-6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/catalog/image-08.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/talents/photo-7.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/catalog/image-09.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/talents/photo-8.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/talents-page.hbs" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/talents-list-page.hbs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/_component-talents-list.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_component-talents-list.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +70,7 @@
       <workItem from="1628882749297" duration="6390000" />
       <workItem from="1628925298580" duration="15851000" />
       <workItem from="1629052712669" duration="4463000" />
-      <workItem from="1629097718157" duration="5827000" />
+      <workItem from="1629097718157" duration="6315000" />
     </task>
     <servers />
   </component>
