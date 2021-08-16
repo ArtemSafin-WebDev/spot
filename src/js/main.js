@@ -7,19 +7,22 @@ import customSelects from './customSelects';
 import phoneMask from './phoneMask';
 import onlyNumeric from './onlyNumeric';
 import fileUpload from './fileUpload';
+import componentTalentsList from './componentTalentsList';
 
-document.addEventListener('DOMContentLoaded', function() {
-    polyfills();
-    detectTouch();
-    setScrollbarWidth();
-    validation();
-    customSelects();
-    phoneMask();
-    onlyNumeric();
-    fileUpload();
+document.addEventListener('DOMContentLoaded', function () {
+  polyfills();
+  detectTouch();
+  setScrollbarWidth();
+  validation();
+  customSelects();
+  phoneMask();
+  onlyNumeric();
+  fileUpload();
+
+  componentTalentsList();
 });
 
-window.addEventListener('load', function() {
-    document.body.classList.add('loaded');
-    setTimeout(() => document.body.classList.add('animatable'), 300)
+window.addEventListener('load', function () {
+  document.body.classList.add('loaded');
+  setTimeout(() => document.body.classList.add('animatable'), 300)
 })

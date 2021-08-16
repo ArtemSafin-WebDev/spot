@@ -2820,3 +2820,85 @@ button.swiper-pagination-bullet {
 
 .catalog__card-content-feather-image {
   height: 122px; }
+
+.talents {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden; }
+
+.talents__block-wrapper + .talents__block-wrapper {
+  margin-top: 60px; }
+
+.talents__title {
+  font-size: 26px;
+  line-height: 30px;
+  margin-bottom: 24px; }
+
+.talents__item-wrapper {
+  height: 80px;
+  position: relative;
+  z-index: 1; }
+  .talents__item-wrapper:hover {
+    z-index: 1; }
+    .talents__item-wrapper:hover .talents__item-link {
+      opacity: 1;
+      text-decoration: initial; }
+    .talents__item-wrapper:hover .talents__item-photo {
+      right: -28%;
+      top: -150%;
+      -webkit-transform: rotate(-6.33deg);
+              transform: rotate(-6.33deg);
+      opacity: 1; }
+    .talents__item-wrapper:hover:nth-last-child(1) .talents__item-photo, .talents__item-wrapper:hover:nth-last-child(2) .talents__item-photo {
+      top: auto; }
+  .talents__item-wrapper:nth-last-child(1) .talents__item-photo {
+    top: auto;
+    bottom: 0; }
+  .talents__item-wrapper:nth-last-child(2) .talents__item-photo {
+    top: auto;
+    bottom: -90%; }
+
+.talents__list {
+  margin: -10px 0; }
+
+.talents__item-link {
+  font-size: 56px;
+  line-height: 60px;
+  -webkit-transition: opacity 300ms;
+  transition: opacity 300ms;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .talents__item-link.no-hover {
+    opacity: 0.4; }
+
+.talents__item-photo {
+  position: absolute;
+  top: 0;
+  right: -100%;
+  width: 366px;
+  height: 366px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
+  opacity: 0;
+  -webkit-transition: right 600ms, top 600ms, opacity 1s, -webkit-transform 600ms;
+  transition: right 600ms, top 600ms, opacity 1s, -webkit-transform 600ms;
+  transition: transform 600ms, right 600ms, top 600ms, opacity 1s;
+  transition: transform 600ms, right 600ms, top 600ms, opacity 1s, -webkit-transform 600ms;
+  -webkit-transform: rotate(0);
+          transform: rotate(0); }
