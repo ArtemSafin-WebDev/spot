@@ -1175,12 +1175,12 @@ td, th {
     overflow: hidden; }
 
 ::-moz-selection {
-  color: white;
-  background-color: var(--secondary-color); }
+  color: #000;
+  background-color: var(--main-color); }
 
 ::selection {
-  color: white;
-  background-color: var(--secondary-color); }
+  color: #000;
+  background-color: var(--main-color); }
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
@@ -1455,12 +1455,12 @@ td, th {
     overflow: hidden; }
 
 ::-moz-selection {
-  color: white;
-  background-color: var(--secondary-color); }
+  color: #000;
+  background-color: var(--main-color); }
 
 ::selection {
-  color: white;
-  background-color: var(--secondary-color); }
+  color: #000;
+  background-color: var(--main-color); }
 
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
@@ -2610,6 +2610,14 @@ button.swiper-pagination-bullet {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   padding-top: 18px;
   padding-bottom: 10px; }
+  @media only screen and (max-width: 768px) {
+    .header {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; } }
 
 .header__logo-wrapper {
   height: -webkit-min-content;
@@ -2926,3 +2934,52 @@ button.swiper-pagination-bullet {
   height: 500px;
   -o-object-fit: cover;
      object-fit: cover; }
+
+.contacts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  padding-top: 64px;
+  padding-bottom: 64px;
+  margin-top: -40px;
+  margin-bottom: -40px; }
+  @media only screen and (max-width: 1400px) {
+    .contacts {
+      grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media only screen and (max-width: 768px) {
+    .contacts {
+      grid-template-columns: 1fr; } }
+
+.contacts__block-wrapper {
+  margin-right: 64px;
+  margin-top: 40px; }
+  .contacts__block-wrapper:last-child {
+    margin-right: 0; }
+  @media only screen and (max-width: 1024px) {
+    .contacts__block-wrapper {
+      margin-right: 20px;
+      margin-top: 20px; } }
+
+.contacts__item-wrapper + .contacts__item-wrapper {
+  margin-top: 64px; }
+
+@media only screen and (max-width: 1024px) {
+  .contacts__item-wrapper + .contacts__item-wrapper {
+    margin-top: 20px; } }
+
+.contacts__item-cation {
+  font-size: 26px;
+  line-height: 30px;
+  opacity: 0.4;
+  margin-bottom: 8px; }
+  @media only screen and (max-width: 1024px) {
+    .contacts__item-cation {
+      font-size: 16px;
+      line-height: 20px; } }
+
+.contacts__item-value {
+  font-size: 36px;
+  line-height: 50px; }
+  @media only screen and (max-width: 1024px) {
+    .contacts__item-value {
+      font-size: 22px;
+      line-height: 26px; } }
