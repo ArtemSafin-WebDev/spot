@@ -968,7 +968,7 @@ button.swiper-pagination-bullet {
   padding: 0; }
 
 :root {
-  --max-container-width: 1640px;
+  --max-container-width: 1580px;
   --padding-page-content: 20px;
   --main-color: #fff;
   --fon-courier-new: 'Courier-New', sans-serif; }
@@ -1248,7 +1248,7 @@ select:-webkit-autofill:focus {
   padding: 0; }
 
 :root {
-  --max-container-width: 1640px;
+  --max-container-width: 1580px;
   --padding-page-content: 20px;
   --main-color: #fff;
   --fon-courier-new: 'Courier-New', sans-serif; }
@@ -2514,21 +2514,28 @@ button.swiper-pagination-bullet {
     @media only screen and (max-width: 576px) {
       .gl-catalog__item--poster-square {
         grid-row: span 3; } }
+  .gl-catalog__item--video-small {
+    grid-row: span 3; }
   .gl-catalog__item--video-medium {
+    grid-row: span 6;
     grid-column: span 2; }
     @media only screen and (max-width: 576px) {
       .gl-catalog__item--video-medium {
+        grid-row: span 6;
         grid-column: auto; } }
     @media only screen and (max-width: 576px) {
       .gl-catalog__item--video-medium {
+        grid-row: span 3;
         grid-column: auto; } }
   .gl-catalog__item--video-large {
+    grid-row: span 9;
     grid-column: span 3; }
     @media only screen and (max-width: 1024px) {
       .gl-catalog__item--video-large {
         grid-column: span 2; } }
     @media only screen and (max-width: 576px) {
       .gl-catalog__item--video-large {
+        grid-row: span 3;
         grid-column: auto; } }
 
 .gl-catalog__link-wrapper {
@@ -2583,8 +2590,9 @@ button.swiper-pagination-bullet {
 .gl-catalog__card-title-wrapper {
   padding-top: 12px; }
   .gl-catalog__card-title-wrapper.no-content {
-    padding-top: 0;
-    height: 0; }
+    height: 16px;
+    -webkit-box-sizing: content-box;
+            box-sizing: content-box; }
 
 .gl-catalog__card-title-number {
   margin-right: 30px; }

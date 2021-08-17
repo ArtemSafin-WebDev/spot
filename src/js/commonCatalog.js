@@ -4,18 +4,12 @@ export default function commonCatalog(hostElem) {
   const catalogListElem = hostElem.querySelector('.gl-catalog__list');
   const cardTitleWrapper = hostElem.querySelectorAll('.gl-catalog__card-title-wrapper');
 
-  const cardsVerticalElems = hostElem.querySelectorAll('.gl-catalog__item--poster-vertical');
-  const cardsSquareElems = hostElem.querySelectorAll('.gl-catalog__item--poster-square');
-  const cardsVideoSmallElems = hostElem.querySelectorAll('.gl-catalog__item--video-small');
-  const cardsVideoMediumElems = hostElem.querySelectorAll('.gl-catalog__item--video-medium');
-  const cardsVideoLargeElems = hostElem.querySelectorAll('.gl-catalog__item--video-large');
+  const catalogItem = hostElem.querySelectorAll('.gl-catalog__item');
 
   const GRID_GAP = 20;
 
   const onResize = () => {
-    const HEIGHT_CAPTION = cardTitleWrapper[0].clientHeight;
     let width;
-    let height;
     switch (true) {
       case window.innerWidth > 1024:
         width = (catalogListElem.clientWidth - GRID_GAP * 2) / 3;
@@ -32,46 +26,45 @@ export default function commonCatalog(hostElem) {
         catalogListElem.style.gridTemplateColumns = `repeat(1, minmax(0, ${ width }px))`;
     }
 
-    cardsVerticalElems.forEach((card, i) => {
-      if (window.innerWidth > 1024) {
-        height = ((width * 2 - GRID_GAP * 690 / 500) + cardTitleWrapper[i].clientHeight);
-      } else if (window.innerWidth > 576) {
-        height = ((width * 690 / 500) + cardTitleWrapper[i].clientHeight);
-      } else {
-        height = width + cardTitleWrapper[i].clientHeight;
+    let height;
+    let ratio; // 9 / 16 у видосов
+    let columnWidth;
+    catalogItem.forEach((elem, i) => {
+      switch (true) {
+        case elem.className.includes('gl-catalog__item--poster-vertical'): // fixme постер
+          columnWidth = 1;
+          ratio = window.innerWidth > 576 ? 690 / 500 : 1;
+          break;
+
+        case elem.className.includes('gl-catalog__item--poster-square'): // fixme квадрат
+          columnWidth = 1;
+          ratio = 1;
+          break;
+
+          case elem.className.includes('gl-catalog__item--video-small'): // fixme маленькое видео
+            columnWidth = 1;
+            ratio = 280 / 500;
+            break;
+
+        case elem.className.includes('gl-catalog__item--video-medium'): // fixme среднее видео
+          ratio = 600 / 1020;
+          columnWidth = window.innerWidth > 576 ? 2 : 1;
+          break;
+
+        case elem.className.includes('gl-catalog__item--video-large'): // fixme большое видео
+          ratio = 875 / 1540;
+          if (window.innerWidth > 1024) {
+            columnWidth = 3;
+          } else if (window.innerWidth > 576) {
+            columnWidth = 2;
+          } else {
+            columnWidth = 1;
+          }
+          break;
       }
-      card.style.height = `${ height }px`;
-    })
 
-    cardsSquareElems.forEach((card, i) => {
-      height = width + cardTitleWrapper[i].clientHeight;
-      card.style.height = `${ height }px`;
-    })
-
-    cardsVideoSmallElems.forEach((card, i) => {
-      height = ((width * 9 / 16) + cardTitleWrapper[i].clientHeight);
-      card.style.height = `${ height }px`;
-    })
-
-    cardsVideoMediumElems.forEach((card, i) => {
-      if (window.innerWidth > 576) {
-        height = (((width * 2 - GRID_GAP) * 9 / 16) + cardTitleWrapper[i].clientHeight);
-      } else {
-        height = ((width * 9 / 16) + cardTitleWrapper[i].clientHeight);
-      }
-      card.style.height = `${ height }px`;
-      card.style.height = `${ height }px`;
-    })
-
-    cardsVideoLargeElems.forEach((card, i) => {
-      if (window.innerWidth > 1024) {
-        height = (((width * 3 - GRID_GAP * 2) * 9 / 16) + cardTitleWrapper[i].clientHeight);
-      } else if (window.innerWidth > 576) {
-        height = (((width * 2 - GRID_GAP) * 9 / 16) + cardTitleWrapper[i].clientHeight);
-      } else {
-        height = ((width * 9 / 16) + cardTitleWrapper[i].clientHeight);
-      }
-      card.style.height = `${ height }px`;
+      height = (((width * columnWidth + GRID_GAP * (columnWidth - 1)) * ratio) + cardTitleWrapper[i].clientHeight);
+      elem.style.height = `${ height }px`;
     })
   }
 

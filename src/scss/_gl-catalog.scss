@@ -38,26 +38,26 @@
   }
 
   &--video-small {
-    //grid-row: span 3;
+    grid-row: span 3;
   }
 
   &--video-medium {
-    //grid-row: span 6;
+    grid-row: span 6;
     grid-column: span 2;
 
     @include breakpoint(small-mobile) {
-      //grid-row: span 6;
+      grid-row: span 6;
       grid-column: auto;
     }
 
     @include breakpoint(small-mobile) {
-      //grid-row: span 3;
+      grid-row: span 3;
       grid-column: auto;
     }
   }
 
   &--video-large {
-    //grid-row: span 9;
+    grid-row: span 9;
     grid-column: span 3;
 
     @include breakpoint(tablet) {
@@ -65,7 +65,7 @@
     }
 
     @include breakpoint(small-mobile) {
-      //grid-row: span 3;
+      grid-row: span 3;
       grid-column: auto;
     }
   }
@@ -123,9 +123,8 @@
   padding-top: 12px;
 
   &.no-content {
-    padding-top: 0;
-    height: 0; // 16px line-height обычного шрифта
-    //box-sizing: content-box;
+    height: 16px; // 16px line-height обычного шрифта
+    box-sizing: content-box;
   }
 }
 
