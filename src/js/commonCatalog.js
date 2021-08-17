@@ -1,4 +1,4 @@
-import Masonry from 'masonry-layout'
+import Masonry from 'masonry-layout';
 // fixme берем соотношение блоков 16/9 (примерное соотношение стандратных видео)
 
 export default function commonCatalog(hostElem) {
@@ -11,6 +11,12 @@ export default function commonCatalog(hostElem) {
   const GRID_GAP = 20;
 
   let currentSize; // 'desk' | 'mobile'
+
+  const arrBig = [];
+  const arrSmall = [];
+  let isNoPair = false;
+  let lastBig = false;
+  let start = 0;
 
   cardTitleWithNumElems.forEach((elem, i) => {
     if (elem.className.includes('with-num')) {
@@ -103,79 +109,83 @@ export default function commonCatalog(hostElem) {
     })
   }
 
-  // const mixDumElems = () => {
-  //   if (window.innerWidth > 576 && (!currentSize || currentSize !== 'desk')) {
-  //     currentSize = 'desk';
-  //
-  //   } else if (window.innerWidth <= 576 && (!currentSize || currentSize !== 'mobile')) {
-  //     currentSize = 'mobile';
-  //     const halfItemsArr = [];
-  //     const wholeItemsArr = [];
-  //     const fullItemsArr = [];
-  //     catalogItems.forEach(elem => {
-  //       if (elem.className.includes('gl-catalog__item--poster-vertical') || elem.className.includes('gl-catalog__item--poster-square')) {
-  //         halfItemsArr.push({
-  //           half: elem
-  //         });
-  //       } else {
-  //         wholeItemsArr.push({
-  //           whole: elem
-  //         });
-  //       }
-  //     });
-  //
-  //     let indexLastUnpairedPoster = null;
-  //     catalogItems.forEach((el, i) => {
-  //       if (i < 2) { // первые два - обязатльено большие
-  //         fullItemsArr.push(el);
-  //         wholeItemsArr.pop();
-  //       } else if (fullItemsArr[fullItemsArr.length - 1].whole || fullItemsArr[fullItemsArr.length - 2].whole) { // если последние 2 - большие
-  //         fullItemsArr.push(el);
-  //       }
-  //
-  //       else if (halfItemsArr.length && !indexLastUnpairedPoster) {
-  //         halfItemsArr.pop();
-  //         fullItemsArr.push(el);
-  //         indexLastUnpairedPoster = fullItemsArr.length - 1;
-  //       } else if (halfItemsArr.length && indexLastUnpairedPoster) {
-  //         halfItemsArr.pop();
-  //         fullItemsArr.push(el);
-  //         indexLastUnpairedPoster = null;
-  //       }
-  //     })
-  //
-  //     fullItemsArr.forEach(elem => {
-  //       catalogListElem.appendChild(elem);
-  //     })
-  //
-  //     //   if (elem.className.includes('gl-catalog__item--poster-vertical') || elem.className.includes('gl-catalog__item--poster-square')) {
-  //     //     if (i < 1) {
-  //     //       catalogListElem.insertBefore(elem, catalogItems[2]);
-  //     //       itemsTypesArr[1] = ('qwe');
-  //     //       console.log(itemsTypesArr)
-  //     //     } else if (itemsTypesArr.lastIndexOf('qwe')) {
-  //     //       catalogListElem.insertBefore(elem, catalogItems[itemsTypesArr.lastIndexOf('qwe')]);
-  //     //       itemsTypesArr[itemsTypesArr.lastIndexOf('qwe') - 1] = 'qwe'
-  //     //     }
-  //     //     // catalogListElem.insertBefore(elem, catalogItems[2]);
-  //     //   } else {
-  //     //     itemsTypesArr[i]('1');
-  //     //   }
-  //   }
-  // }
+  catalogItems.forEach(elem => {
+    if (elem.className.includes('gl-catalog__item--poster')) {
+      arrSmall.push(elem);
+    } else {
+      arrBig.push(elem);
+    }
+  });
+
+  let order = 1;
+
+  const commonPush = arr => {
+    const elem = arr[0];
+    if (elem) {
+      elem.style.order = order.toString();
+      arr.shift();
+      order++;
+      return true;
+    }
+
+    return false;
+  }
+
+  const pushToBigArr = () => {
+    if (!commonPush(arrBig)) {
+      pushToSmallArr();
+    } else {
+      lastBig = true;
+    }
+  }
+
+  const pushToSmallArr = () => {
+    if (!commonPush(arrSmall)) {
+      pushToBigArr();
+    } else {
+      lastBig = false;
+      isNoPair = !isNoPair;
+    }
+  }
+
+  const mixDumElems = () => {
+    if (start < 2) {
+      pushToBigArr();
+      start++;
+    } else {
+      if (lastBig || isNoPair) {
+        pushToSmallArr();
+      } else {
+        pushToBigArr();
+      }
+    }
+
+    if (arrBig.length || arrSmall.length) {
+      mixDumElems();
+    }
+  }
 
   onResize();
-  // mixDumElems();
+  mixDumElems();
 
-  const msnry = new Masonry(catalogListElem, {
-    itemSelector: '.gl-catalog__item',
-    percentPosition: true,
-    gutter: GRID_GAP,
-    horizontalOrder: false
-  });
+  if (window.innerWidth > 576) {
+    const msnry = new Masonry(catalogListElem, {
+      itemSelector: '.gl-catalog__item',
+      percentPosition: true,
+      gutter: GRID_GAP,
+      horizontalOrder: false
+    });
+  }
 
   window.addEventListener('resize', () => {
     onResize();
-    // mixDumElems();
+    if (window.innerWidth > 576 && currentSize === 'mobile') {
+      currentSize = 'desk';
+      msnry.on(eventName, listener)
+    } else if (window.innerWidth <= 576 && currentSize === 'desk') {
+      currentSize = 'mobile';
+      msnry.off(eventName, listener )
+      mixDumElems();
+    }
   });
 }

@@ -6,6 +6,12 @@
 
 .gl-catalog__list {
   margin-bottom: -20px;
+
+  @include breakpoint(small-mobile) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .gl-catalog__item {
