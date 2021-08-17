@@ -2494,9 +2494,7 @@ button.swiper-pagination-bullet {
     margin-bottom: 10px; } }
 
 .gl-catalog__list {
-  display: grid;
-  grid-gap: 20px;
-  grid-auto-flow: dense; }
+  margin-bottom: -20px; }
 
 .gl-catalog__item {
   display: -webkit-box;
@@ -2506,37 +2504,7 @@ button.swiper-pagination-bullet {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  grid-row: span 3; }
-  .gl-catalog__item--poster-vertical {
-    grid-row: span 7; }
-  .gl-catalog__item--poster-square {
-    grid-row: span 5; }
-    @media only screen and (max-width: 576px) {
-      .gl-catalog__item--poster-square {
-        grid-row: span 3; } }
-  .gl-catalog__item--video-small {
-    grid-row: span 3; }
-  .gl-catalog__item--video-medium {
-    grid-row: span 6;
-    grid-column: span 2; }
-    @media only screen and (max-width: 576px) {
-      .gl-catalog__item--video-medium {
-        grid-row: span 6;
-        grid-column: auto; } }
-    @media only screen and (max-width: 576px) {
-      .gl-catalog__item--video-medium {
-        grid-row: span 3;
-        grid-column: auto; } }
-  .gl-catalog__item--video-large {
-    grid-row: span 9;
-    grid-column: span 3; }
-    @media only screen and (max-width: 1024px) {
-      .gl-catalog__item--video-large {
-        grid-column: span 2; } }
-    @media only screen and (max-width: 576px) {
-      .gl-catalog__item--video-large {
-        grid-row: span 3;
-        grid-column: auto; } }
+  margin-bottom: 20px; }
 
 .gl-catalog__link-wrapper {
   display: -webkit-box;
@@ -2588,14 +2556,19 @@ button.swiper-pagination-bullet {
     opacity: 0.2; }
 
 .gl-catalog__card-title-wrapper {
-  padding-top: 12px; }
+  padding-top: 12px;
+  position: relative; }
   .gl-catalog__card-title-wrapper.no-content {
     height: 16px;
     -webkit-box-sizing: content-box;
             box-sizing: content-box; }
+  .gl-catalog__card-title-wrapper.with-num {
+    padding-left: 46px; }
 
 .gl-catalog__card-title-number {
-  margin-right: 30px; }
+  position: absolute;
+  top: 12px;
+  left: 0; }
 
 .gl-catalog__mark {
   font-weight: bold; }
@@ -2758,12 +2731,19 @@ button.swiper-pagination-bullet {
   @media only screen and (max-width: 1200px) {
     .catalog__card-content-inst {
       padding: 60px 20px; } }
+  @media only screen and (max-width: 640px) {
+    .catalog__card-content-inst {
+      padding: 20px; } }
 
 .catalog__card-content-inst-title {
   font-weight: bold;
   font-size: 20px;
   line-height: 28px;
   width: 50%; }
+  @media only screen and (max-width: 576px) {
+    .catalog__card-content-inst-title {
+      font-size: 16px;
+      line-height: 20px; } }
 
 .catalog__card-content-inst-value {
   font-weight: bold;
@@ -2771,6 +2751,14 @@ button.swiper-pagination-bullet {
   line-height: 42px;
   padding-left: 90px;
   position: relative; }
+  @media only screen and (max-width: 768px) {
+    .catalog__card-content-inst-value {
+      padding-left: 72px; } }
+  @media only screen and (max-width: 576px) {
+    .catalog__card-content-inst-value {
+      font-size: 16px;
+      line-height: 20px;
+      padding-left: 56px; } }
   .catalog__card-content-inst-value:before {
     position: absolute;
     content: '';
@@ -2784,6 +2772,14 @@ button.swiper-pagination-bullet {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center; }
+    @media only screen and (max-width: 768px) {
+      .catalog__card-content-inst-value:before {
+        width: 46px;
+        height: 46px; } }
+    @media only screen and (max-width: 576px) {
+      .catalog__card-content-inst-value:before {
+        width: 32px;
+        height: 32px; } }
 
 .catalog__card-facebook-wrapper, .catalog__card-meduza-wrapper, .catalog__card-feather-wrapper {
   padding: 60px;
@@ -2819,6 +2815,9 @@ button.swiper-pagination-bullet {
   height: 90px;
   -webkit-transition: height 1s;
   transition: height 1s; }
+  @media only screen and (max-width: 576px) {
+    .catalog__card-solid-facebook {
+      height: 70px; } }
 
 .catalog__card-meduza-wrapper {
   -webkit-box-orient: vertical;
