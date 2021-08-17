@@ -6,6 +6,10 @@
   position: absolute;
   width: 100%;
   padding: 54px 60px;
+
+  @include breakpoint(laptop) {
+    padding: 60px 20px;
+  }
 }
 
 .catalog__card-content-inst-title {
@@ -37,17 +41,38 @@
   }
 }
 
-.catalog__card-facebook-wrapper, .catalog__card-media-wrapper, .catalog__card-feather-wrapper {
+.catalog__card-facebook-wrapper, .catalog__card-meduza-wrapper, .catalog__card-feather-wrapper {
   padding: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @include breakpoint(laptop) {
+    padding: 60px 20px;
+  }
+
+  @include breakpoint(small-tablet) {
+    padding: 20px;
+  }
+
+  @include breakpoint(small-mobile) {
+    padding: 60px 20px;
+  }
+
 }
 
-.catalog__link-wrapper {
+.gl-catalog__item {
   &:hover {
     .catalog__card-solid-facebook {
       height: 110px;
+    }
+
+    .catalog__card-content-feather-image {
+      height: 140px;
+    }
+
+    .catalog__card-content-meduza-caption {
+      color: #525151;
     }
   }
 }
@@ -57,21 +82,23 @@
   transition: height 1s;
 }
 
-.catalog__card-media-wrapper {
+.catalog__card-meduza-wrapper {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
 }
 
-.catalog__card-content-media-logo {
+.catalog__card-content-meduza-logo {
   height: 20px;
 }
 
-.catalog__card-content-media-caption {
+.catalog__card-content-meduza-caption {
   font-size: 26px;
   line-height: 36px;
+  transition: color 1s;
 }
 
 .catalog__card-content-feather-image {
   height: 122px;
+  transition: height 1s;
 }

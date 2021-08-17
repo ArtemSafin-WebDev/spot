@@ -2755,6 +2755,9 @@ button.swiper-pagination-bullet {
   position: absolute;
   width: 100%;
   padding: 54px 60px; }
+  @media only screen and (max-width: 1200px) {
+    .catalog__card-content-inst {
+      padding: 60px 20px; } }
 
 .catalog__card-content-inst-title {
   font-weight: bold;
@@ -2782,7 +2785,7 @@ button.swiper-pagination-bullet {
     background-size: contain;
     background-position: center; }
 
-.catalog__card-facebook-wrapper, .catalog__card-media-wrapper, .catalog__card-feather-wrapper {
+.catalog__card-facebook-wrapper, .catalog__card-meduza-wrapper, .catalog__card-feather-wrapper {
   padding: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2793,16 +2796,31 @@ button.swiper-pagination-bullet {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center; }
+  @media only screen and (max-width: 1200px) {
+    .catalog__card-facebook-wrapper, .catalog__card-meduza-wrapper, .catalog__card-feather-wrapper {
+      padding: 60px 20px; } }
+  @media only screen and (max-width: 768px) {
+    .catalog__card-facebook-wrapper, .catalog__card-meduza-wrapper, .catalog__card-feather-wrapper {
+      padding: 20px; } }
+  @media only screen and (max-width: 576px) {
+    .catalog__card-facebook-wrapper, .catalog__card-meduza-wrapper, .catalog__card-feather-wrapper {
+      padding: 60px 20px; } }
 
-.catalog__link-wrapper:hover .catalog__card-solid-facebook {
+.gl-catalog__item:hover .catalog__card-solid-facebook {
   height: 110px; }
+
+.gl-catalog__item:hover .catalog__card-content-feather-image {
+  height: 140px; }
+
+.gl-catalog__item:hover .catalog__card-content-meduza-caption {
+  color: #525151; }
 
 .catalog__card-solid-facebook {
   height: 90px;
   -webkit-transition: height 1s;
   transition: height 1s; }
 
-.catalog__card-media-wrapper {
+.catalog__card-meduza-wrapper {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -2814,15 +2832,19 @@ button.swiper-pagination-bullet {
       -ms-flex-align: start;
           align-items: flex-start; }
 
-.catalog__card-content-media-logo {
+.catalog__card-content-meduza-logo {
   height: 20px; }
 
-.catalog__card-content-media-caption {
+.catalog__card-content-meduza-caption {
   font-size: 26px;
-  line-height: 36px; }
+  line-height: 36px;
+  -webkit-transition: color 1s;
+  transition: color 1s; }
 
 .catalog__card-content-feather-image {
-  height: 122px; }
+  height: 122px;
+  -webkit-transition: height 1s;
+  transition: height 1s; }
 
 .talents {
   padding-top: 60px;
