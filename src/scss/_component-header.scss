@@ -52,14 +52,14 @@
     background-repeat: no-repeat;
 
     clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
-    transition: clip-path .8s ease-in;
+    transition: clip-path 400ms ease-in;
   }
 
   &:hover {
     text-decoration: initial;
     &::before {
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-      transition: clip-path .5s ease-out;
+      transition: clip-path 500ms ease-out;
     }
   }
 

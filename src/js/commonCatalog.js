@@ -12,6 +12,7 @@ export default function commonCatalog(hostElem) {
   const cardsTitlesNumber = hostElem.querySelectorAll('.gl-catalog__card-title-number');
 
   let currentSize; // 'desk' | 'mobile'
+  let widthBlock;
 
   const arrBig = [];
   const arrSmall = [];
@@ -28,7 +29,6 @@ export default function commonCatalog(hostElem) {
   })
 
   const onResize = () => {
-    let widthBlock;
     switch (true) {
       case window.innerWidth > 1024:
         widthBlock = (catalogListElem.clientWidth - GRID_GAP * 2) / 3;
@@ -178,6 +178,7 @@ export default function commonCatalog(hostElem) {
       itemSelector: '.gl-catalog__item',
       percentPosition: true,
       gutter: GRID_GAP,
+      columnWidth: widthBlock,
       horizontalOrder: false
     });
   }

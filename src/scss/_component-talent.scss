@@ -6,8 +6,15 @@
 .talent__description-wrapper {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  grid-gap: 80px;
   margin-bottom: 20px;
+}
+
+.talent__description-item {
+  margin-right: 80px;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 .talent__description-name {

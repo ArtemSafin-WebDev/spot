@@ -11,11 +11,9 @@ export default function commonDarkeningLinks(linksElems, wrapper) {
     }
   })
 
-  if (wrapper) {
-    wrapper.onmouseout = () => {
-      linksElems.forEach(link => {
-        link.classList.remove('no-hover');
-      })
-    }
+  wrapper.onmouseout = () => {
+    linksElems.forEach(link => {
+      link.classList.remove('no-hover');
+    })
   }
 }

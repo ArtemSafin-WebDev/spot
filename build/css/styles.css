@@ -5466,19 +5466,19 @@ a.plyr__control {
     background-repeat: no-repeat;
     -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
             clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
-    -webkit-transition: -webkit-clip-path .8s ease-in;
-    transition: -webkit-clip-path .8s ease-in;
-    transition: clip-path .8s ease-in;
-    transition: clip-path .8s ease-in, -webkit-clip-path .8s ease-in; }
+    -webkit-transition: -webkit-clip-path 400ms ease-in;
+    transition: -webkit-clip-path 400ms ease-in;
+    transition: clip-path 400ms ease-in;
+    transition: clip-path 400ms ease-in, -webkit-clip-path 400ms ease-in; }
   .header__link:hover {
     text-decoration: initial; }
     .header__link:hover::before {
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
               clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-      -webkit-transition: -webkit-clip-path .5s ease-out;
-      transition: -webkit-clip-path .5s ease-out;
-      transition: clip-path .5s ease-out;
-      transition: clip-path .5s ease-out, -webkit-clip-path .5s ease-out; }
+      -webkit-transition: -webkit-clip-path 500ms ease-out;
+      transition: -webkit-clip-path 500ms ease-out;
+      transition: clip-path 500ms ease-out;
+      transition: clip-path 500ms ease-out, -webkit-clip-path 500ms ease-out; }
   .header__link.no-hover {
     opacity: 0.4; }
 
@@ -5813,8 +5813,12 @@ a.plyr__control {
 .talent__description-wrapper {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  grid-gap: 80px;
   margin-bottom: 20px; }
+
+.talent__description-item {
+  margin-right: 80px; }
+  .talent__description-item:last-child {
+    margin-right: 0; }
 
 .talent__description-name {
   font-size: 56px;
