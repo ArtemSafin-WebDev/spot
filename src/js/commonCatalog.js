@@ -7,9 +7,9 @@ export default function commonCatalog(hostElem) {
 
   const catalogListElem = hostElem.querySelector('.gl-catalog__list');
   const catalogItems = hostElem.querySelectorAll('.gl-catalog__item');
+  const catalogContentsElems = hostElem.querySelectorAll('.gl-catalog__content');
 
   const cardTitleWrapper = hostElem.querySelectorAll('.gl-catalog__card-title-wrapper');
-  const cardTitleWithNumElems = hostElem.querySelectorAll('.gl-catalog__card-title-wrapper.with-num');
   const cardsTitlesNumber = hostElem.querySelectorAll('.gl-catalog__card-title-number');
 
   let currentSize; // 'desk' | 'mobile'
@@ -99,9 +99,10 @@ export default function commonCatalog(hostElem) {
         width = widthBlock * columnLength + gap;
       }
 
-      height = (((widthBlock * columnLength + gap) * ratio) + cardTitleWrapper[i].clientHeight);
+      height = ((widthBlock * columnLength + gap) * ratio);
+      catalogContentsElems[i].style.height = `${ height }px`;
+      catalogContentsElems[i].style.width = `${ width }px`;
       elem.style.width = `${ width }px`;
-      elem.style.height = `${ height }px`;
     })
   }
 
@@ -133,7 +134,6 @@ export default function commonCatalog(hostElem) {
       order++;
       return true;
     }
-
     return false;
   }
 

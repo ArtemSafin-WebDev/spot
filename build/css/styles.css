@@ -2514,7 +2514,10 @@ button.swiper-pagination-bullet {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content; }
 
 .gl-catalog__link-wrapper {
   display: -webkit-box;
@@ -2752,6 +2755,10 @@ button.swiper-pagination-bullet {
     .catalog__card-content-inst-title {
       font-size: 16px;
       line-height: 20px; } }
+  @media only screen and (max-width: 370px) {
+    .catalog__card-content-inst-title {
+      font-size: 14px;
+      line-height: 16px; } }
 
 .catalog__card-content-inst-value {
   font-weight: bold;
@@ -2808,7 +2815,7 @@ button.swiper-pagination-bullet {
       padding: 20px; } }
   @media only screen and (max-width: 576px) {
     .catalog__card-facebook-wrapper, .catalog__card-meduza-wrapper, .catalog__card-feather-wrapper {
-      padding: 60px 20px; } }
+      padding: 20px; } }
 
 .gl-catalog__item:hover .catalog__card-solid-facebook {
   height: 110px; }
@@ -2841,12 +2848,30 @@ button.swiper-pagination-bullet {
 
 .catalog__card-content-meduza-logo {
   height: 20px; }
+  @media only screen and (max-width: 768px) {
+    .catalog__card-content-meduza-logo {
+      height: 16px; } }
+  @media only screen and (max-width: 576px) {
+    .catalog__card-content-meduza-logo {
+      height: 10px; } }
 
 .catalog__card-content-meduza-caption {
   font-size: 26px;
   line-height: 36px;
   -webkit-transition: color 1s;
   transition: color 1s; }
+  @media only screen and (max-width: 1024px) {
+    .catalog__card-content-meduza-caption {
+      font-size: 22px;
+      line-height: 32px; } }
+  @media only screen and (max-width: 768px) {
+    .catalog__card-content-meduza-caption {
+      font-size: 18px;
+      line-height: 24px; } }
+  @media only screen and (max-width: 576px) {
+    .catalog__card-content-meduza-caption {
+      font-size: 12px;
+      line-height: 14px; } }
 
 .catalog__card-content-feather-image {
   height: 122px;
