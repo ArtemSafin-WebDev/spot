@@ -37,7 +37,7 @@
   }
 }
 
-.gl-catalog__card-image-wrapper {
+.gl-catalog__card-media-wrapper {
   position: relative;
   height: 100%;
   flex-grow: 1;
@@ -67,6 +67,16 @@
   &.mod-inst {
     opacity: 0.2;
   }
+}
+
+.wrapp {
+  width: 100%;
+  height: 100%;
+}
+
+.gl-catalog__card-video {
+  width: 100%;
+  height: 100%;
 }
 
 .gl-catalog__card-title-wrapper {
