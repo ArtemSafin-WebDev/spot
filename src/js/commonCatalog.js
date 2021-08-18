@@ -1,14 +1,16 @@
 import Masonry from 'masonry-layout';
-// fixme берем соотношение блоков 16/9 (примерное соотношение стандратных видео)
 
 export default function commonCatalog(hostElem) {
+  const GRID_GAP = 20;
+  const RATIO_VIDEO = 0.5625 // 9/16
+  const RATIO_POSTER_VERTICAL = 1.38 // 690 / 500
+
   const catalogListElem = hostElem.querySelector('.gl-catalog__list');
   const catalogItems = hostElem.querySelectorAll('.gl-catalog__item');
 
   const cardTitleWrapper = hostElem.querySelectorAll('.gl-catalog__card-title-wrapper');
   const cardTitleWithNumElems = hostElem.querySelectorAll('.gl-catalog__card-title-wrapper.with-num');
-
-  const GRID_GAP = 20;
+  const cardsTitlesNumber = hostElem.querySelectorAll('.gl-catalog__card-title-number');
 
   let currentSize; // 'desk' | 'mobile'
 
@@ -18,16 +20,11 @@ export default function commonCatalog(hostElem) {
   let lastBig = false;
   let start = 0;
 
-  cardTitleWithNumElems.forEach((elem, i) => {
-    if (elem.className.includes('with-num')) {
-      const newElem = document.createElement('div');
-      newElem.classList.add('gl-catalog__card-title-number');
-      if (i + 1 < 10) {
-        newElem.innerText = `0${ i + 1 }`;
-      } else {
-        newElem.innerText = `${ i + 1 }`;
-      }
-      elem.appendChild(newElem);
+  cardsTitlesNumber.forEach((elem, i) => {
+    if (i + 1 < 10) {
+      elem.innerText = `0${ i + 1 }`;
+    } else {
+      elem.innerText = i + 1;
     }
   })
 
@@ -48,7 +45,7 @@ export default function commonCatalog(hostElem) {
 
     let height;
     let width;
-    let ratio; // 9 / 16 у видосов
+    let ratio;
     let columnLength;
     catalogItems.forEach((elem, i) => {
       switch (true) {
@@ -56,32 +53,32 @@ export default function commonCatalog(hostElem) {
           if (window.innerWidth > 576) {
             columnLength = 1;
           } else {
-            columnLength = 1 / 2;
+            columnLength = 0.5;
           }
-          ratio = 690 / 500;
+          ratio = RATIO_POSTER_VERTICAL;
           break;
 
         case elem.className.includes('gl-catalog__item--poster-square'): // fixme квадрат
           if (window.innerWidth > 576) {
             columnLength = 1;
           } else {
-            columnLength = 1 / 2;
+            columnLength = 0.5;
           }
           ratio = 1;
           break;
 
         case elem.className.includes('gl-catalog__item--video-small'): // fixme маленькое видео
           columnLength = 1;
-          ratio = 9 / 16; // 280 / 500;
+          ratio = RATIO_VIDEO; // 280 / 500;
           break;
 
         case elem.className.includes('gl-catalog__item--video-medium'): // fixme среднее видео
-          ratio = 9 / 16; // 600 / 1020;
+          ratio = RATIO_VIDEO; // 600 / 1020;
           columnLength = window.innerWidth > 576 ? 2 : 1;
           break;
 
         case elem.className.includes('gl-catalog__item--video-large'): // fixme большое видео
-          ratio = 9 / 16; // 875 / 1540;
+          ratio = RATIO_VIDEO; // 875 / 1540;
           if (window.innerWidth > 1024) {
             columnLength = 3;
           } else if (window.innerWidth > 576) {
@@ -103,7 +100,6 @@ export default function commonCatalog(hostElem) {
       }
 
       height = (((widthBlock * columnLength + gap) * ratio) + cardTitleWrapper[i].clientHeight);
-
       elem.style.width = `${ width }px`;
       elem.style.height = `${ height }px`;
     })
@@ -118,12 +114,22 @@ export default function commonCatalog(hostElem) {
   });
 
   let order = 1;
+  let number = 1;
 
   const commonPush = arr => {
     const elem = arr[0];
     if (elem) {
       elem.style.order = order.toString();
       arr.shift();
+      const cardNum = elem.querySelector('.gl-catalog__card-title-number');
+      if (cardNum) {
+        if (number < 10) {
+          cardNum.innerText = `0${ number }`;
+        } else {
+          cardNum.innerText = number;
+        }
+        number++;
+      }
       order++;
       return true;
     }
@@ -181,10 +187,8 @@ export default function commonCatalog(hostElem) {
     onResize();
     if (window.innerWidth > 576 && currentSize === 'mobile') {
       currentSize = 'desk';
-      msnry.on(eventName, listener)
     } else if (window.innerWidth <= 576 && currentSize === 'desk') {
       currentSize = 'mobile';
-      msnry.off(eventName, listener )
       mixDumElems();
     }
   });

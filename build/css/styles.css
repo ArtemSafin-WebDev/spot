@@ -2567,18 +2567,16 @@ button.swiper-pagination-bullet {
 
 .gl-catalog__card-title-wrapper {
   padding-top: 12px;
-  position: relative; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
   .gl-catalog__card-title-wrapper.no-content {
     height: 16px;
     -webkit-box-sizing: content-box;
             box-sizing: content-box; }
-  .gl-catalog__card-title-wrapper.with-num {
-    padding-left: 46px; }
 
 .gl-catalog__card-title-number {
-  position: absolute;
-  top: 12px;
-  left: 0; }
+  margin-right: 10px; }
 
 .gl-catalog__mark {
   font-weight: bold; }

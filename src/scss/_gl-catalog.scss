@@ -70,22 +70,16 @@
 
 .gl-catalog__card-title-wrapper {
   padding-top: 12px;
-  position: relative;
+  display: flex;
 
   &.no-content {
     height: 16px; // 16px line-height обычного шрифта
     box-sizing: content-box;
   }
-
-  &.with-num {
-    padding-left: 46px;
-  }
 }
 
 .gl-catalog__card-title-number {
-  position: absolute;
-  top: 12px;
-  left: 0;
+  margin-right: 10px;
 }
 
 .gl-catalog__mark {
