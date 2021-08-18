@@ -5442,7 +5442,9 @@ a.plyr__control {
 .header__link {
   font-size: 36px;
   line-height: 42px;
-  position: relative; }
+  position: relative;
+  -webkit-transition: opacity 300ms;
+  transition: opacity 300ms; }
   @media only screen and (max-width: 1024px) {
     .header__link {
       font-size: 22px;
@@ -5477,6 +5479,8 @@ a.plyr__control {
       transition: -webkit-clip-path .5s ease-out;
       transition: clip-path .5s ease-out;
       transition: clip-path .5s ease-out, -webkit-clip-path .5s ease-out; }
+  .header__link.no-hover {
+    opacity: 0.4; }
 
 .header__contacts-wrapper {
   display: -webkit-box;

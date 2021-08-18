@@ -14,8 +14,13 @@ export default function commonVideo(hostElem) {
     plyr.muted = true;
 
     parent.onmouseenter = () => {
-      plyr.play();
+      const playPromise = plyr.play();
+      if (playPromise) {
+        playPromise.then(() => {
+        })
+      }
     }
+
     parent.onmouseleave = () => {
       plyr.pause();
     };

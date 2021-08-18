@@ -9,7 +9,6 @@ export default function commonCatalog(hostElem) {
   const catalogItems = hostElem.querySelectorAll('.gl-catalog__item');
   const catalogContentsElems = hostElem.querySelectorAll('.gl-catalog__content');
 
-  const cardTitleWrapper = hostElem.querySelectorAll('.gl-catalog__card-title-wrapper');
   const cardsTitlesNumber = hostElem.querySelectorAll('.gl-catalog__card-title-number');
 
   let currentSize; // 'desk' | 'mobile'
