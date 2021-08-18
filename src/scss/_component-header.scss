@@ -28,6 +28,7 @@
   line-height: 42px;
   position: relative;
   transition: opacity 300ms;
+  opacity: 0.4;
 
   @include breakpoint(tablet) {
     font-size: 22px;
@@ -50,14 +51,14 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
     clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
     transition: clip-path 400ms ease-in;
   }
 
-  &:hover {
+  &:hover, &.mod-active {
     text-decoration: initial;
-    &::before {
+    opacity: 1;
+    &:before {
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
       transition: clip-path 500ms ease-out;
     }
@@ -65,6 +66,10 @@
 
   &.no-hover {
     opacity: 0.4;
+    &:before {
+      clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    }
+
   }
 }
 
