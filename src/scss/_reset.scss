@@ -7,8 +7,8 @@
 }
 
 :root {
-  --max-container-width: 1580px;
-  --padding-page-content: 20px;
+  --max-container-width: 158rem;
+  --padding-page-content: 2rem;
   --main-color: #fff;
   --fon-courier-new: 'Courier-New', sans-serif;
 }
@@ -18,18 +18,26 @@ html {
   font-size: 10px;
   -webkit-text-size-adjust: 100%;
   @include noHighlight();
+
+  @include breakpoint(tablet) {
+    font-size: 9px;
+  }
+
+  @include breakpoint(small-mobile) {
+    font-size: 8px;
+  }
 }
 
 body {
-  min-width: 320px;
+  min-width: 32rem;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   color: var(--main-color);
   font-family: var(--fon-courier-new);
   overflow-x: hidden;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 1.4rem;
+  line-height: 1.6rem;
 }
 
 main {
@@ -80,7 +88,7 @@ textarea {
   display: block;
   width: 100%;
   overflow: auto;
-  height: 200px;
+  height: 20rem;
   @include customScrollbar();
 }
 
@@ -97,7 +105,7 @@ input[type='number'] {
 
 input[type='search'] {
   -webkit-appearance: textfield; /* 1 */
-  outline-offset: -2px; /* 2 */
+  outline-offset: -.2rem; /* 2 */
 }
 
 input[type='search'] {

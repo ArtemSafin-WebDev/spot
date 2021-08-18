@@ -1,11 +1,11 @@
 .gl-catalog {
   @include breakpoint(mobile) {
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
   }
 }
 
 .gl-catalog__list {
-  margin-bottom: -20px;
+  margin-bottom: -2rem;
 
   @include breakpoint(small-mobile) {
     display: flex;
@@ -17,7 +17,7 @@
 .gl-catalog__item {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
   height: min-content;
 }
 
@@ -80,17 +80,17 @@
 }
 
 .gl-catalog__card-title-wrapper {
-  padding-top: 12px;
+  padding-top: 1.2rem;
   display: flex;
 
   &.no-content {
-    height: 16px; // 16px line-height обычного шрифта
+    height: 1.6rem; // 1.6rem line-height обычного шрифта
     box-sizing: content-box;
   }
 }
 
 .gl-catalog__card-title-number {
-  margin-right: 10px;
+  margin-right: 1rem;
 }
 
 .gl-catalog__mark {
@@ -98,7 +98,7 @@
 }
 
 .gl-catalog__card-title {
-  font-size: 18px;
-  padding: 50px 0;
+  font-size: 1.8rem;
+  padding: 5rem 0;
   font-weight: 400;
 }
