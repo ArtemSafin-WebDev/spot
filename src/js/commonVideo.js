@@ -3,7 +3,7 @@ import Plyr from 'plyr';
 export default function commonVideo(hostElem) {
   const videosElems = hostElem.querySelectorAll('.gl-catalog__card-video');
 
-  videosElems.forEach((elem, i) => {
+  videosElems.forEach(elem => {
     const parent = elem.parentElement;
     const plyr = new Plyr(elem, {
       controls: [],
@@ -22,7 +22,7 @@ export default function commonVideo(hostElem) {
     }
 
     parent.onmouseleave = () => {
-      plyr.pause();
+      plyr.stop();
     };
   });
 }
