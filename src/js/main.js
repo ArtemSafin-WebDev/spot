@@ -11,6 +11,7 @@ import componentTalentsList from './componentTalentsList';
 import componentMainCatalog from './componentMainCatalog';
 import componentTalents from './componentTalents';
 import componentHeader from './componentHeader';
+import test from './test';
 
 document.addEventListener('DOMContentLoaded', function () {
   polyfills();
@@ -21,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
   phoneMask();
   onlyNumeric();
   fileUpload();
+  test();
 
   componentHeader();
   componentTalentsList();
