@@ -13,6 +13,7 @@ import componentTalents from './componentTalents';
 import componentHeader from './componentHeader';
 import test from './test';
 import componentVideoWorks from './componentVideoWorks';
+import componentVideoFilms from './componentVideoFilms';
 
 document.addEventListener('DOMContentLoaded', function () {
   polyfills();
@@ -30,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function () {
   componentMainCatalog();
   componentTalents();
   componentVideoWorks();
+  componentVideoFilms();
 });
 
 window.addEventListener('load', function () {
