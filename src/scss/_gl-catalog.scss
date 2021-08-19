@@ -19,6 +19,15 @@
   flex-direction: column;
   margin-bottom: 2rem;
   height: min-content;
+  transition: opacity 700ms;
+
+  &.mod-anim-hide {
+    opacity: 0;
+  }
+
+  &.mod-hide {
+    display: none;
+  }
 }
 
 .gl-catalog__link-wrapper {

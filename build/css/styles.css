@@ -5431,7 +5431,13 @@ a.plyr__control {
   margin-bottom: 2rem;
   height: -webkit-min-content;
   height: -moz-min-content;
-  height: min-content; }
+  height: min-content;
+  -webkit-transition: opacity 700ms;
+  transition: opacity 700ms; }
+  .gl-catalog__item.mod-anim-hide {
+    opacity: 0; }
+  .gl-catalog__item.mod-hide {
+    display: none; }
 
 .gl-catalog__link-wrapper {
   display: -webkit-box;
@@ -5533,11 +5539,11 @@ a.plyr__control {
 .header__logo {
   height: 3.6rem; }
 
-.header__link-wrapper {
+.header__control-wrapper {
   width: 100%;
   overflow: hidden; }
 
-.header__link {
+.header__control {
   font-size: 3.6rem;
   line-height: 4.2rem;
   position: relative;
@@ -5545,12 +5551,12 @@ a.plyr__control {
   transition: opacity 300ms;
   opacity: 0.4; }
   @media only screen and (max-width: 1024px) {
-    .header__link {
+    .header__control {
       font-size: 2.2rem;
       line-height: 2.6rem; }
-      .header__link + .header__link {
+      .header__control + .header__control {
         margin-top: .4rem; } }
-  .header__link:before {
+  .header__control:before {
     position: absolute;
     content: '';
     top: 50%;
@@ -5569,19 +5575,19 @@ a.plyr__control {
     transition: -webkit-clip-path 400ms ease-in;
     transition: clip-path 400ms ease-in;
     transition: clip-path 400ms ease-in, -webkit-clip-path 400ms ease-in; }
-  .header__link:hover, .header__link.mod-active {
+  .header__control:hover, .header__control.mod-active {
     text-decoration: initial;
     opacity: 1; }
-    .header__link:hover:before, .header__link.mod-active:before {
+    .header__control:hover:before, .header__control.mod-active:before {
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
               clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
       -webkit-transition: -webkit-clip-path 500ms ease-out;
       transition: -webkit-clip-path 500ms ease-out;
       transition: clip-path 500ms ease-out;
       transition: clip-path 500ms ease-out, -webkit-clip-path 500ms ease-out; }
-  .header__link.no-hover {
+  .header__control.no-hover {
     opacity: 0.4; }
-    .header__link.no-hover:before {
+    .header__control.no-hover:before {
       -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
               clip-path: polygon(0 0, 0 0, 0 100%, 0 100%); }
 

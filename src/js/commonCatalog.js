@@ -11,6 +11,13 @@ export default function commonCatalog(hostElem) {
 
   const cardsTitlesNumber = hostElem.querySelectorAll('.gl-catalog__card-title-number');
 
+  const sortBtns = document.querySelectorAll('.header__sort-btn');
+
+  const brandedCards = hostElem.querySelectorAll('.gl-catalog-branded');
+  const musicCards = hostElem.querySelectorAll('.gl-catalog-music');
+  const filmCards = hostElem.querySelectorAll('.gl-catalog-film');
+
+  let msnry;
   let currentSize; // 'desk' | 'mobile'
   let widthBlock;
 
@@ -170,11 +177,61 @@ export default function commonCatalog(hostElem) {
     }
   }
 
+  const onSort = (indexBtnActive, elemsShow, elemsHideArr) => {
+    sortBtns.forEach((btn, index) => {
+      if (index === indexBtnActive) {
+        btn.classList.add('mod-active');
+      } else {
+        btn.classList.remove('mod-active');
+      }
+    })
+
+    elemsShow.forEach(elem => {
+      elem.classList.remove('mod-anim-hide');
+      setTimeout(() => {
+        elem.classList.remove('mod-hide');
+        msnry.layout();
+      }, 700)
+    })
+
+    elemsHideArr.forEach(elemsHide => {
+      elemsHide.forEach(elem => {
+        elem.classList.add('mod-anim-hide');
+        setTimeout(() => {
+          elem.classList.add('mod-hide');
+          msnry.layout();
+        }, 700)
+        }
+      )
+    })
+  }
+
+  sortBtns.forEach((btn, i) => {
+    btn.onclick = () => {
+      switch (btn.value) {
+        case 'branded':
+          onSort(i, brandedCards, [musicCards, filmCards]);
+
+          break;
+
+        case 'music':
+          onSort(i, musicCards, [brandedCards, filmCards]);
+          break;
+
+        case 'film':
+          onSort(i, filmCards, [brandedCards, musicCards]);
+          break;
+      }
+    }
+  })
+
   onResize();
   mixDumElems();
 
+  // initMasonry();
+
   if (window.innerWidth > 576) {
-    const msnry = new Masonry(catalogListElem, {
+    msnry = new Masonry(catalogListElem, {
       itemSelector: '.gl-catalog__item',
       percentPosition: true,
       gutter: GRID_GAP,
