@@ -5520,8 +5520,8 @@ a.plyr__control {
 .header {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  padding-top: 1.8rem;
-  padding-bottom: 1rem; }
+  margin-top: 1.8rem;
+  margin-bottom: 1rem; }
   @media only screen and (max-width: 768px) {
     .header {
       display: -webkit-box;
@@ -5529,7 +5529,8 @@ a.plyr__control {
       display: flex;
       -webkit-box-pack: justify;
           -ms-flex-pack: justify;
-              justify-content: space-between; } }
+              justify-content: space-between;
+      min-height: 40px; } }
 
 .header__logo-wrapper {
   height: -webkit-min-content;
@@ -5538,6 +5539,16 @@ a.plyr__control {
 
 .header__logo {
   height: 3.6rem; }
+
+@media only screen and (max-width: 768px) {
+  .header__controls-list {
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: max-height 1s;
+    transition: max-height 1s; } }
+
+.header__controls-list.mod-show {
+  max-height: 18rem; }
 
 .header__control-wrapper {
   width: 100%;
@@ -5552,8 +5563,8 @@ a.plyr__control {
   opacity: 0.4; }
   @media only screen and (max-width: 1024px) {
     .header__control {
-      font-size: 2.2rem;
-      line-height: 2.6rem; }
+      font-size: 2.8rem;
+      line-height: 3.6rem; }
       .header__control + .header__control {
         margin-top: .4rem; } }
   .header__control:before {
@@ -5617,6 +5628,37 @@ a.plyr__control {
   margin-top: -1.6rem;
   margin-right: -1.6rem;
   display: block; }
+
+.header__burger-wrapper {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: none; }
+  @media only screen and (max-width: 768px) {
+    .header__burger-wrapper.mod-show {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
+
+.header__burger {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  margin-top: -15px;
+  margin-right: -5px; }
+  .header__burger:after, .header__burger:before {
+    position: absolute;
+    content: '';
+    right: 5px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 26%; }
+  .header__burger:after {
+    top: 15px;
+    width: 30px; }
+  .header__burger:before {
+    width: 20px;
+    bottom: 15px; }
 
 .footer {
   display: grid;

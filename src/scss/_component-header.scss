@@ -1,12 +1,13 @@
 .header {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  padding-top: 1.8rem;
-  padding-bottom: 1rem;
+  margin-top: 1.8rem;
+  margin-bottom: 1rem;
 
   @include breakpoint(small-tablet) {
-   display: flex;
+    display: flex;
     justify-content: space-between;
+    min-height: 40px;
   }
 }
 
@@ -16,6 +17,18 @@
 
 .header__logo {
   height: 3.6rem;
+}
+
+.header__controls-list {
+  @include breakpoint(small-tablet) {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s;
+  }
+
+  &.mod-show {
+    max-height: 18rem;
+  }
 }
 
 .header__control-wrapper {
@@ -31,8 +44,8 @@
   opacity: 0.4;
 
   @include breakpoint(tablet) {
-    font-size: 2.2rem;
-    line-height: 2.6rem;
+    font-size: 2.8rem;
+    line-height: 3.6rem;
 
     & + & {
       margin-top: .4rem;
@@ -58,6 +71,7 @@
   &:hover, &.mod-active {
     text-decoration: initial;
     opacity: 1;
+
     &:before {
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
       transition: clip-path 500ms ease-out;
@@ -66,6 +80,7 @@
 
   &.no-hover {
     opacity: 0.4;
+
     &:before {
       clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
     }
@@ -94,4 +109,42 @@
   margin-top: -1.6rem;
   margin-right: -1.6rem;
   display: block;
+}
+
+.header__burger-wrapper {
+  align-items: center;
+  display: none;
+
+  &.mod-show {
+    @include breakpoint(small-tablet) {
+      display: flex;
+    }
+  }
+}
+
+.header__burger {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  margin-top: -15px;
+  margin-right: -5px;
+
+  &:after, &:before {
+    position: absolute;
+    content: '';
+    right: 5px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 26%;
+  }
+
+  &:after {
+    top: 15px;
+    width: 30px;
+  }
+
+  &:before {
+    width: 20px;
+    bottom: 15px;
+  }
 }

@@ -21,11 +21,11 @@ export default function commonCatalog(hostElem) {
   let currentSize; // 'desk' | 'mobile'
   let widthBlock;
 
-  const arrBig = [];
-  const arrSmall = [];
+  let arrBig = [];
+  let arrSmall = [];
   let isNoPair = false;
   let lastBig = false;
-  let start = 0;
+  let start;
 
   cardsTitlesNumber.forEach((elem, i) => {
     if (i + 1 < 10) {
@@ -112,16 +112,26 @@ export default function commonCatalog(hostElem) {
     })
   }
 
-  catalogItems.forEach(elem => {
-    if (elem.className.includes('gl-catalog__item--poster')) {
-      arrSmall.push(elem);
-    } else {
-      arrBig.push(elem);
-    }
-  });
+  const onUpdateCardsSort = () => {
+    arrSmall = [];
+    arrBig = [];
+    catalogItems.forEach(elem => {
+      if (!elem.className.includes('mod-anim-hide') && !elem.className.includes('mod-hide')) {
+        if (elem.className.includes('gl-catalog__item--poster')) {
+          arrSmall.push(elem);
+        } else {
+          arrBig.push(elem);
+        }
+      }
+    });
 
-  let order = 1;
-  let number = 1;
+    order = 1;
+    number = 1;
+    start = 0;
+  }
+
+  let order;
+  let number;
 
   const commonPush = arr => {
     const elem = arr[0];
@@ -190,17 +200,20 @@ export default function commonCatalog(hostElem) {
       elem.classList.remove('mod-anim-hide');
       setTimeout(() => {
         elem.classList.remove('mod-hide');
-        msnry.layout();
       }, 700)
     })
 
     elemsHideArr.forEach(elemsHide => {
       elemsHide.forEach(elem => {
-        elem.classList.add('mod-anim-hide');
-        setTimeout(() => {
-          elem.classList.add('mod-hide');
-          msnry.layout();
-        }, 700)
+          elem.classList.add('mod-anim-hide');
+          setTimeout(() => {
+            elem.classList.add('mod-hide');
+            onUpdateCardsSort();
+            mixDumElems();
+            if (window.innerWidth > 576) {
+              msnry.layout();
+            }
+          }, 700)
         }
       )
     })
@@ -211,7 +224,6 @@ export default function commonCatalog(hostElem) {
       switch (btn.value) {
         case 'branded':
           onSort(i, brandedCards, [musicCards, filmCards]);
-
           break;
 
         case 'music':
@@ -226,6 +238,7 @@ export default function commonCatalog(hostElem) {
   })
 
   onResize();
+  onUpdateCardsSort();
   mixDumElems();
 
   // initMasonry();
