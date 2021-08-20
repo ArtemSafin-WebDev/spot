@@ -27,6 +27,76 @@ export default function commonCatalog(hostElem) {
   let lastBig = false;
   let start;
 
+  const onSort = (nameSort) => {
+    let indexBtnActive;
+    let nameQueryParam;
+    let elemsShow;
+    let elemsHideArr
+
+    switch (nameSort) {
+      case 'branded':
+        indexBtnActive = 0;
+        nameQueryParam = 'branded';
+        elemsShow = brandedCards;
+        elemsHideArr = [musicCards, filmCards];
+        break;
+
+      case 'music':
+        indexBtnActive = 1;
+        nameQueryParam = 'music';
+        elemsShow = musicCards;
+        elemsHideArr = [brandedCards, filmCards];
+        break;
+
+      case 'film':
+        indexBtnActive = 2;
+        nameQueryParam = 'film';
+        elemsShow = filmCards;
+        elemsHideArr = [brandedCards, musicCards];
+        break;
+    }
+
+    const currentQueryParamSort = window.location.href.split('?sort=')[1];
+
+    if (currentQueryParamSort && currentQueryParamSort !== nameQueryParam) {
+      window.history.pushState({}, '', `?sort=${ nameQueryParam }`);
+    }
+
+    sortBtns.forEach((btn, index) => {
+      if (index === indexBtnActive) {
+        btn.classList.add('mod-active');
+      } else {
+        btn.classList.remove('mod-active');
+      }
+    })
+
+    elemsShow.forEach(elem => {
+      elem.classList.remove('mod-anim-hide');
+      setTimeout(() => {
+        elem.classList.remove('mod-hide');
+      }, 700)
+    })
+
+    elemsHideArr.forEach(elemsHide => {
+      elemsHide.forEach(elem => {
+          elem.classList.add('mod-anim-hide');
+          setTimeout(() => {
+            elem.classList.add('mod-hide');
+            onUpdateCardsSort();
+            mixDumElems();
+            if (window.innerWidth > 576) {
+              msnry.layout();
+            }
+          }, 700)
+        }
+      )
+    })
+  }
+
+  if (window.location.href.split('?sort=')[1]) {
+    onSort(window.location.href.split('?sort=')[1]);
+  }
+
   cardsTitlesNumber.forEach((elem, i) => {
     if (i + 1 < 10) {
       elem.innerText = `0${ i + 1 }`;
@@ -187,53 +257,9 @@ export default function commonCatalog(hostElem) {
     }
   }
 
-  const onSort = (indexBtnActive, elemsShow, elemsHideArr) => {
-    sortBtns.forEach((btn, index) => {
-      if (index === indexBtnActive) {
-        btn.classList.add('mod-active');
-      } else {
-        btn.classList.remove('mod-active');
-      }
-    })
-
-    elemsShow.forEach(elem => {
-      elem.classList.remove('mod-anim-hide');
-      setTimeout(() => {
-        elem.classList.remove('mod-hide');
-      }, 700)
-    })
-
-    elemsHideArr.forEach(elemsHide => {
-      elemsHide.forEach(elem => {
-          elem.classList.add('mod-anim-hide');
-          setTimeout(() => {
-            elem.classList.add('mod-hide');
-            onUpdateCardsSort();
-            mixDumElems();
-            if (window.innerWidth > 576) {
-              msnry.layout();
-            }
-          }, 700)
-        }
-      )
-    })
-  }
-
   sortBtns.forEach((btn, i) => {
     btn.onclick = () => {
-      switch (btn.value) {
-        case 'branded':
-          onSort(i, brandedCards, [musicCards, filmCards]);
-          break;
-
-        case 'music':
-          onSort(i, musicCards, [brandedCards, filmCards]);
-          break;
-
-        case 'film':
-          onSort(i, filmCards, [brandedCards, musicCards]);
-          break;
-      }
+      onSort(btn.value);
     }
   })
 

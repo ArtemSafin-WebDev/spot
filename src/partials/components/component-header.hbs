@@ -6,25 +6,43 @@
   <ul class="header__controls-list">
     <li class="header__control-wrapper">
       <a href="talents-list-page.html" class="header__control
-               {{#if isTalentPage}}mod-active{{/if}}
-               {{#if isTalentsListPage}}mod-active{{/if}}">
+        {{#if isTalentPage}}mod-active{{/if}}
+        {{#if isTalentsListPage}}mod-active{{/if}}">
         Talents
       </a>
     </li>
     <li class="header__control-wrapper">
-      <button class="header__control header__sort-btn" value="branded">
-        Branded
-      </button>
+      {{#if isMainPage}}
+        <button class="header__control header__sort-btn" value="branded">
+          Branded
+        </button>
+      {{else}}
+        <a href="/?sort=branded" class="header__control header__sort-btn">
+          Branded
+        </a>
+      {{/if}}
     </li>
     <li class="header__control-wrapper">
-      <button class="header__control header__sort-btn" value="music">
-        Music video
-      </button>
+      {{#if isMainPage}}
+        <button class="header__control header__sort-btn" value="music">
+          Music video
+        </button>
+      {{else}}
+        <a href="/?sort=music" class="header__control header__sort-btn">
+          Music video
+        </a>
+      {{/if}}
     </li>
     <li class="header__control-wrapper">
-      <button class="header__control header__sort-btn" value="film">
-        Film
-      </button>
+      {{#if isMainPage}}
+        <button class="header__control header__sort-btn" value="film">
+          Film
+        </button>
+      {{else}}
+        <a href="/?sort=film" class="header__control header__sort-btn">
+          Film
+        </a>
+      {{/if}}
     </li>
     <li class="header__control-wrapper gl-sm-tablet-show">
       <a href="contacts-page.html" class="header__control {{#if isContactsPage}}mod-active{{/if}}">
