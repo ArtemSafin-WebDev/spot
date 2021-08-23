@@ -93,8 +93,10 @@ export default function commonCatalog(hostElem) {
     })
   }
 
-  if (window.location.href.split('?sort=')[1]) {
-    onSort(window.location.href.split('?sort=')[1]);
+  const querySort = window.location.href.split('?sort=')[1];
+
+  if (querySort) {
+    onSort(querySort);
   }
 
   cardsTitlesNumber.forEach((elem, i) => {
