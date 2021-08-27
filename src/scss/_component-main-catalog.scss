@@ -1,0 +1,165 @@
+.catalog__card-content-inst {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  padding: 5.4rem 6rem;
+
+  @include breakpoint(laptop) {
+    padding: 6rem 2rem;
+  }
+
+  @include breakpoint(mobile) {
+    padding: 2rem;
+  }
+}
+
+.catalog__card-content-inst-title {
+  font-weight: bold;
+  font-size: 2rem;
+  line-height: 2.8rem;
+  width: 50%;
+
+  @include breakpoint(small-mobile) {
+    font-size: 1.6rem;
+    line-height: 2rem;
+  }
+
+  @include breakpoint(supersmall-mobile) {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  }
+}
+
+.catalog__card-content-inst-value {
+  font-weight: bold;
+  font-size: 3.6rem;
+  line-height: 4.2rem;
+  padding-left: 9rem;
+  position: relative;
+
+  @include breakpoint(small-tablet) {
+    padding-left: 7.2rem
+  }
+
+  @include breakpoint(small-mobile) {
+    font-size: 1.6rem;
+    line-height: 2rem;
+    padding-left: 5.6rem;
+  }
+
+  &:before {
+    position: absolute;
+    content: '';
+    width: 7rem;
+    height: 7rem;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    background-image: url('../img/catalog/inst.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    @include breakpoint(small-tablet) {
+      width: 4.6rem;
+      height: 4.6rem;
+    }
+
+    @include breakpoint(small-mobile) {
+      width: 3.2rem;
+      height: 3.2rem;
+    }
+  }
+}
+
+.catalog__card-facebook-wrapper, .catalog__card-meduza-wrapper, .catalog__card-feather-wrapper {
+  padding: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include breakpoint(laptop) {
+    padding: 6rem 2rem;
+  }
+
+  @include breakpoint(small-tablet) {
+    padding: 2rem;
+  }
+
+  @include breakpoint(small-mobile) {
+    padding: 2rem;
+  }
+
+}
+
+.gl-catalog__item {
+  &:hover {
+    .catalog__card-solid-facebook {
+      height: 11rem;
+    }
+
+    .catalog__card-content-feather-image {
+      height: 14rem;
+    }
+
+    .catalog__card-content-meduza-caption {
+      color: #525151;
+    }
+  }
+}
+
+.catalog__card-solid-facebook {
+  height: 9rem;
+  transition: height 1s;
+
+  @include breakpoint(small-mobile) {
+    height: 7rem;
+  }
+}
+
+.catalog__card-meduza-wrapper {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.catalog__card-content-meduza-logo {
+  height: 2rem;
+
+  @include breakpoint(small-tablet) {
+    height: 1.6rem;
+  }
+
+  @include breakpoint(small-mobile) {
+    height: 1rem;
+  }
+}
+
+.catalog__card-content-meduza-caption {
+  font-size: 2.6rem;
+  line-height: 3.6rem;
+  transition: color 1s;
+
+  @include breakpoint(tablet) {
+    font-size: 2.2rem;
+    line-height: 3.2rem;
+  }
+
+  @include breakpoint(small-tablet) {
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+  }
+
+  @include breakpoint(small-mobile) {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+  }
+}
+
+.catalog__card-content-feather-image {
+  height: 12.2rem;
+  transition: height 1s;
+}

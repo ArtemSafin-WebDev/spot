@@ -1,0 +1,113 @@
+.gl-catalog {
+  @include breakpoint(mobile) {
+    margin-bottom: 1rem;
+  }
+}
+
+.gl-catalog__list {
+  margin-bottom: -2rem;
+
+  @include breakpoint(small-mobile) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.gl-catalog__item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  height: min-content;
+  transition: opacity 700ms;
+
+  &.mod-anim-hide {
+    opacity: 0;
+  }
+
+  &.mod-hide {
+    display: none;
+  }
+}
+
+.gl-catalog__link-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  color: var(--main-color);
+
+  &:hover {
+    text-decoration: initial;
+
+    .gl-catalog__card-content {
+      width: 120%;
+      height: 120%;
+    }
+  }
+}
+
+.gl-catalog__card-media-wrapper {
+  position: relative;
+  height: 100%;
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.gl-catalog__card-solid-grey {
+  background-color: #141414;
+  height: 100%;
+}
+
+.gl-catalog__card-solid-transparent {
+  background-color: transparent;
+  height: 100%;
+}
+
+.gl-catalog__card-content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: width 1s, height 1s;
+
+  &.mod-inst {
+    opacity: 0.2;
+  }
+}
+
+.wrapp {
+  width: 100%;
+  height: 100%;
+}
+
+.gl-catalog__card-video {
+  width: 100%;
+  height: 100%;
+}
+
+.gl-catalog__card-title-wrapper {
+  padding-top: 1.2rem;
+  display: flex;
+
+  &.no-content {
+    height: 1.6rem; // 1.6rem line-height обычного шрифта
+    box-sizing: content-box;
+  }
+}
+
+.gl-catalog__card-title-number {
+  margin-right: 1rem;
+}
+
+.gl-catalog__mark {
+  font-weight: bold;
+}
+
+.gl-catalog__card-title {
+  font-size: 1.8rem;
+  padding: 5rem 0;
+  font-weight: 400;
+}

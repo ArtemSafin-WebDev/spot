@@ -1,36 +1,65 @@
 <header class="header container" id="header-host">
-  <a href="/" class="header__logo-wrapper">
+  <a href="/spot/build" class="header__logo-wrapper">
     <img src="img/header/logo.svg" alt="logo" class="header__logo">
   </a>
 
-  <ul class="header__links-list">
-    <li class="header__link-wrapper">
-      <a href="" class="header__link">
+  <ul class="header__controls-list">
+    <li class="header__control-wrapper">
+      <a href="talents-list-page.html" class="header__control
+        {{#if isTalentPage}}mod-active{{/if}}
+        {{#if isTalentsListPage}}mod-active{{/if}}">
         Talents
       </a>
     </li>
-    <li class="header__link-wrapper">
-      <a href="" class="header__link">
-        Branded
-      </a>
+    <li class="header__control-wrapper">
+      {{#if isMainPage}}
+        <button class="header__control header__sort-btn" value="branded">
+          Branded
+        </button>
+      {{else}}
+        <a href="/spot/build/?sort=branded" class="header__control header__sort-btn">
+          Branded
+        </a>
+      {{/if}}
     </li>
-    <li class="header__link-wrapper">
-      <a href="" class="header__link">
-        Music video
-      </a>
+    <li class="header__control-wrapper">
+      {{#if isMainPage}}
+        <button class="header__control header__sort-btn" value="music">
+          Music video
+        </button>
+      {{else}}
+        <a href="/spot/build/?sort=music" class="header__control header__sort-btn">
+          Music video
+        </a>
+      {{/if}}
     </li>
-    <li class="header__link-wrapper">
-      <a href="" class="header__link">
-        Film
+    <li class="header__control-wrapper">
+      {{#if isMainPage}}
+        <button class="header__control header__sort-btn" value="film">
+          Film
+        </button>
+      {{else}}
+        <a href="/spot/build/?sort=film" class="header__control header__sort-btn">
+          Film
+        </a>
+      {{/if}}
+    </li>
+    <li class="header__control-wrapper gl-sm-tablet-show">
+      <a href="contacts-page.html" class="header__control {{#if isContactsPage}}mod-active{{/if}}">
+        Contacts
       </a>
     </li>
   </ul>
+
+  <div class="header__burger-wrapper mod-show">
+    <button class="header__burger gl-sm-tablet-show"></button>
+  </div>
 
   <div class="header__contacts-wrapper gl-sm-tablet-hide">
     <a href="tel:+79061234727" class="header__contacts-tel">
       +7 906 1234 727
     </a>
-    <a href="/" class="header__contacts-link">
+    <a href="contacts-page.html" class="header__contacts-link">
       Contacts
     </a>
   </div>

@@ -7,19 +7,34 @@ import customSelects from './customSelects';
 import phoneMask from './phoneMask';
 import onlyNumeric from './onlyNumeric';
 import fileUpload from './fileUpload';
+import componentTalentsList from './componentTalentsList';
+import componentMainCatalog from './componentMainCatalog';
+import componentTalents from './componentTalents';
+import componentHeader from './componentHeader';
+import test from './test';
+import componentVideoWorks from './componentVideoWorks';
+import componentVideoFilms from './componentVideoFilms';
 
-document.addEventListener('DOMContentLoaded', function() {
-    polyfills();
-    detectTouch();
-    setScrollbarWidth();
-    validation();
-    customSelects();
-    phoneMask();
-    onlyNumeric();
-    fileUpload();
+document.addEventListener('DOMContentLoaded', function () {
+  polyfills();
+  detectTouch();
+  setScrollbarWidth();
+  validation();
+  customSelects();
+  phoneMask();
+  onlyNumeric();
+  fileUpload();
+  test();
+
+  componentHeader();
+  componentTalentsList();
+  componentMainCatalog();
+  componentTalents();
+  componentVideoWorks();
+  componentVideoFilms();
 });
 
-window.addEventListener('load', function() {
-    document.body.classList.add('loaded');
-    setTimeout(() => document.body.classList.add('animatable'), 300)
+window.addEventListener('load', function () {
+  document.body.classList.add('loaded');
+  setTimeout(() => document.body.classList.add('animatable'), 300)
 })

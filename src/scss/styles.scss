@@ -7,7 +7,15 @@
 @import 'reset';
 @import 'sizes';
 @import 'vendor';
+@import 'global';
+
+@import 'gl-catalog';
 
 @import 'component-header';
 @import 'component-footer';
-@import 'component-catalog';
+@import 'component-main-catalog';
+@import 'component-talents-list';
+@import 'component-talent';
+@import 'component-contacts';
+@import 'components-video-works';
+@import 'component-video-films';

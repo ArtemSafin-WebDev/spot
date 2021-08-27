@@ -1,0 +1,20 @@
+.video-films {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include breakpoint(small-tablet) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.video-films__item-name {
+  & + & {
+    margin-top: 20px;
+  }
+}
+
+.video-films__description-photo {
+  height: 485px;
+  object-fit: contain;
+}

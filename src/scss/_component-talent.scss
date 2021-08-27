@@ -1,0 +1,9 @@
+.talent {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+
+  @include breakpoint(tablet) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}

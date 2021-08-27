@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <meta name="format-detection" content="telephone=no">
+  <script src="assets/js/ie11CustomProperties.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="assets/js/backend.js"></script>
+  <link rel="stylesheet" href="css/styles.min.css"/>
+  <link rel="icon" type="image/x-icon" href="img/header/logo.svg">
+  <title>
+    
+  </title>
+</head>
+
+<body class="no-touch">
+
+<div class="sprite" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
+  <?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol fill="none" viewBox="0 0 91 19" id="media-logo" xmlns="http://www.w3.org/2000/svg"><path d="M9.886 8.259v9.373L14.21 19V8.259h2.781v9.373L21.29 19l2.806-3.8h-2.78V5.953l-4.3-1.494-2.806 3.293V5.953L9.912 4.46 7.105 7.752V5.953L2.807 4.46 0 8.259h2.781v9.373L7.105 19V8.259h2.781zM56.31 15.2V5.827l-4.323-1.368v13.046L56.284 19l2.807-3.293v1.798L63.389 19l2.807-3.8h-2.782V5.827l-4.323-1.368V15.2h-2.782zm31.91-8.867L83.996 4.46 78.99 6.84l5.006 1.875-6.877 3.318v5.422L81.442 19l2.554-3.319v1.824L88.32 19 91 15.175h-2.781V6.333zM29.684 19l4.956-1.976-4.956-1.85v-2.66l6.498-3.14-3.691-4.915-7.13 3.42v9.272L29.684 19zm46.5-4.104l-5.26-1.596 4.93-6.283-6.17-2.558-3.236 4.104 5.285 1.621-5.032 6.257L72.947 19l3.236-4.104zm5.258.304v-3.75l2.554-1.215V15.2h-2.554zM29.684 6.916l2.175 2.99-2.175 1.038V6.916zm7.611 10.235L41.62 19l7.105-2.837V4.94L37.295 0v4.375L44.4 7.187v9.001l-2.781-1.013V7.27l-4.324 1.368v8.512z" fill="#fff"/></symbol></svg></div>
+
+<div class="layout-wrapper">
+  <header class="header container" id="header-host">
+    <a href="/spot/build" class="header__logo-wrapper">
+      <img src="img/header/logo.svg" alt="logo" class="header__logo">
+    </a>
+  
+    <ul class="header__controls-list">
+      <li class="header__control-wrapper">
+        <a href="talents-list-page.html" class="header__control
+          
+          ">
+          Talents
+        </a>
+      </li>
+      <li class="header__control-wrapper">
+          <a href="/spot/build/?sort=branded" class="header__control header__sort-btn">
+            Branded
+          </a>
+      </li>
+      <li class="header__control-wrapper">
+          <a href="/spot/build/?sort=music" class="header__control header__sort-btn">
+            Music video
+          </a>
+      </li>
+      <li class="header__control-wrapper">
+          <a href="/spot/build/?sort=film" class="header__control header__sort-btn">
+            Film
+          </a>
+      </li>
+      <li class="header__control-wrapper gl-sm-tablet-show">
+        <a href="contacts-page.html" class="header__control ">
+          Contacts
+        </a>
+      </li>
+    </ul>
+  
+    <div class="header__burger-wrapper mod-show">
+      <button class="header__burger gl-sm-tablet-show"></button>
+    </div>
+  
+    <div class="header__contacts-wrapper gl-sm-tablet-hide">
+      <a href="tel:+79061234727" class="header__contacts-tel">
+        +7 906 1234 727
+      </a>
+      <a href="contacts-page.html" class="header__contacts-link">
+        Contacts
+      </a>
+    </div>
+  </header>
+
+  <main class="layout-content">
+    
+    <section class="gl-catalog container" id="main-catalog-host-4">
+      <ul class="gl-catalog__list">
+
+        <li class="gl-catalog__item gl-catalog__item--video-medium  gl-catalog-film">
+          <a href="talent-page.html" class="gl-catalog__link-wrapper">
+            <div class="gl-catalog__card-media-wrapper gl-catalog__content">
+              <!-- fixme vimeo-->
+              <div data-plyr-provider="vimeo"
+                   data-plyr-embed-id="https://player.vimeo.com/video/584985260?h=4cd90bc17c"
+                   class="gl-catalog__card-video">
+              </div>
+              <!-- fixme vimeo-->
+            </div>
+            <h3 class="gl-catalog__card-title-wrapper">
+              <span class="gl-catalog__card-title-number"></span>
+              <span class="gl-catalog__card-title-content">
+            <b class="gl-catalog__mark">Unlimint</b> Ready for tomorrow
+          </span>
+            </h3>
+          </a>
+        </li>
+        <li class="gl-catalog__item gl-catalog__item--video-small gl-catalog-branded">
+          <a href="talent-page.html" class="gl-catalog__link-wrapper">
+            <div class="gl-catalog__card-media-wrapper gl-catalog__content">
+              <!-- fixme vimeo-->
+              <div data-plyr-provider="vimeo"
+                   data-plyr-embed-id="https://vimeo.com/584079874"
+                   class="gl-catalog__card-video">
+              </div>
+              <!-- fixme vimeo-->
+            </div>
+            <h3 class="gl-catalog__card-title-wrapper">
+              <span class="gl-catalog__card-title-number"></span>
+              <span class="gl-catalog__card-title-content">
+            <b class="gl-catalog__mark">Unlimint</b> Ready for tomorrow
+          </span>
+            </h3>
+          </a>
+        </li>
+        <li class="gl-catalog__item gl-catalog__item--video-small gl-catalog-branded">
+          <a href="talent-page.html" class="gl-catalog__link-wrapper">
+            <div class="gl-catalog__card-media-wrapper gl-catalog__content">
+              <!-- fixme vimeo-->
+              <div data-plyr-provider="vimeo"
+                   data-plyr-embed-id="https://vimeo.com/584079874"
+                   class="gl-catalog__card-video">
+              </div>
+              <!-- fixme vimeo-->
+            </div>
+            <h3 class="gl-catalog__card-title-wrapper">
+              <span class="gl-catalog__card-title-number"></span>
+              <span class="gl-catalog__card-title-content">
+            <b class="gl-catalog__mark">Unlimint</b> Ready for tomorrow
+          </span>
+            </h3>
+          </a>
+        </li>
+        <li class="gl-catalog__item gl-catalog__item--poster-square">
+          <a href="talent-page.html" class="gl-catalog__link-wrapper catalog__link-wrapper">
+            <div class="gl-catalog__card-solid-grey catalog__card-facebook-wrapper gl-catalog__content">
+              <img src="img/catalog/facebook.svg" alt="facebook" class="catalog__card-solid-facebook">
+            </div>
+            <h3 class="gl-catalog__card-title-wrapper">
+              Our Facebook
+            </h3>
+          </a>
+        </li>
+        <li class="gl-catalog__item gl-catalog__item--poster-square">
+          <a href="talent-page.html" class="gl-catalog__link-wrapper">
+            <div class="gl-catalog__card-media-wrapper gl-catalog__content">
+              <img src="img/common/image-13.jpg" alt="" class="gl-catalog__card-content mod-image">
+            </div>
+            <h3 class="gl-catalog__card-title-wrapper">
+              <span class="gl-catalog__card-title-number"></span>
+              <span class="gl-catalog__card-title-content">
+            <b class="gl-catalog__mark">Unlimint</b> Ready for tomorrow
+          </span>
+            </h3>
+          </a>
+        </li>
+        <li class="gl-catalog__item gl-catalog__item--video-small gl-catalog-branded">
+          <a href="talent-page.html" class="gl-catalog__link-wrapper">
+            <div class="gl-catalog__card-media-wrapper gl-catalog__content">
+              <!-- fixme vimeo-->
+              <div data-plyr-provider="vimeo"
+                   data-plyr-embed-id="https://vimeo.com/584079874"
+                   class="gl-catalog__card-video">
+              </div>
+              <!-- fixme vimeo-->
+            </div>
+            <h3 class="gl-catalog__card-title-wrapper">
+              <span class="gl-catalog__card-title-number"></span>
+              <span class="gl-catalog__card-title-content">
+            <b class="gl-catalog__mark">Unlimint</b> Ready for tomorrow
+          </span>
+            </h3>
+          </a>
+        </li>
+        <li class="gl-catalog__item gl-catalog__item--video-small">
+          <a href="talent-page.html" class="gl-catalog__link-wrapper">
+            <div class="gl-catalog__card-solid-transparent catalog__card-feather-wrapper gl-catalog__content">
+              <img src="img/catalog/feater.svg" alt="feater" class="catalog__card-content-feather-image">
+            </div>
+            <div class="gl-catalog__card-title-wrapper no-content"></div>
+          </a>
+        </li>
+        <li class="gl-catalog__item gl-catalog__item--video-small gl-catalog-film">
+          <a href="talent-page.html" class="gl-catalog__link-wrapper">
+            <div class="gl-catalog__card-media-wrapper gl-catalog__content">
+
+              <!-- fixme vimeo-->
+              <div data-plyr-provider="vimeo"
+                   data-plyr-embed-id="https://player.vimeo.com/video/584985260?h=4cd90bc17c"
+                   class="gl-catalog__card-video">
+              </div>
+              <!-- fixme vimeo-->
+            </div>
+            <h3 class="gl-catalog__card-title-wrapper">
+              <span class="gl-catalog__card-title-number"></span>
+              <span class="gl-catalog__card-title-content">
+            <b class="gl-catalog__mark">Unlimint</b> Ready for tomorrow
+          </span>
+            </h3>
+          </a>
+        </li>
+        <li class="gl-catalog__item gl-catalog__item--poster-square">
+          <a href="talent-page.html" class="gl-catalog__link-wrapper">
+            <div class="gl-catalog__card-solid-grey catalog__card-meduza-wrapper gl-catalog__content">
+              <img src="img/catalog/meduza-logo.svg" alt="meduza-logo" class="catalog__card-content-meduza-logo">
+              <div class="catalog__card-content-meduza-caption">
+                Best Moscow based production company
+              </div>
+            </div>
+            <h3 class="gl-catalog__card-title-wrapper">
+              Press about us
+            </h3>
+          </a>
+        </li>
+        <li class="gl-catalog__item gl-catalog__item--video-large gl-catalog-music">
+          <a href="talent-page.html" class="gl-catalog__link-wrapper">
+            <div class="gl-catalog__card-media-wrapper gl-catalog__content">
+              <!-- fixme vimeo-->
+              <div data-plyr-provider="vimeo"
+                   data-plyr-embed-id="https://vimeo.com/31082430"
+                   class="gl-catalog__card-video">
+              </div>
+              <!-- fixme vimeo-->
+            </div>
+            <h3 class="gl-catalog__card-title-wrapper">
+              <span class="gl-catalog__card-title-number"></span>
+              <span class="gl-catalog__card-title-content">
+            <b class="gl-catalog__mark">Unlimint</b> Ready for tomorrow
+          </span>
+            </h3>
+          </a>
+        </li>
+        <li class="gl-catalog__item gl-catalog__item--video-small gl-catalog-music">
+          <a href="talent-page.html" class="gl-catalog__link-wrapper">
+            <div class="gl-catalog__card-media-wrapper gl-catalog__content">
+              <!-- fixme vimeo-->
+              <div data-plyr-provider="vimeo"
+                   data-plyr-embed-id="https://vimeo.com/31082430"
+                   class="gl-catalog__card-video">
+              </div>
+              <!-- fixme vimeo-->
+            </div>
+            <h3 class="gl-catalog__card-title-wrapper">
+              <span class="gl-catalog__card-title-number"></span>
+              <span class="gl-catalog__card-title-content">
+            <b class="gl-catalog__mark">Unlimint</b> Ready for tomorrow
+          </span>
+            </h3>
+          </a>
+        </li>
+        <li class="gl-catalog__item gl-catalog__item--video-small gl-catalog-branded">
+          <a href="talent-page.html" class="gl-catalog__link-wrapper">
+            <div class="gl-catalog__card-media-wrapper gl-catalog__content">
+              <!-- fixme vimeo-->
+              <div data-plyr-provider="vimeo"
+                   data-plyr-embed-id="https://vimeo.com/584079874"
+                   class="gl-catalog__card-video">
+              </div>
+              <!-- fixme vimeo-->
+            </div>
+            <h3 class="gl-catalog__card-title-wrapper">
+              <span class="gl-catalog__card-title-number"></span>
+              <span class="gl-catalog__card-title-content">
+            <b class="gl-catalog__mark">Unlimint</b> Ready for tomorrow
+          </span>
+            </h3>
+          </a>
+        </li>
+        <li class="gl-catalog__item gl-catalog__item--video-medium gl-catalog-film">
+          <a href="talent-page.html" class="gl-catalog__link-wrapper">
+            <div class="gl-catalog__card-media-wrapper gl-catalog__content">
+
+              <!-- fixme vimeo-->
+              <div data-plyr-provider="vimeo"
+                   data-plyr-embed-id="https://player.vimeo.com/video/584985260?h=4cd90bc17c"
+                   class="gl-catalog__card-video">
+              </div>
+              <!-- fixme vimeo-->
+            </div>
+            <h3 class="gl-catalog__card-title-wrapper">
+              <span class="gl-catalog__card-title-number"></span>
+              <span class="gl-catalog__card-title-content">
+            <b class="gl-catalog__mark">Unlimint</b> Ready for tomorrow
+          </span>
+            </h3>
+          </a>
+        </li>
+        <li class="gl-catalog__item gl-catalog__item--poster-vertical">
+          <a href="talent-page.html" class="gl-catalog__link-wrapper">
+            <div class="gl-catalog__card-media-wrapper gl-catalog__content">
+              <img src="img/common/image-02.jpg" alt="" class="gl-catalog__card-content mod-image">
+            </div>
+            <h3 class="gl-catalog__card-title-wrapper">
+              <span class="gl-catalog__card-title-number"></span>
+              <span class="gl-catalog__card-title-content">
+            <b class="gl-catalog__mark">Unlimint</b> Ready for tomorrow
+          </span>
+            </h3>
+          </a>
+        </li>
+        <li class="gl-catalog__item gl-catalog__item--video-small gl-catalog-music">
+          <a href="talent-page.html" class="gl-catalog__link-wrapper">
+            <div class="gl-catalog__card-media-wrapper gl-catalog__content">
+              <!-- fixme vimeo-->
+              <div data-plyr-provider="vimeo"
+                   data-plyr-embed-id="https://vimeo.com/31082430"
+                   class="gl-catalog__card-video">
+              </div>
+              <!-- fixme vimeo-->
+            </div>
+            <h3 class="gl-catalog__card-title-wrapper">
+              <span class="gl-catalog__card-title-number"></span>
+              <span class="gl-catalog__card-title-content">
+            <b class="gl-catalog__mark">Unlimint</b> Ready for tomorrow
+          </span>
+            </h3>
+          </a>
+        </li>
+        <li class="gl-catalog__item gl-catalog__item--poster-square">
+          <a href="talent-page.html" class="gl-catalog__link-wrapper">
+            <div class="gl-catalog__card-media-wrapper gl-catalog__content">
+              <img src="img/catalog/image-inst.jpg" alt="" class="gl-catalog__card-content mod-inst">
+              <div class="catalog__card-content-inst">
+                <div class="catalog__card-content-inst-title">
+                  Follow Us on Instagram
+                </div>
+                <div class="catalog__card-content-inst-value">
+                  2829
+                </div>
+              </div>
+            </div>
+            <div class="gl-catalog__card-title-wrapper no-content"></div>
+          </a>
+        </li>
+      </ul>
+    </section>
+
+
+  </main>
+
+  <footer class="footer container" id="footer-host">
+    <ul class="footer__social-list">
+      <li class="footer__social-link-wrapper">
+        <a href="video-works-page.html" class="footer__social-link" target="_blank">
+          Vimeo
+        </a>
+      </li>
+      <li class="footer__social-link-wrapper">
+        <a href="/" class="footer__social-link" target="_blank">
+          Instagram
+        </a>
+      </li>
+      <li class="footer__social-link-wrapper">
+        <a href="/" class="footer__social-link" target="_blank">
+          Facebook
+        </a>
+      </li>
+    </ul>
+  
+    <a href="tel:+79061234727" class="footer__tel">
+      +7 906 1234 727
+    </a>
+  
+    <div class="footer__company-wrapper">
+      <a href="https://markweber.ru/" class="footer__company" target="_blank">
+        Design and Development
+      </a>
+    </div>
+  </footer>
+</div>
+
+</body>
+</html>
