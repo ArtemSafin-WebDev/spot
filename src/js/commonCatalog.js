@@ -85,6 +85,7 @@ export default function commonCatalog(hostElem) {
             elem.classList.add('mod-hide');
             onUpdateCardsSort();
             mixDumElems();
+            msnry.layout();
           }, 700)
         }
       )

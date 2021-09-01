@@ -3,53 +3,73 @@
     <img src="img/header/logo.svg" alt="logo" class="header__logo">
   </a>
 
-  <ul class="header__controls-list">
-    <li class="header__control-wrapper">
-      <a href="talents-list-page.html" class="header__control
+  <div class="header__menu-wrapper">
+    <ul class="header__controls-list">
+      <li class="header__control-wrapper">
+        <a href="talents-list-page.html" class="header__control
         {{#if isTalentPage}}mod-active{{/if}}
-        {{#if isTalentsListPage}}mod-active{{/if}}">
-        Talents
-      </a>
-    </li>
-    <li class="header__control-wrapper">
-      {{#if isMainPage}}
-        <button class="header__control header__sort-btn" value="branded">
-          Branded
-        </button>
-      {{else}}
-        <a href="/?sort=branded" class="header__control header__sort-btn">
-          Branded
+          {{#if isTalentsListPage}}mod-active{{/if}}">
+          Talents
         </a>
-      {{/if}}
-    </li>
-    <li class="header__control-wrapper">
-      {{#if isMainPage}}
-        <button class="header__control header__sort-btn" value="music">
-          Music video
-        </button>
-      {{else}}
-        <a href="/?sort=music" class="header__control header__sort-btn">
-          Music video
+      </li>
+      <li class="header__control-wrapper">
+        {{#if isMainPage}}
+          <button class="header__control header__sort-btn" value="branded">
+            Branded
+          </button>
+        {{else}}
+          <a href="/?sort=branded" class="header__control header__sort-btn">
+            Branded
+          </a>
+        {{/if}}
+      </li>
+      <li class="header__control-wrapper">
+        {{#if isMainPage}}
+          <button class="header__control header__sort-btn" value="music">
+            Music video
+          </button>
+        {{else}}
+          <a href="/?sort=music" class="header__control header__sort-btn">
+            Music video
+          </a>
+        {{/if}}
+      </li>
+      <li class="header__control-wrapper">
+        {{#if isMainPage}}
+          <button class="header__control header__sort-btn" value="film">
+            Film
+          </button>
+        {{else}}
+          <a href="/?sort=film" class="header__control header__sort-btn">
+            Film
+          </a>
+        {{/if}}
+      </li>
+      <li class="header__control-wrapper gl-sm-tablet-show">
+        <a href="contacts-page.html" class="header__control {{#if isContactsPage}}mod-active{{/if}}">
+          Contacts
         </a>
-      {{/if}}
-    </li>
-    <li class="header__control-wrapper">
-      {{#if isMainPage}}
-        <button class="header__control header__sort-btn" value="film">
-          Film
-        </button>
-      {{else}}
-        <a href="/?sort=film" class="header__control header__sort-btn">
-          Film
+      </li>
+    </ul>
+
+    <ul class="header__social-list gl-xx-mobile-hide">
+      <li class="header__social-link-wrapper">
+        <a href="video-works-page.html" class="header__social-link" target="_blank">
+          Vimeo
         </a>
-      {{/if}}
-    </li>
-    <li class="header__control-wrapper gl-sm-tablet-show">
-      <a href="contacts-page.html" class="header__control {{#if isContactsPage}}mod-active{{/if}}">
-        Contacts
-      </a>
-    </li>
-  </ul>
+      </li>
+      <li class="header__social-link-wrapper">
+        <a href="/" class="header__social-link" target="_blank">
+          Instagram
+        </a>
+      </li>
+      <li class="header__social-link-wrapper">
+        <a href="/" class="header__social-link" target="_blank">
+          Facebook
+        </a>
+      </li>
+    </ul>
+  </div>
 
   <div class="header__burger-wrapper mod-show">
     <button class="header__burger gl-sm-tablet-show"></button>

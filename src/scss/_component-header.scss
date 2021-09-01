@@ -19,7 +19,10 @@
   height: 3.6rem;
 }
 
-.header__controls-list {
+.header__menu-wrapper {
+  display: flex;
+  justify-content: space-between;
+
   @include breakpoint(small-tablet) {
     max-height: 0;
     overflow: hidden;
@@ -42,6 +45,7 @@
   position: relative;
   transition: opacity 300ms;
   opacity: 0.4;
+  white-space: nowrap;
 
   @include breakpoint(tablet) {
     font-size: 2.8rem;
@@ -86,6 +90,28 @@
     }
 
   }
+}
+
+.header__social-list {
+  margin-top: 1rem;
+  margin-left: 3rem;
+}
+
+.header__social-link-wrapper {
+  & + & {
+    margin-top: 2rem;
+  }
+}
+
+.header__social-link {
+  padding: 1rem;
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+}
+
+.header__tel {
+  padding: 1rem;
+  margin: -1rem;
 }
 
 .header__contacts-wrapper {
