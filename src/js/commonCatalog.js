@@ -60,7 +60,7 @@ export default function commonCatalog(hostElem) {
 
     const currentQueryParamSort = window.location.href.split('?sort=')[1];
     if (currentQueryParamSort !== nameQueryParam) {
-      window.history.pushState({}, '', `/spot/?sort=${ nameQueryParam }`);
+      window.history.pushState({}, '', `/?sort=${ nameQueryParam }`);
     }
 
     sortBtns.forEach((btn, index) => {
@@ -257,7 +257,7 @@ export default function commonCatalog(hostElem) {
     }
   }
 
-  sortBtns.forEach((btn, i) => {
+  sortBtns.forEach(btn => {
     btn.onclick = () => {
       onSort(btn.value);
     }
