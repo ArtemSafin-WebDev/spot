@@ -65,7 +65,7 @@
     background-position: center;
     background-repeat: no-repeat;
     clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
-    transition: clip-path 400ms ease-in;
+    transition: clip-path 150ms ease-in;
   }
 
   &:hover, &.mod-active {
@@ -74,7 +74,7 @@
 
     &:before {
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-      transition: clip-path 500ms ease-out;
+      transition: clip-path 250ms ease-out;
     }
   }
 

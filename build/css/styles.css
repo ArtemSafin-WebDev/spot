@@ -5582,20 +5582,20 @@ a.plyr__control {
     background-repeat: no-repeat;
     -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
             clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
-    -webkit-transition: -webkit-clip-path 400ms ease-in;
-    transition: -webkit-clip-path 400ms ease-in;
-    transition: clip-path 400ms ease-in;
-    transition: clip-path 400ms ease-in, -webkit-clip-path 400ms ease-in; }
+    -webkit-transition: -webkit-clip-path 150ms ease-in;
+    transition: -webkit-clip-path 150ms ease-in;
+    transition: clip-path 150ms ease-in;
+    transition: clip-path 150ms ease-in, -webkit-clip-path 150ms ease-in; }
   .header__control:hover, .header__control.mod-active {
     text-decoration: initial;
     opacity: 1; }
     .header__control:hover:before, .header__control.mod-active:before {
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
               clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-      -webkit-transition: -webkit-clip-path 500ms ease-out;
-      transition: -webkit-clip-path 500ms ease-out;
-      transition: clip-path 500ms ease-out;
-      transition: clip-path 500ms ease-out, -webkit-clip-path 500ms ease-out; }
+      -webkit-transition: -webkit-clip-path 250ms ease-out;
+      transition: -webkit-clip-path 250ms ease-out;
+      transition: clip-path 250ms ease-out;
+      transition: clip-path 250ms ease-out, -webkit-clip-path 250ms ease-out; }
   .header__control.no-hover {
     opacity: 0.4; }
     .header__control.no-hover:before {
