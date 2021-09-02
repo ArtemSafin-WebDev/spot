@@ -61,7 +61,7 @@ export default function commonCatalog(hostElem) {
 
     const currentQueryParamSort = window.location.href.split('?sort=')[1];
     if (currentQueryParamSort !== nameQueryParam) {
-      window.history.pushState({}, '', `/?sort=${ nameQueryParam }`);
+      window.history.pushState({}, '', `/spot/build/?sort=${ nameQueryParam }`);
     }
 
     sortBtns.forEach((btn, index) => {
