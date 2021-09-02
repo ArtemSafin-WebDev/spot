@@ -12,6 +12,7 @@ export default function commonCatalog(hostElem) {
   const cardsTitlesNumber = hostElem.querySelectorAll('.gl-catalog__card-title-number');
 
   const sortBtns = document.querySelectorAll('.header__sort-btn');
+  const linkHeader = document.querySelector('.header__control.mod-link');
 
   const brandedCards = hostElem.querySelectorAll('.gl-catalog-branded');
   const musicCards = hostElem.querySelectorAll('.gl-catalog-music');
@@ -64,10 +65,13 @@ export default function commonCatalog(hostElem) {
     }
 
     sortBtns.forEach((btn, index) => {
+      linkHeader.classList.add('mod-no-active');
       if (index === indexBtnActive) {
         btn.classList.add('mod-active');
+        btn.classList.remove('mod-no-active');
       } else {
         btn.classList.remove('mod-active');
+        btn.classList.add('mod-no-active');
       }
     })
 

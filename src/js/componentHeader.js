@@ -7,6 +7,7 @@ export default function componentHeader() {
   if (hostElem) {
     const linksElems = hostElem.querySelectorAll('.header__control');
     const btnBurger = hostElem.querySelector('.header__burger-wrapper');
+    const btnClose = hostElem.querySelector('.header__close-btn');
     const menuElem = hostElem.querySelector('.header__controls-list');
     const menuWrapper = hostElem.querySelector('.header__menu-wrapper');
 
@@ -16,6 +17,7 @@ export default function componentHeader() {
       const onOpenMenu = () => {
         menuWrapper.classList.add('mod-show');
         btnBurger.classList.remove('mod-show');
+        btnClose.classList.add('mod-show');
         isOpenMenu = true;
       }
 
@@ -23,6 +25,7 @@ export default function componentHeader() {
         menuWrapper.classList.remove('mod-show');
         setTimeout(() => {
           btnBurger.classList.add('mod-show');
+          btnClose.classList.remove('mod-show');
         }, 1000)
         isOpenMenu = false;
       }

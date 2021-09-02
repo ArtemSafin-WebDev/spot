@@ -5546,7 +5546,11 @@ a.plyr__control {
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
-          justify-content: space-between; }
+          justify-content: space-between;
+  margin-right: -2rem; }
+  @media only screen and (max-width: 1024px) {
+    .header__menu-wrapper {
+      margin-right: 0; } }
   @media only screen and (max-width: 768px) {
     .header__menu-wrapper {
       max-height: 0;
@@ -5566,7 +5570,7 @@ a.plyr__control {
   position: relative;
   -webkit-transition: opacity 300ms;
   transition: opacity 300ms;
-  opacity: 0.4;
+  opacity: 1;
   white-space: nowrap; }
   @media only screen and (max-width: 1024px) {
     .header__control {
@@ -5603,9 +5607,9 @@ a.plyr__control {
       transition: -webkit-clip-path 250ms ease-out;
       transition: clip-path 250ms ease-out;
       transition: clip-path 250ms ease-out, -webkit-clip-path 250ms ease-out; }
-  .header__control.no-hover {
+  .header__control.no-hover, .header__control.mod-no-active {
     opacity: 0.4; }
-    .header__control.no-hover:before {
+    .header__control.no-hover:before, .header__control.mod-no-active:before {
       -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
               clip-path: polygon(0 0, 0 0, 0 100%, 0 100%); }
 
@@ -5663,12 +5667,29 @@ a.plyr__control {
       display: -ms-flexbox;
       display: flex; } }
 
-.header__burger {
+.header__close-btn, .header__burger {
   width: 40px;
   height: 40px;
-  position: relative;
   margin-top: -15px;
   margin-right: -5px; }
+
+.header__close-btn {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: -5px;
+  margin-right: -10px;
+  display: none; }
+  .header__close-btn.mod-show {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+
+.header__burger {
+  position: relative; }
   .header__burger:after, .header__burger:before {
     position: absolute;
     content: '';
@@ -5682,6 +5703,10 @@ a.plyr__control {
   .header__burger:before {
     width: 20px;
     bottom: 15px; }
+
+.header__close-icon {
+  height: 20px;
+  width: 20px; }
 
 .footer {
   display: grid;

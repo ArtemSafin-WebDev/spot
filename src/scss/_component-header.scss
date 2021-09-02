@@ -22,6 +22,11 @@
 .header__menu-wrapper {
   display: flex;
   justify-content: space-between;
+  margin-right: -2rem;
+
+  @include breakpoint(tablet) {
+    margin-right: 0;
+  }
 
   @include breakpoint(small-tablet) {
     max-height: 0;
@@ -44,7 +49,7 @@
   line-height: 4.2rem;
   position: relative;
   transition: opacity 300ms;
-  opacity: 0.4;
+  opacity: 1;
   white-space: nowrap;
 
   @include breakpoint(tablet) {
@@ -82,13 +87,12 @@
     }
   }
 
-  &.no-hover {
+  &.no-hover, &.mod-no-active {
     opacity: 0.4;
 
     &:before {
       clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
     }
-
   }
 }
 
@@ -148,12 +152,27 @@
   }
 }
 
-.header__burger {
+.header__close-btn, .header__burger {
   width: 40px;
   height: 40px;
-  position: relative;
   margin-top: -15px;
   margin-right: -5px;
+}
+
+.header__close-btn {
+  align-items: center;
+  justify-content: center;
+  margin-top: -5px;
+  margin-right: -10px;
+  display: none;
+
+  &.mod-show {
+    display: flex;
+  }
+}
+
+.header__burger {
+  position: relative;
 
   &:after, &:before {
     position: absolute;
@@ -173,4 +192,9 @@
     width: 20px;
     bottom: 15px;
   }
+}
+
+.header__close-icon {
+  height: 20px;
+  width: 20px;
 }
