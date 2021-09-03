@@ -22,11 +22,6 @@
 .header__menu-wrapper {
   display: flex;
   justify-content: space-between;
-  margin-right: -2rem;
-
-  @include breakpoint(tablet) {
-    margin-right: 0;
-  }
 
   @include breakpoint(small-tablet) {
     max-height: 0;
@@ -96,9 +91,13 @@
   }
 }
 
+.header___left-block {
+  display: flex;
+  justify-content: space-between;
+}
+
 .header__social-list {
   margin-top: 1rem;
-  margin-left: 3rem;
 }
 
 .header__social-link-wrapper {

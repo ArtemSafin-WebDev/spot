@@ -52,23 +52,9 @@
       </li>
     </ul>
 
-    <ul class="header__social-list gl-xx-mobile-hide">
-      <li class="header__social-link-wrapper">
-        <a href="video-works-page.html" class="header__social-link" target="_blank">
-          Vimeo
-        </a>
-      </li>
-      <li class="header__social-link-wrapper">
-        <a href="/" class="header__social-link" target="_blank">
-          Instagram
-        </a>
-      </li>
-      <li class="header__social-link-wrapper">
-        <a href="/" class="header__social-link" target="_blank">
-          Facebook
-        </a>
-      </li>
-    </ul>
+    <div class="gl-sm-tablet-show">
+      {{> cmt-social-list }}
+    </div>
   </div>
 
   <div class="header__burger-wrapper mod-show">
@@ -79,12 +65,17 @@
     <img src="img/header/close.svg" alt="" class="header__close-icon">
   </button>
 
-  <div class="header__contacts-wrapper gl-sm-tablet-hide">
-    <a href="tel:+79061234727" class="header__contacts-tel">
-      +7 906 1234 727
-    </a>
-    <a href="contacts-page.html" class="header__contacts-link">
-      Contacts
-    </a>
+  <div class="header___left-block gl-sm-tablet-hide">
+    <div class="gl-sm-tablet-hide">
+      {{> cmt-social-list }}
+    </div>
+    <div class="header__contacts-wrapper">
+      <a href="tel:+79061234727" class="header__contacts-tel">
+        +7 906 1234 727
+      </a>
+      <a href="contacts-page.html" class="header__contacts-link">
+        Contacts
+      </a>
+    </div>
   </div>
 </header>
