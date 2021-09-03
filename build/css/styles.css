@@ -5522,6 +5522,9 @@ a.plyr__control {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   margin-top: 1.8rem;
   margin-bottom: 1rem; }
+  @media only screen and (max-width: 1024px) {
+    .header {
+      grid-template-columns: 1fr 2fr 3fr; } }
   @media only screen and (max-width: 768px) {
     .header {
       display: -webkit-box;

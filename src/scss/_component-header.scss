@@ -4,6 +4,10 @@
   margin-top: 1.8rem;
   margin-bottom: 1rem;
 
+  @include breakpoint(tablet) {
+    grid-template-columns: 1fr 2fr 3fr;
+  }
+
   @include breakpoint(small-tablet) {
     display: flex;
     justify-content: space-between;
