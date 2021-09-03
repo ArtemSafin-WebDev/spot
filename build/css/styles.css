@@ -5556,6 +5556,12 @@ a.plyr__control {
   .header__menu-wrapper.mod-show {
     max-height: 18rem; }
 
+.header__controls-list {
+  margin-right: 2rem; }
+  @media only screen and (max-width: 426px) {
+    .header__controls-list {
+      margin-right: 0; } }
+
 .header__control-wrapper {
   width: 100%;
   overflow: hidden; }
@@ -5660,38 +5666,17 @@ a.plyr__control {
   display: block; }
 
 .header__burger-wrapper {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: none; }
-  @media only screen and (max-width: 768px) {
-    .header__burger-wrapper.mod-show {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex; } }
-
-.header__close-btn, .header__burger {
-  width: 40px;
-  height: 40px;
-  margin-top: -15px;
-  margin-right: -5px; }
-
-.header__close-btn {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: -5px;
-  margin-right: -10px;
-  display: none; }
-  .header__close-btn.mod-show {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
 
 .header__burger {
+  width: 40px;
+  height: 40px;
+  margin-right: -5px;
   position: relative; }
   .header__burger:after, .header__burger:before {
     position: absolute;
@@ -5699,17 +5684,30 @@ a.plyr__control {
     right: 5px;
     height: 2px;
     background-color: #fff;
-    border-radius: 26%; }
+    border-radius: 26%;
+    -webkit-transition: -webkit-transform 0.8s;
+    transition: -webkit-transform 0.8s;
+    transition: transform 0.8s;
+    transition: transform 0.8s, -webkit-transform 0.8s;
+    -webkit-transition: -webkit-transform .7s, top .7s, width .7s; }
   .header__burger:after {
     top: 15px;
     width: 30px; }
   .header__burger:before {
     width: 20px;
     bottom: 15px; }
-
-.header__close-icon {
-  height: 20px;
-  width: 20px; }
+  .header__burger.mod-close-btn:after {
+    transform: translateY(0px) rotate(-45deg);
+    -webkit-transform: translateY(0px) rotate(-45deg); }
+  .header__burger.mod-close-btn:before {
+    transform: translateY(0px) rotate(45deg);
+    -webkit-transform: translateY(0px) rotate(45deg); }
+  .header__burger.mod-close-btn:after, .header__burger.mod-close-btn:before {
+    top: 50%;
+    width: 30px; }
+    @media only screen and (max-width: 576px) {
+      .header__burger.mod-close-btn:after, .header__burger.mod-close-btn:before {
+        width: 24px; } }
 
 .footer {
   display: grid;
