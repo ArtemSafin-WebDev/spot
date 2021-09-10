@@ -12,10 +12,13 @@ export default function commonCatalog(hostElem) {
   const cardsTitlesNumber = hostElem.querySelectorAll('.gl-catalog__card-title-number');
 
   const sortBtns = document.querySelectorAll('.header__sort-btn');
+  const linkHeader = document.querySelector('.header__control.mod-link');
 
   const brandedCards = hostElem.querySelectorAll('.gl-catalog-branded');
   const musicCards = hostElem.querySelectorAll('.gl-catalog-music');
   const filmCards = hostElem.querySelectorAll('.gl-catalog-film');
+
+  let timeoutReload;
 
   let msnry;
   let currentSize; // 'desk' | 'mobile'
@@ -62,10 +65,13 @@ export default function commonCatalog(hostElem) {
     }
 
     sortBtns.forEach((btn, index) => {
+      linkHeader.classList.add('mod-no-active');
       if (index === indexBtnActive) {
         btn.classList.add('mod-active');
+        btn.classList.remove('mod-no-active');
       } else {
         btn.classList.remove('mod-active');
+        btn.classList.add('mod-no-active');
       }
     })
 
@@ -83,9 +89,7 @@ export default function commonCatalog(hostElem) {
             elem.classList.add('mod-hide');
             onUpdateCardsSort();
             mixDumElems();
-            if (window.innerWidth > 576) {
-              msnry.layout();
-            }
+            msnry.layout();
           }, 700)
         }
       )
@@ -258,7 +262,7 @@ export default function commonCatalog(hostElem) {
     }
   }
 
-  sortBtns.forEach((btn, i) => {
+  sortBtns.forEach(btn => {
     btn.onclick = () => {
       onSort(btn.value);
     }
@@ -275,12 +279,12 @@ export default function commonCatalog(hostElem) {
       itemSelector: '.gl-catalog__item',
       percentPosition: true,
       gutter: GRID_GAP,
-      columnWidth: widthBlock,
-      horizontalOrder: false
+      columnWidth: widthBlock
     });
   }
 
   window.addEventListener('resize', () => {
+    clearTimeout(timeoutReload);
     onResize();
     if (window.innerWidth > 576 && currentSize === 'mobile') {
       currentSize = 'desk';
@@ -288,5 +292,10 @@ export default function commonCatalog(hostElem) {
       currentSize = 'mobile';
       mixDumElems();
     }
+
+    // todo костыль, вместо msnry.layout()
+    timeoutReload = setTimeout(() => {
+      location.reload();
+    }, 500)
   });
 }

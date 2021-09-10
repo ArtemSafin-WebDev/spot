@@ -5,39 +5,40 @@ export default function componentHeader() {
   const hostElem = document.querySelector('#header-host');
 
   if (hostElem) {
-    const linksWrapperElems = hostElem.querySelector('.header__controls-list');
     const linksElems = hostElem.querySelectorAll('.header__control');
-    const btnBurger = hostElem.querySelector('.header__burger-wrapper');
+    const btnBurger = hostElem.querySelector('.header__burger');
     const menuElem = hostElem.querySelector('.header__controls-list');
+    const menuWrapper = hostElem.querySelector('.header__menu-wrapper');
 
     if (btnBurger) {
       let isOpenMenu = false;
 
       const onOpenMenu = () => {
-        menuElem.classList.add('mod-show');
-        btnBurger.classList.remove('mod-show');
-        isOpenMenu = true;
+        menuWrapper.classList.add('mod-show');
+        btnBurger.classList.add('mod-close-btn');
+
       }
 
       const onCloseMenu = () => {
-        menuElem.classList.remove('mod-show');
-        setTimeout(() => {
-          btnBurger.classList.add('mod-show');
-        }, 1000)
-        isOpenMenu = false;
+        menuWrapper.classList.remove('mod-show');
+        btnBurger.classList.remove('mod-close-btn');
+
       }
 
-      btnBurger.onclick = () => {
+      btnBurger.parentElement.onclick = () => {
         onOpenMenu();
       };
 
       document.addEventListener('click', (e) => {
-        if (isOpenMenu && !checkExistParent(e.target, menuElem) && !checkExistParent(e.target, btnBurger)) {
+        if (isOpenMenu && (!checkExistParent(e.target, menuWrapper) || checkExistParent(e.target, btnBurger))) {
           onCloseMenu();
+          isOpenMenu = false;
+        } else {
+          isOpenMenu = true;
         }
       })
     }
 
-    commonDarkeningLinks(linksElems, linksWrapperElems);
+    commonDarkeningLinks(linksElems, menuElem);
   }
 }

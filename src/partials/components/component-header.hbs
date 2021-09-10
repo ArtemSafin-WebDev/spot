@@ -3,64 +3,75 @@
     <img src="img/header/logo.svg" alt="logo" class="header__logo">
   </a>
 
-  <ul class="header__controls-list">
-    <li class="header__control-wrapper">
-      <a href="talents-list-page.html" class="header__control
+  <div class="header__menu-wrapper">
+    <ul class="header__controls-list">
+      <li class="header__control-wrapper">
+        <a href="/spot/build/talents-list-page.html" class="header__control mod-link
         {{#if isTalentPage}}mod-active{{/if}}
-        {{#if isTalentsListPage}}mod-active{{/if}}">
-        Talents
-      </a>
-    </li>
-    <li class="header__control-wrapper">
-      {{#if isMainPage}}
-        <button class="header__control header__sort-btn" value="branded">
-          Branded
-        </button>
-      {{else}}
-        <a href="/spot/build/?sort=branded" class="header__control header__sort-btn">
-          Branded
+          {{#if isTalentsListPage}}mod-active{{/if}}">
+          Talents
         </a>
-      {{/if}}
-    </li>
-    <li class="header__control-wrapper">
-      {{#if isMainPage}}
-        <button class="header__control header__sort-btn" value="music">
-          Music video
-        </button>
-      {{else}}
-        <a href="/spot/build/?sort=music" class="header__control header__sort-btn">
-          Music video
+      </li>
+      <li class="header__control-wrapper">
+        {{#if isMainPage}}
+          <button class="header__control header__sort-btn" value="branded">
+            Branded
+          </button>
+        {{else}}
+          <a href="/spot/build/?sort=branded" class="header__control header__sort-btn">
+            Branded
+          </a>
+        {{/if}}
+      </li>
+      <li class="header__control-wrapper">
+        {{#if isMainPage}}
+          <button class="header__control header__sort-btn" value="music">
+            Music video
+          </button>
+        {{else}}
+          <a href="/spot/build/?sort=music" class="header__control header__sort-btn">
+            Music video
+          </a>
+        {{/if}}
+      </li>
+      <li class="header__control-wrapper">
+        {{#if isMainPage}}
+          <button class="header__control header__sort-btn" value="film">
+            Film
+          </button>
+        {{else}}
+          <a href="/spot/build/?sort=film" class="header__control header__sort-btn">
+            Film
+          </a>
+        {{/if}}
+      </li>
+      <li class="header__control-wrapper gl-sm-tablet-show">
+        <a href="contacts-page.html" class="header__control {{#if isContactsPage}}mod-active{{/if}}">
+          Contacts
         </a>
-      {{/if}}
-    </li>
-    <li class="header__control-wrapper">
-      {{#if isMainPage}}
-        <button class="header__control header__sort-btn" value="film">
-          Film
-        </button>
-      {{else}}
-        <a href="/spot/build/?sort=film" class="header__control header__sort-btn">
-          Film
-        </a>
-      {{/if}}
-    </li>
-    <li class="header__control-wrapper gl-sm-tablet-show">
-      <a href="contacts-page.html" class="header__control {{#if isContactsPage}}mod-active{{/if}}">
-        Contacts
-      </a>
-    </li>
-  </ul>
+      </li>
+    </ul>
 
-  <div class="header__burger-wrapper mod-show">
-    <button class="header__burger gl-sm-tablet-show"></button>
+    <div class="gl-sm-tablet-show">
+      {{> cmt-social-list }}
+    </div>
   </div>
 
-  <div class="header__contacts-wrapper gl-sm-tablet-hide">
-    <a href="tel:+79061234727" class="header__contacts-tel">
-      +7 906 1234 727
-    </a>
-    <a href="contacts-page.html" class="header__contacts-link">
-      Contacts
-    </a>
+  <div class="header__burger-wrapper gl-sm-tablet-show">
+    <button class="header__burger"></button>
+  </div>
+
+  <div class="header___left-block gl-sm-tablet-hide">
+    <div class="gl-sm-tablet-hide">
+      {{> cmt-social-list }}
+    </div>
+    <div class="header__contacts-wrapper">
+      <a href="tel:+79061234727" class="header__contacts-tel">
+        +7 906 1234 727
+      </a>
+      <a href="contacts-page.html" class="header__contacts-link">
+        Contacts
+      </a>
+    </div>
   </div>
 </header>
