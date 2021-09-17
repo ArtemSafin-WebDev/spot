@@ -1,4 +1,5 @@
 import Masonry from 'masonry-layout';
+import window from 'inputmask/lib/global/window';
 
 export default function commonCatalog(hostElem) {
   const GRID_GAP = 20;
@@ -29,6 +30,8 @@ export default function commonCatalog(hostElem) {
   let isNoPair = false;
   let lastBig = false;
   let start;
+
+  let windowWidth = window.innerWidth;
 
   const onSort = (nameSort) => {
     let indexBtnActive;
@@ -61,7 +64,7 @@ export default function commonCatalog(hostElem) {
 
     const currentQueryParamSort = window.location.href.split('?sort=')[1];
     if (currentQueryParamSort !== nameQueryParam) {
-      window.history.pushState({}, '', `/spot/build/?sort=${ nameQueryParam }`);
+      window.history.pushState({}, '', `/?sort=${ nameQueryParam }`);
     }
 
     sortBtns.forEach((btn, index) => {
@@ -295,7 +298,10 @@ export default function commonCatalog(hostElem) {
 
     // todo костыль, вместо msnry.layout()
     timeoutReload = setTimeout(() => {
-      location.reload();
-    }, 500)
+      // чтобы не обновлялось на мобилке при изменении высоты
+      if (windowWidth !== window.innerWidth) {
+        location.reload();
+      }
+    }, 500);
   });
 }
