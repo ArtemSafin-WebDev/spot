@@ -286,6 +286,8 @@ export default function commonCatalog(hostElem) {
     });
   }
 
+  window.mainLoader.onClose();
+
   window.addEventListener('resize', () => {
     clearTimeout(timeoutReload);
     onResize();

@@ -6124,3 +6124,83 @@ a.plyr__control {
   height: 485px;
   -o-object-fit: contain;
      object-fit: contain; }
+
+.gl-loader-wrapper {
+  position: fixed;
+  top: -9999px;
+  left: -9999px;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  color: #000;
+  font-size: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: -1;
+  opacity: 0; }
+  .gl-loader-wrapper.mod-show {
+    z-index: 50;
+    top: 0;
+    left: 0;
+    opacity: 1; }
+
+.gl-loader-dots {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-animation-delay: 150ms;
+          animation-delay: 150ms;
+  margin: auto;
+  width: 24px;
+  height: 24px; }
+  .gl-loader-dots:not(.mod-show), .gl-loader-dots:not(.mod-show):before, .gl-loader-dots:not(.mod-show):after {
+    display: none; }
+  .gl-loader-dots, .gl-loader-dots:before, .gl-loader-dots:after {
+    content: '';
+    display: block;
+    border-radius: 100%;
+    -webkit-animation-name: flicker;
+            animation-name: flicker;
+    -webkit-animation-duration: 1200ms;
+            animation-duration: 1200ms;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    background-color: #fff; }
+  .gl-loader-dots:before, .gl-loader-dots:after {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
+  .gl-loader-dots:before {
+    left: -38px; }
+  .gl-loader-dots:after {
+    right: -38px;
+    -webkit-animation-delay: 300ms;
+            animation-delay: 300ms; }
+
+@-webkit-keyframes flicker {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: .05; }
+  85% {
+    opacity: 1; } }
+
+@keyframes flicker {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: .05; }
+  85% {
+    opacity: 1; } }
