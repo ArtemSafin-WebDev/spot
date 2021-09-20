@@ -12,12 +12,11 @@ export default function commonCatalog(hostElem) {
 
   const cardsTitlesNumber = hostElem.querySelectorAll('.gl-catalog__card-title-number');
 
-  const sortBtns = document.querySelectorAll('.header__sort-btn');
-  const linkHeader = document.querySelector('.header__control.mod-link');
+  const sortBtns = Array.from(document.querySelectorAll('.header__sort-btn'));
+  const sortValuesArr = [];
+  sortBtns.map(btn => sortValuesArr.push(btn.value));
 
-  const brandedCards = hostElem.querySelectorAll('.gl-catalog-branded');
-  const musicCards = hostElem.querySelectorAll('.gl-catalog-music');
-  const filmCards = hostElem.querySelectorAll('.gl-catalog-film');
+  const linkHeader = document.querySelector('.header__control.mod-link');
 
   let timeoutReload;
 
@@ -39,28 +38,15 @@ export default function commonCatalog(hostElem) {
     let elemsShow;
     let elemsHideArr
 
-    switch (nameSort) {
-      case 'branded':
-        indexBtnActive = 0;
-        nameQueryParam = 'branded';
-        elemsShow = brandedCards;
-        elemsHideArr = [musicCards, filmCards];
-        break;
-
-      case 'music':
-        indexBtnActive = 1;
-        nameQueryParam = 'music';
-        elemsShow = musicCards;
-        elemsHideArr = [brandedCards, filmCards];
-        break;
-
-      case 'film':
-        indexBtnActive = 2;
-        nameQueryParam = 'film';
-        elemsShow = filmCards;
-        elemsHideArr = [brandedCards, musicCards];
-        break;
-    }
+    sortValuesArr.forEach((sortElem, index) => {
+      if (nameSort === sortElem) {
+        indexBtnActive = index;
+        nameQueryParam = sortElem;
+        elemsShow = hostElem.querySelectorAll(`.gl-catalog-${ sortElem }`);
+        const elemsNameHideArr = sortValuesArr.filter(elem => elem !== sortElem);
+        elemsHideArr = elemsNameHideArr.map(elemName => hostElem.querySelectorAll(`.gl-catalog-${ elemName }`));
+      }
+    })
 
     const currentQueryParamSort = window.location.href.split('?sort=')[1];
     if (currentQueryParamSort !== nameQueryParam) {
