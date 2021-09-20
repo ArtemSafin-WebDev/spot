@@ -15,6 +15,9 @@ import test from './test';
 import componentVideoWorks from './componentVideoWorks';
 import componentVideoFilms from './componentVideoFilms';
 import { CommonCircleLoader } from './commonCircleLoader';
+import window from 'inputmask/lib/global/window';
+
+let loader;
 
 document.addEventListener('DOMContentLoaded', function () {
   polyfills();
@@ -33,13 +36,15 @@ document.addEventListener('DOMContentLoaded', function () {
   componentVideoWorks();
   componentVideoFilms();
 
-  window.mainLoader = new CommonCircleLoader('main');
+  loader = new CommonCircleLoader('main');
 
-  window.mainLoader.onShow();
+  loader.onShow();
 });
 
 window.addEventListener('load', function () {
   document.body.classList.add('loaded');
-  setTimeout(() => document.body.classList.add('animatable'), 300)
+  setTimeout(() => document.body.classList.add('animatable'), 300);
+
+  loader.onClose();
   componentMainCatalog();
 })
