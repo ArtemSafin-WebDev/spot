@@ -1,5 +1,15 @@
+body {
+  &.no-touch {
+    .talents {
+      padding-bottom: 22rem !important;
+      margin-bottom: -7rem;
+    }
+  }
+}
+
 .talents {
-  padding-top: 6rem;
+  padding-top: 13rem;
+  margin-top: -7rem;
   padding-bottom: 6rem;
   overflow: hidden;
   display: grid;
@@ -51,35 +61,9 @@
 
     .talents__item-photo {
       right: 22%;
-      top: -150%;
-      transform: rotate(-6.33deg);
+      bottom: 50%;
+      transform: translateY(-40%) rotate(-6.33deg);
       opacity: 1;
-    }
-
-    &:nth-last-child(1), &:nth-last-child(2) {
-      .talents__item-photo {
-        top: auto;
-      }
-    }
-  }
-
-  &:nth-child(1) {
-    .talents__item-photo {
-      top: -106%;
-    }
-  }
-
-  &:nth-last-child(1) {
-    .talents__item-photo {
-      top: auto;
-      bottom: 0;
-    }
-  }
-
-  &:nth-last-child(2) {
-    .talents__item-photo {
-      top: auto;
-      bottom: -90%;
     }
   }
 }
