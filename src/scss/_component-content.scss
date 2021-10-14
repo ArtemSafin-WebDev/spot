@@ -1,3 +1,6 @@
+$line-width-desk: 16.2rem;
+$line-width-laptop: 8rem;
+
 %content-btn {
   padding: 2.2rem;
   font-size: 1.4rem;
@@ -15,12 +18,42 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
   padding-top: 5rem;
   padding-bottom: 5rem;
+
+  @include breakpoint(tablet) {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
 }
 
 .content__tab-menu-container {
   width: 100%;
   overflow: hidden;
   padding-right: 3rem;
+
+  @include breakpoint(laptop) {
+    padding-right: 1.2rem;
+  }
+
+  @include breakpoint(tablet) {
+    padding-right: 0;
+    margin-bottom: 4rem;
+    //position: fixed;  // todo fixes
+    //bottom: 2rem;  // todo fixes
+    //left: var(--padding-page-content);  // todo fixes
+    //z-index: 1;  // todo fixes
+    //width: calc(100% - var(--padding-page-content) * 2); // todo fixes
+  }
+}
+
+.content__menu-btns {
+  grid-gap: 1rem;
+  padding: 2rem;
+
+  @include breakpoint(tablet) {
+    background-color: #000;
+  }
 }
 
 .content__tab-menu {
@@ -30,18 +63,39 @@
   color: rgba(250, 250, 250, .6);
   transition: color 250ms;
   position: relative;
-  padding-right: 16.2rem;
+  padding-right: $line-width-desk;
+
+  @include breakpoint(laptop) {
+    padding-right: $line-width-laptop;
+  }
+
+  @include breakpoint(tablet) {
+    padding-right: 0;
+    margin: 0 12rem;
+  }
+
+  @include breakpoint(mobile) {
+    margin: 0 6rem;
+  }
 
   &:before {
     position: absolute;
     content: '';
     top: 1.2rem;
-    right: 0;
+    right: -.4rem;
     background-color: rgba(250, 250, 250, .4);
-    width: 16.2rem;
+    width: $line-width-desk;
     height: 1px;
     clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
     transition: clip-path 150ms ease-in;
+
+    @include breakpoint(laptop) {
+      width: $line-width-laptop;
+    }
+
+    @include breakpoint(tablet) {
+      content: none;
+    }
   }
 
   & + & {
@@ -61,24 +115,66 @@
 .content__btn-nav-wrapper {
   display: flex;
   margin-top: 6.4rem;
-  padding-right: 16.2rem;
+  padding-right: $line-width-desk;
+
+  @include breakpoint(laptop) {
+    padding-right: $line-width-laptop;
+  }
 }
 
 .content__btn-nav {
-  @extend %content-btn;
-  width: 50%;
-  flex: 1 1 50%;
   display: flex;
   align-items: center;
   justify-content: center;
+  @extend %content-btn;
+  width: 50%;
+  flex: 1 1 50%;
 
   & + & {
     margin-left: 2rem;
+  }
+
+  @include breakpoint(tablet) {
+    border: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10rem;
+    box-sizing: border-box;
+    height: calc(100% - 2rem);
+    z-index: 2;
+
+    &.mod-prev {
+      left: 0;
+    }
+
+    &.mod-next {
+      right: 0;
+    }
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+
+  @include breakpoint(mobile) {
+    width: 7rem;
   }
 }
 
 .content__btn-nav-icon {
   height: 2rem;
+
+  @include breakpoint(tablet) {
+    fill: #fff;
+  }
+}
+
+.content__tab-menu-swiper-container {
+  @include breakpoint(tablet) {
+    position: relative;
+    border: 1px solid rgba(250, 250, 250, .3);
+  }
 }
 
 .content__main-block {
@@ -139,6 +235,12 @@
     height: 58rem;
     max-width: 100%;
     object-fit: contain;
+
+    @include breakpoint(tablet) {
+      width: 100%;
+      max-height: 62rem;
+      height: auto;
+    }
   }
 
   ul, ol {
