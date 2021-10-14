@@ -7,6 +7,8 @@ export default function componentContent() {
   const sliderElem = hostElem.querySelector('.js-swiper-container');
   const btnPrev = hostElem.querySelector('.js-btn-prev');
   const btnNext = hostElem.querySelector('.js-btn-next');
+  const btnsContent = hostElem.querySelectorAll('.js-btn-content');
+  const contentElems = hostElem.querySelectorAll('.js-content');
 
   if (!hostElem) return;
 
@@ -18,6 +20,18 @@ export default function componentContent() {
     navigation: {
       prevEl: btnPrev,
       nextEl: btnNext
+    }
+  })
+
+  btnsContent.forEach(btn => {
+    btn.onmouseenter = () => {
+      contentElems.forEach(elem => {
+        if (elem.hasAttribute(`data-${ btn.value }`)) {
+          elem.classList.add('mod-show');
+        } else {
+          elem.classList.remove('mod-show');
+        }
+      })
     }
   })
 }

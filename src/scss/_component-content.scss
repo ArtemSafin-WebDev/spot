@@ -61,20 +61,32 @@
 .content__btn-nav-wrapper {
   display: flex;
   margin-top: 6.4rem;
+  padding-right: 16.2rem;
 }
 
 .content__btn-nav {
   @extend %content-btn;
   width: 50%;
   flex: 1 1 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   & + & {
     margin-left: 2rem;
   }
 }
 
+.content__btn-nav-icon {
+  height: 2rem;
+}
+
 .content__main-block {
   grid-column: 2 / 4;
+
+  &:not(.mod-show) {
+    display: none;
+  }
 
   h1, h2, h3, p, img {
     margin: 2.6rem 0;

@@ -6260,18 +6260,33 @@ body.no-touch .talents {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 6.4rem; }
+  margin-top: 6.4rem;
+  padding-right: 16.2rem; }
 
 .content__btn-nav {
   width: 50%;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 50%;
-          flex: 1 1 50%; }
+          flex: 1 1 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
   .content__btn-nav + .content__btn-nav {
     margin-left: 2rem; }
 
+.content__btn-nav-icon {
+  height: 2rem; }
+
 .content__main-block {
   grid-column: 2 / 4; }
+  .content__main-block:not(.mod-show) {
+    display: none; }
   .content__main-block h1, .content__main-block h2, .content__main-block h3, .content__main-block p, .content__main-block img {
     margin: 2.6rem 0; }
     .content__main-block h1:first-child, .content__main-block h2:first-child, .content__main-block h3:first-child, .content__main-block p:first-child, .content__main-block img:first-child {

@@ -6,8 +6,8 @@
           {{#each tabsListGroups }}
             <div class="swiper-slide">
               {{#each this }}
-                <button type="button" class="content__tab-menu">
-                  {{ this }}
+                <button type="button" class="content__tab-menu js-btn-content" value="{{ this.value }}">
+                  {{ this.text }}
                 </button>
               {{/each}}
             </div>
@@ -18,79 +18,81 @@
 
     <div class="content__btn-nav-wrapper">
       <button type="button" class="content__btn-nav mod-prev js-btn-prev">
-        prev
+        <img src="img/content/arrow-left.svg" alt="" class="content__btn-nav-icon">
       </button>
       <button type="button" class="content__btn-nav mod-next js-btn-next">
-        next
+        <img src="img/content/arrow-right.svg" alt="" class="content__btn-nav-icon">
       </button>
     </div>
   </div>
 
-  <div class="content__main-block">
-    <h1>
-      Hello, iam most big title H1
-    </h1>
+  {{#each contentList }}
+    <div class="content__main-block js-content {{#if isShow }}mod-show{{/if}}" data-{{ this.value }}>
+      <h1>
+        Hello, iam most {{ this.title }}
+      </h1>
 
-    <img src="img/content/img.jpg" alt="">
+      <img src="img/content/{{ this.img }}.jpg" alt="">
 
-    <h2>Iam second size title</h2>
+      <h2>Iam second size title</h2>
 
-    <h3>
-      The near future - young adults without Soviet past are slowly rising to power. A forward-thinking urbanist who is
-      a bar enthusiast and a cycle lover becomes the prefect of one of the Moscow districts.
-    </h3>
+      <h3>
+        The near future - young adults without Soviet past are slowly rising to power. A forward-thinking urbanist who is
+        a bar enthusiast and a cycle lover becomes the prefect of one of the Moscow districts.
+      </h3>
 
-    <p>
-      The near future - young adults without Soviet past are slowly rising to power. A forward thinking urbanist who is
-      a bar enthusiast and a cycle lover becomes the prefect of one of the Moscow districts. He wants Moscow to be one
-      of the most progressive and modern cities but can he really change something? Will he become part of the system or
-      break it? The film shows usone challenging day in the life of the new administrative official.
-    </p>
+      <p>
+        The near future - young adults without Soviet past are slowly rising to power. A forward thinking urbanist who is
+        a bar enthusiast and a cycle lover becomes the prefect of one of the Moscow districts. He wants Moscow to be one
+        of the most progressive and modern cities but can he really change something? Will he become part of the system or
+        break it? The film shows usone challenging day in the life of the new administrative official.
+      </p>
 
-    <p>
-      Who is a bar enthusiast and a cycle lover becomes the prefect of one of the Moscow districts. He wants Moscow to
-      be one of the most progressive and modern cities but can he really change something? Will he become part.
-    </p>
+      <p>
+        Who is a bar enthusiast and a cycle lover becomes the prefect of one of the Moscow districts. He wants Moscow to
+        be one of the most progressive and modern cities but can he really change something? Will he become part.
+      </p>
 
-    <ul>
-      <li>
-        I'm beginnin' to feel like a Rap God, Rap God
-      </li>
-      <li>
-        All my people from the front to the back nod, back nod
-      </li>
-      <li>
-        Now, who thinks their arms are long enough to slap box, slap box?
-      </li>
-      <li>
-        They said I rap like a robot, so call me Rap-bot
-      </li>
-    </ul>
+      <ul>
+        <li>
+          I'm beginnin' to feel like a Rap God, Rap God
+        </li>
+        <li>
+          All my people from the front to the back nod, back nod
+        </li>
+        <li>
+          Now, who thinks their arms are long enough to slap box, slap box?
+        </li>
+        <li>
+          They said I rap like a robot, so call me Rap-bot
+        </li>
+      </ul>
 
-    <button>
-      Please stand up
-    </button>
+      <button>
+        Please stand up
+      </button>
 
-    <ol>
-      <li>
-        I'm beginnin' to feel like a Rap God, Rap God
-      </li>
-      <li>
-        All my people from the front to the back nod, back nod
-      </li>
-      <li>
-        Now, who thinks their arms are long enough to slap box, slap box?
-      </li>
-      <li>
-        They said I rap like a robot, so call me Rap-bot
-      </li>
-    </ol>
+      <ol>
+        <li>
+          I'm beginnin' to feel like a Rap God, Rap God
+        </li>
+        <li>
+          All my people from the front to the back nod, back nod
+        </li>
+        <li>
+          Now, who thinks their arms are long enough to slap box, slap box?
+        </li>
+        <li>
+          They said I rap like a robot, so call me Rap-bot
+        </li>
+      </ol>
 
-    <p>
-      The near future - young adults without Soviet past are slowly rising to power. A forward thinking urbanist who is
-      a bar enthusiast and a cycle lover becomes the prefect of one of the Moscow districts. He wants Moscow to be one
-      of the most progressive and modern cities but can he really change something? Will he become part of the system or
-      break it? The film shows usone challenging day in the life of the new administrative official.
-    </p>
-  </div>
+      <p>
+        The near future - young adults without Soviet past are slowly rising to power. A forward thinking urbanist who is
+        a bar enthusiast and a cycle lover becomes the prefect of one of the Moscow districts. He wants Moscow to be one
+        of the most progressive and modern cities but can he really change something? Will he become part of the system or
+        break it? The film shows usone challenging day in the life of the new administrative official.
+      </p>
+    </div>
+  {{/each}}
 </section>
