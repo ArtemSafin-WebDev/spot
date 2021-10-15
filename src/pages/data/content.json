@@ -1,5 +1,9 @@
 {
   "title": "Контент",
+  "linkPrev": {
+    "text": "Main Page",
+    "link": "/"
+  },
   "tabsListGroups": [
     [
       {

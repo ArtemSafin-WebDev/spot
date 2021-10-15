@@ -5555,6 +5555,26 @@ a.plyr__control {
               justify-content: space-between;
       min-height: 40px; } }
 
+.header__left-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.header__link-prev {
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  padding: 1.6rem;
+  margin: -1.6rem;
+  color: rgba(250, 250, 250, 0.6) !important;
+  margin-top: 1.6rem; }
+
 .header__logo-wrapper {
   height: -webkit-min-content;
   height: -moz-min-content;

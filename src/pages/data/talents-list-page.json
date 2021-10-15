@@ -1,4 +1,8 @@
 {
   "title": "Talents list",
-  "isTalentsListPage": true
+  "isTalentsListPage": true,
+  "linkPrev": {
+    "text": "Main Page",
+    "link": "/"
+  }
 }
