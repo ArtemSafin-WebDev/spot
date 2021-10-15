@@ -39,7 +39,7 @@ export default function componentContent() {
   })
 
   btnsContent.forEach(btn => {
-    btn.onmouseenter = () => {
+    btn.onclick = () => {
       contentElems.forEach(elem => {
         if (elem.hasAttribute(`data-${ btn.value }`)) {
           elem.classList.add('mod-show');

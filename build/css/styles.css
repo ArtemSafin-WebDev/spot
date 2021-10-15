@@ -5642,6 +5642,11 @@ a.plyr__control {
     transition: -webkit-clip-path 150ms ease-in;
     transition: clip-path 150ms ease-in;
     transition: clip-path 150ms ease-in, -webkit-clip-path 150ms ease-in; }
+  .header__control.no-hover, .header__control.mod-no-active, .header__control:not(.mod-active) {
+    opacity: 0.4; }
+    .header__control.no-hover:before, .header__control.mod-no-active:before, .header__control:not(.mod-active):before {
+      -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+              clip-path: polygon(0 0, 0 0, 0 100%, 0 100%); }
   .header__control:hover, .header__control.mod-active {
     text-decoration: initial;
     opacity: 1; }
@@ -5652,11 +5657,6 @@ a.plyr__control {
       transition: -webkit-clip-path 250ms ease-out;
       transition: clip-path 250ms ease-out;
       transition: clip-path 250ms ease-out, -webkit-clip-path 250ms ease-out; }
-  .header__control.no-hover, .header__control.mod-no-active {
-    opacity: 0.4; }
-    .header__control.no-hover:before, .header__control.mod-no-active:before {
-      -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
-              clip-path: polygon(0 0, 0 0, 0 100%, 0 100%); }
 
 .header___left-block {
   display: -webkit-box;

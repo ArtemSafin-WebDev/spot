@@ -99,6 +99,14 @@
     transition: clip-path 150ms ease-in;
   }
 
+  &.no-hover, &.mod-no-active, &:not(.mod-active) {
+    opacity: 0.4;
+
+    &:before {
+      clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
+    }
+  }
+
   &:hover, &.mod-active {
     text-decoration: initial;
     opacity: 1;
@@ -106,14 +114,6 @@
     &:before {
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
       transition: clip-path 250ms ease-out;
-    }
-  }
-
-  &.no-hover, &.mod-no-active {
-    opacity: 0.4;
-
-    &:before {
-      clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
     }
   }
 }
