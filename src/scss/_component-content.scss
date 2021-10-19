@@ -180,10 +180,6 @@ $line-width-laptop: 8rem;
 .content__main-block {
   grid-column: 2 / 4;
 
-  &:not(.mod-show) {
-    display: none;
-  }
-
   h1, h2, h3, p, img {
     margin: 2.6rem 0;
 
@@ -296,7 +292,8 @@ $line-width-laptop: 8rem;
     }
   }
 
-  button {
+  a {
+    cursor: pointer;
     @extend %content-btn;
     position: relative;
     padding-right: 6.2rem;
