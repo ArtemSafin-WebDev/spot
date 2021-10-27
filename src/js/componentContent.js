@@ -29,8 +29,8 @@ export default function componentContent() {
     }
   })
 
-  // const activeTab = window.location.href.split('/')[3]; // todo prod
-  const activeTab = window.location.href.split('?')[1]; // todo dev
+  const activeTab = window.location.href.split('/')[3]; // todo prod
+  // const activeTab = window.location.href.split('?')[1]; // todo dev
 
   tabMenuDeskElems.forEach((tab, i) => {
     if (tab.innerText === activeTab) {
