@@ -7,3 +7,22 @@
     padding-bottom: 4rem;
   }
 }
+
+.talent__title {
+  font-size: 5rem;
+  word-break: break-word;
+
+  @include breakpoint(desktop) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    font-size: 4.8rem;
+  }
+
+  @include breakpoint(small-tablet) {
+    font-size: 4.6rem;
+  }
+
+  @include breakpoint(small-mobile) {
+    font-size: 3.6rem;
+  }
+}

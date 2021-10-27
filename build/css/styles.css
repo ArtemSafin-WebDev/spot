@@ -5361,7 +5361,8 @@ a.plyr__control {
 
 .gl-personal-page-content {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3rem;
   margin-bottom: 2rem; }
   @media only screen and (max-width: 1024px) {
     .gl-personal-page-content {
@@ -6079,6 +6080,21 @@ body.no-touch .talents {
     .talent {
       padding-top: 4rem;
       padding-bottom: 4rem; } }
+
+.talent__title {
+  font-size: 5rem;
+  word-break: break-word; }
+  @media only screen and (max-width: 1400px) {
+    .talent__title {
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+      font-size: 4.8rem; } }
+  @media only screen and (max-width: 768px) {
+    .talent__title {
+      font-size: 4.6rem; } }
+  @media only screen and (max-width: 576px) {
+    .talent__title {
+      font-size: 3.6rem; } }
 
 .contacts {
   display: grid;
