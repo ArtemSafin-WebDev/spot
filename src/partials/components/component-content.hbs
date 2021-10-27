@@ -6,9 +6,7 @@
           {{#each tabsListGroups }}
             <div class="swiper-slide">
               {{#each this }}
-                <a href="" class="content__tab-menu">
-                  {{ this.text }}
-                </a>
+                <a href="" class="content__tab-menu js-tab-menu-desk">{{ this.text }}</a>
               {{/each}}
             </div>
           {{/each}}
@@ -26,31 +24,6 @@
     </div>
   </div>
 
-<!--  <div class="content__tab-menu-container gl-tablet-show">-->
-<!--    <div class="content__tab-menu-wrapper">-->
-<!--      <div class="content__tab-menu-swiper-container swiper-container js-swiper-container-tablet">-->
-<!--        <div class="swiper-wrapper">-->
-<!--          {{#each tabsList }}-->
-<!--            <div class="swiper-slide">-->
-<!--              <div class="content__menu-btns">-->
-<!--                <button type="button" class="content__tab-menu" value="{{ this.value }}">-->
-<!--                  {{ this.text }}-->
-<!--                </button>-->
-<!--              </div>-->
-<!--            </div>-->
-<!--          {{/each}}-->
-<!--        </div>-->
-
-<!--        <button type="button" class="content__btn-nav mod-prev js-btn-prev-tablet">-->
-<!--          <img src="img/content/arrow-left.svg" alt="" class="content__btn-nav-icon">-->
-<!--        </button>-->
-<!--        <button type="button" class="content__btn-nav mod-next js-btn-next-tablet">-->
-<!--          <img src="img/content/arrow-right.svg" alt="" class="content__btn-nav-icon">-->
-<!--        </button>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-
   <div class="content__menu-wrapper gl-tablet-show">
     <div class="content__btn-control-menu-wrapper">
       <button type="button" class="content__btn-control-menu js-mobile-btn-control-menu"></button>
@@ -60,9 +33,7 @@
       <ul class="js-mobile-menu-list">
         {{#each tabsList }}
           <li class="content__menu-item">
-            <a href="" class="content__tab-menu">
-              {{ this.text }}
-            </a>
+            <a href="" class="content__tab-menu js-tab-menu-mobile">{{ this.text }}</a>
           </li>
         {{/each}}
       </ul>

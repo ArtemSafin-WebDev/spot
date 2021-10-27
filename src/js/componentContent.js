@@ -13,6 +13,8 @@ export default function componentContent() {
   const mobileMenuContainerElem = hostElem.querySelector('.js-mobile-menu-list-container');
   const mobileMenuElem = hostElem.querySelector('.js-mobile-menu-list');
   const contentBlockElem = hostElem.querySelector('.js-content-block');
+  const tabMenuDeskElems = hostElem.querySelectorAll('.js-tab-menu-desk');
+  const tabMenuMobileElems = hostElem.querySelectorAll('.js-tab-menu-mobile');
 
   let isOpenMenu = false;
 
@@ -24,6 +26,22 @@ export default function componentContent() {
     navigation: {
       prevEl: btnPrev,
       nextEl: btnNext
+    }
+  })
+
+  // const activeTab = window.location.href.split('/')[3]; // todo prod
+  const activeTab = window.location.href.split('?')[1]; // todo dev
+
+  tabMenuDeskElems.forEach((tab, i) => {
+    if (tab.innerText === activeTab) {
+      tab.classList.add('mod-active');
+      swiperDesk.slideTo(parseInt(i / 5))
+    }
+  })
+
+  tabMenuMobileElems.forEach(tab => {
+    if (tab.innerText === activeTab) {
+      tab.classList.add('mod-active');
     }
   })
 
