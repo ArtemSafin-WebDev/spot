@@ -1,0 +1,131 @@
+<section class="content container" id="content-host">
+  <div class="content__tab-menu-container gl-tablet-hide">
+    <div class="content__tab-menu-wrapper">
+      <div class="swiper-container js-swiper-container">
+        <div class="swiper-wrapper">
+          {{#each tabsListGroups }}
+            <div class="swiper-slide">
+              {{#each this }}
+                <a href="" class="content__tab-menu">
+                  {{ this.text }}
+                </a>
+              {{/each}}
+            </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+
+    <div class="content__btn-nav-wrapper gl-tablet-hide">
+      <button type="button" class="content__btn-nav mod-prev js-btn-prev">
+        <img src="img/content/arrow-left.svg" alt="" class="content__btn-nav-icon">
+      </button>
+      <button type="button" class="content__btn-nav mod-next js-btn-next">
+        <img src="img/content/arrow-right.svg" alt="" class="content__btn-nav-icon">
+      </button>
+    </div>
+  </div>
+
+  <div class="content__tab-menu-container gl-tablet-show">
+    <div class="content__tab-menu-wrapper">
+      <div class="content__tab-menu-swiper-container swiper-container js-swiper-container-tablet">
+        <div class="swiper-wrapper">
+          {{#each tabsList }}
+            <div class="swiper-slide">
+              <div class="content__menu-btns">
+                <button type="button" class="content__tab-menu" value="{{ this.value }}">
+                  {{ this.text }}
+                </button>
+              </div>
+            </div>
+          {{/each}}
+        </div>
+
+        <button type="button" class="content__btn-nav mod-prev js-btn-prev-tablet">
+          <img src="img/content/arrow-left.svg" alt="" class="content__btn-nav-icon">
+        </button>
+        <button type="button" class="content__btn-nav mod-next js-btn-next-tablet">
+          <img src="img/content/arrow-right.svg" alt="" class="content__btn-nav-icon">
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="content__main-block">
+    <h1>
+      Hello, iam most CONTENT 1
+    </h1>
+
+    <img src="img/content/img-1.jpg" alt="">
+
+    <h2>Iam second size title</h2>
+
+    <h3>
+      The near future - young adults without Soviet past are slowly rising to power. A forward-thinking urbanist who
+      is
+      a bar enthusiast and a cycle lover becomes the prefect of one of the Moscow districts.
+    </h3>
+
+    <p>
+      The near future - young adults without Soviet past are slowly rising to power. A forward thinking urbanist who
+      is
+      a bar enthusiast and a cycle lover becomes the prefect of one of the Moscow districts. He wants Moscow to be
+      one
+      of the most progressive and modern cities but can he really change something? Will he become part of the
+      system
+      or
+      break it? The film shows usone challenging day in the life of the new administrative official.
+    </p>
+
+    <p>
+      Who is a bar enthusiast and a cycle lover becomes the prefect of one of the Moscow districts. He wants Moscow
+      to
+      be one of the most progressive and modern cities but can he really change something? Will he become part.
+    </p>
+
+    <ul>
+      <li>
+        I'm beginnin' to feel like a Rap God, Rap God
+      </li>
+      <li>
+        All my people from the front to the back nod, back nod
+      </li>
+      <li>
+        Now, who thinks their arms are long enough to slap box, slap box?
+      </li>
+      <li>
+        They said I rap like a robot, so call me Rap-bot
+      </li>
+    </ul>
+
+    <a href="">
+      Please stand up
+    </a>
+
+    <ol>
+      <li>
+        I'm beginnin' to feel like a Rap God, Rap God
+      </li>
+      <li>
+        All my people from the front to the back nod, back nod
+      </li>
+      <li>
+        Now, who thinks their arms are long enough to slap box, slap box?
+      </li>
+      <li>
+        They said I rap like a robot, so call me Rap-bot
+      </li>
+    </ol>
+
+    <p>
+      The near future - young adults without Soviet past are slowly rising to power. A forward thinking urbanist who
+      is
+      a bar enthusiast and a cycle lover becomes the prefect of one of the Moscow districts. He wants Moscow to be
+      one
+      of the most progressive and modern cities but can he really change something? Will he become part of the
+      system
+      or
+      break it? The film shows usone challenging day in the life of the new administrative official.
+    </p>
+  </div>
+</section>

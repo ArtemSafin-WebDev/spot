@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <meta name="format-detection" content="telephone=no">
+  <script src="assets/js/ie11CustomProperties.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="assets/js/backend.js"></script>
+  <link rel="stylesheet" href="css/styles.min.css"/>
+  <link rel="icon" type="image/x-icon" href="img/header/logo.svg">
+  <title>
+    Talent
+  </title>
+</head>
+
+<body class="no-touch">
+
+<div class="sprite" aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;">
+  <?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol viewBox="0 0 25 24" id="close" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.411 0L0 3.411l8.65 8.651-8.526 8.527L3.535 24l8.527-8.527 8.405 8.406 3.412-3.412-8.406-8.405 8.53-8.53L20.59.123 12.062 8.65 3.412 0z"/></symbol></svg></div>
+
+<div class="layout-wrapper">
+  <header class="header container" id="header-host">
+    <div class="header__left-block">
+      <a href="/" class="header__logo-wrapper">
+        <img src="img/header/logo.svg" alt="logo" class="header__logo">
+      </a>
+  
+      <a href="/" class="header__link-prev">
+        All Talents
+      </a>
+    </div>
+  
+    <div class="header__menu-wrapper">
+      <ul class="header__controls-list">
+        <li class="header__control-wrapper">
+          <a href="/talents-list-page.html" class="header__control mod-link
+          mod-active
+            ">
+            Talents
+          </a>
+        </li>
+        <li class="header__control-wrapper">
+            <a href="/?sort=branded" class="header__control header__sort-btn">
+              Branded
+            </a>
+        </li>
+        <li class="header__control-wrapper">
+            <a href="/?sort=music" class="header__control header__sort-btn">
+              Music video
+            </a>
+        </li>
+        <li class="header__control-wrapper">
+            <a href="/?sort=film" class="header__control header__sort-btn">
+              Film
+            </a>
+        </li>
+        <li class="header__control-wrapper gl-sm-tablet-show">
+          <a href="contacts-page.html" class="header__control ">
+            Contacts
+          </a>
+        </li>
+      </ul>
+  
+      <div class="gl-sm-tablet-show">
+        <ul class="header__social-list gl-xx-mobile-hide">
+          <li class="header__social-link-wrapper">
+            <a href="video-works-page.html" class="header__social-link" target="_blank">
+              Vimeo
+            </a>
+          </li>
+          <li class="header__social-link-wrapper">
+            <a href="/" class="header__social-link" target="_blank">
+              Instagram
+            </a>
+          </li>
+          <li class="header__social-link-wrapper">
+            <a href="/" class="header__social-link" target="_blank">
+              Facebook
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  
+    <div class="header__burger-wrapper gl-sm-tablet-show">
+      <button class="header__burger"></button>
+    </div>
+  
+    <div class="header___left-block gl-sm-tablet-hide">
+      <div class="gl-sm-tablet-hide">
+        <ul class="header__social-list gl-xx-mobile-hide">
+          <li class="header__social-link-wrapper">
+            <a href="video-works-page.html" class="header__social-link" target="_blank">
+              Vimeo
+            </a>
+          </li>
+          <li class="header__social-link-wrapper">
+            <a href="/" class="header__social-link" target="_blank">
+              Instagram
+            </a>
+          </li>
+          <li class="header__social-link-wrapper">
+            <a href="/" class="header__social-link" target="_blank">
+              Facebook
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="header__contacts-wrapper">
+        <a href="tel:+79061234727" class="header__contacts-tel">
+          +7 906 1234 727
+        </a>
+        <a href="contacts-page.html" class="header__contacts-link">
+          Contacts
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="layout-content">
+    
+    <section class="talent container" id="talent-host">
+      <div class="gl-personal-page-content">
+        <div class="gl-personal-page-name-wrapper gl-personal-page-item">
+          <div class="gl-title">
+            Rinat Tyukmaev
+          </div>
+          <div class="gl-caption">
+            Director
+          </div>
+        </div>
+    
+        <div class="gl-main-text gl-personal-page-item">
+          Director and Photographer Rinat Tyukmaev makes work that evokes emotion at the very core. His ability to connect
+          with and capture the human condition defines his award-winning storytelling. An eye for the physicality of dance
+          and sport adds the perfect layer to his commercial work.
+        </div>
+    
+        <img src="img/talent/photo-1.jpg" alt="photo" class="gl-personal-page-photo talent__description-photo gl-personal-page-item">
+      </div>
+    
+      <div class="gl-catalog">
+        <ul class="gl-catalog__list">
+          <li class="gl-catalog__item gl-catalog__item--video-large">
+            <div class="gl-catalog__card-media-wrapper gl-catalog__content">
+    
+              <!-- fixme vimeo-->
+              <div data-plyr-provider="vimeo"
+                   data-plyr-embed-id="https://player.vimeo.com/video/584985260?h=4cd90bc17c"
+                   class="gl-catalog__card-video">
+              </div>
+              <!-- fixme vimeo-->
+            </div>
+            <h3 class="gl-catalog__card-title-wrapper">
+              <span class="gl-catalog__card-title-number"></span>
+              <span class="gl-catalog__card-title-content">
+                <b class="gl-catalog__mark">Unlimint</b> Ready for tomorrow
+              </span>
+            </h3>
+          </li>
+          <li class="gl-catalog__item gl-catalog__item--video-small">
+            <div class="gl-catalog__card-media-wrapper gl-catalog__content">
+              <!-- fixme vimeo-->
+              <div data-plyr-provider="vimeo"
+                   data-plyr-embed-id="https://player.vimeo.com/video/584985260?h=4cd90bc17c"
+                   class="gl-catalog__card-video">
+              </div>
+              <!-- fixme vimeo-->
+            </div>
+            <h3 class="gl-catalog__card-title-wrapper">
+              <span class="gl-catalog__card-title-number"></span>
+              <span class="gl-catalog__card-title-content">
+                <b class="gl-catalog__mark">Unlimint</b> Ready for tomorrow
+              </span>
+            </h3>
+          </li>
+          <li class="gl-catalog__item gl-catalog__item--video-small">
+            <div class="gl-catalog__card-media-wrapper gl-catalog__content">
+              <!-- fixme MP4-->
+              <video id="player" playsinline controls class="gl-catalog__card-video">
+                <source src="assets/mp4/video-2.mp4" type="video/mp4"/>
+              </video>
+              <!-- fixme MP4-->
+            </div>
+            <h3 class="gl-catalog__card-title-wrapper">
+              <span class="gl-catalog__card-title-number"></span>
+              <span class="gl-catalog__card-title-content">
+                <b class="gl-catalog__mark">Unlimint</b> Ready for tomorrow
+              </span>
+            </h3>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+
+  </main>
+
+  <footer class="footer container" id="footer-host">
+    <ul class="footer__social-list">
+      <li class="footer__social-link-wrapper">
+        <a href="video-works-page.html" class="footer__social-link" target="_blank">
+          Vimeo
+        </a>
+      </li>
+      <li class="footer__social-link-wrapper">
+        <a href="/" class="footer__social-link" target="_blank">
+          Instagram
+        </a>
+      </li>
+      <li class="footer__social-link-wrapper">
+        <a href="/" class="footer__social-link" target="_blank">
+          Facebook
+        </a>
+      </li>
+    </ul>
+  
+    <a href="tel:+79061234727" class="footer__tel">
+      +7 906 1234 727
+    </a>
+  
+    <div class="footer__company-wrapper">
+      <a href="https://markweber.ru/" class="footer__company" target="_blank">
+        Design and Development
+      </a>
+    </div>
+  </footer>
+</div>
+
+<div class="gl-loader-wrapper" id="loader-wrapper-main">
+  <div class="gl-loader-dots mod-show"></div>
+</div>
+
+</body>
+</html>

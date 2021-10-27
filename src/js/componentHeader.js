@@ -16,7 +16,6 @@ export default function componentHeader() {
       const onOpenMenu = () => {
         menuWrapper.classList.add('mod-show');
         btnBurger.classList.add('mod-close-btn');
-
       }
 
       const onCloseMenu = () => {

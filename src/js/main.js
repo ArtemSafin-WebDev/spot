@@ -16,6 +16,7 @@ import componentVideoWorks from './componentVideoWorks';
 import componentVideoFilms from './componentVideoFilms';
 import { CommonCircleLoader } from './commonCircleLoader';
 import window from 'inputmask/lib/global/window';
+import componentContent from './componentContent';
 
 let loader;
 
@@ -35,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
   componentTalents();
   componentVideoWorks();
   componentVideoFilms();
+  componentContent();
 
   loader = new CommonCircleLoader('main');
 

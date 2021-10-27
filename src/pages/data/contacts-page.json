@@ -1,4 +1,8 @@
 {
   "title": "Contacts",
-  "isContactsPage": true
+  "isContactsPage": true,
+  "linkPrev": {
+    "text": "Main Page",
+    "link": "/"
+  }
 }
