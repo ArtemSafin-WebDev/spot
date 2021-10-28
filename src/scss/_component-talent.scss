@@ -11,18 +11,31 @@
 .talent__title {
   font-size: 5rem;
   word-break: break-word;
+  display: inline;
+
+  .nowrap {
+    white-space: nowrap;
+  }
 
   @include breakpoint(desktop) {
     padding-top: 4rem;
     padding-bottom: 4rem;
-    font-size: 4.8rem;
+    //font-size: 4.8rem;
+  }
+
+  @include breakpoint(laptop) {
+    //font-size: 4.4rem;
   }
 
   @include breakpoint(small-tablet) {
-    font-size: 4.6rem;
+    //font-size: 4.6rem;
   }
 
   @include breakpoint(small-mobile) {
-    font-size: 3.6rem;
+    //font-size: 3.6rem;
   }
+}
+
+.talent__center-item {
+  margin-right: 3rem;
 }

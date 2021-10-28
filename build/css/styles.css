@@ -2649,7 +2649,8 @@ select:-webkit-autofill:focus {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
-  background-color: #000; }
+  background-color: #000;
+  z-index: 1; }
 
 .layout-content {
   -webkit-box-flex: 1;
@@ -5361,26 +5362,26 @@ a.plyr__control {
 
 .gl-personal-page-content {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 3rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   margin-bottom: 2rem; }
   @media only screen and (max-width: 1024px) {
     .gl-personal-page-content {
       grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
-      margin-bottom: 5rem !important;
-      grid-gap: 4rem; } }
+      margin-bottom: 5rem !important; } }
   @media only screen and (max-width: 768px) {
     .gl-personal-page-content {
       grid-template-columns: 1fr;
       margin-bottom: 2rem; } }
 
-@media only screen and (max-width: 1024px) {
-  .gl-personal-page-name-wrapper {
-    margin-bottom: 4rem; } }
-
-@media only screen and (max-width: 768px) {
-  .gl-personal-page-name-wrapper {
-    margin-bottom: 0; } }
+.gl-personal-page-name-wrapper {
+  margin-right: 2rem; }
+  @media only screen and (max-width: 1024px) {
+    .gl-personal-page-name-wrapper {
+      margin-bottom: 4rem;
+      margin-right: 4rem; } }
+  @media only screen and (max-width: 768px) {
+    .gl-personal-page-name-wrapper {
+      margin-bottom: 0; } }
 
 .gl-personal-page-item {
   margin-right: 8rem; }
@@ -5582,7 +5583,8 @@ a.plyr__control {
       -ms-flex-align: center;
           align-items: center;
   -webkit-transition: color 250ms;
-  transition: color 250ms; }
+  transition: color 250ms;
+  z-index: 2; }
   .header__link-prev:hover {
     text-decoration: none;
     color: #fff !important; }
@@ -6009,8 +6011,7 @@ body.no-touch .talents {
   margin-bottom: 2.4rem; }
 
 .talents__item-wrapper {
-  height: 8rem;
-  position: relative; }
+  height: 8rem; }
   @media only screen and (max-width: 1200px) {
     .talents__item-wrapper {
       height: auto;
@@ -6018,17 +6019,6 @@ body.no-touch .talents {
   @media only screen and (max-width: 576px) {
     .talents__item-wrapper {
       padding: .6rem 0; } }
-  .talents__item-wrapper:hover {
-    z-index: 1; }
-    .talents__item-wrapper:hover .talents__item-link {
-      opacity: 1;
-      text-decoration: initial; }
-    .talents__item-wrapper:hover .talents__item-photo {
-      right: 22%;
-      bottom: 50%;
-      -webkit-transform: translateY(-40%) rotate(-6.33deg);
-              transform: translateY(-40%) rotate(-6.33deg);
-      opacity: 1; }
 
 .talents__list {
   margin: -1rem 0; }
@@ -6045,6 +6035,17 @@ body.no-touch .talents {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
+  .talents__item-link:hover {
+    text-decoration: none; }
+    .talents__item-link:hover .talents__item-link {
+      opacity: 1;
+      text-decoration: initial; }
+    .talents__item-link:hover + .talents__item-photo {
+      right: 22%;
+      -webkit-transform: translateY(-50%) rotate(-6.33deg);
+              transform: translateY(-50%) rotate(-6.33deg);
+      opacity: 1;
+      z-index: -1; }
   .talents__item-link.no-hover {
     opacity: 0.4; }
   @media only screen and (max-width: 1400px) {
@@ -6073,6 +6074,9 @@ body.no-touch .talents {
   -webkit-transform: rotate(43deg);
           transform: rotate(43deg); }
 
+.talents__pseudo-link {
+  position: absolute; }
+
 .talent {
   padding-top: 6rem;
   padding-bottom: 6rem; }
@@ -6083,18 +6087,17 @@ body.no-touch .talents {
 
 .talent__title {
   font-size: 5rem;
-  word-break: break-word; }
+  word-break: break-word;
+  display: inline; }
+  .talent__title .nowrap {
+    white-space: nowrap; }
   @media only screen and (max-width: 1400px) {
     .talent__title {
       padding-top: 4rem;
-      padding-bottom: 4rem;
-      font-size: 4.8rem; } }
-  @media only screen and (max-width: 768px) {
-    .talent__title {
-      font-size: 4.6rem; } }
-  @media only screen and (max-width: 576px) {
-    .talent__title {
-      font-size: 3.6rem; } }
+      padding-bottom: 4rem; } }
+
+.talent__center-item {
+  margin-right: 3rem; }
 
 .contacts {
   display: grid;

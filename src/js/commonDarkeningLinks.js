@@ -1,6 +1,6 @@
 export default function commonDarkeningLinks(linksElems, wrapper) {
   linksElems.forEach((link, index) => {
-    link.onmouseenter = () => {
+    link.addEventListener('mouseenter', () => {
       linksElems.forEach((elem, i) => {
         if (i !== index) {
           elem.classList.add('no-hover');
@@ -8,12 +8,12 @@ export default function commonDarkeningLinks(linksElems, wrapper) {
           elem.classList.remove('no-hover');
         }
       })
-    }
+    })
   })
 
-  wrapper.onmouseout = () => {
+  wrapper.addEventListener('mouseout', () => {
     linksElems.forEach(link => {
       link.classList.remove('no-hover');
     })
-  }
+  })
 }

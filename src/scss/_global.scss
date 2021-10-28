@@ -53,14 +53,12 @@
 
 .gl-personal-page-content {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 3rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   margin-bottom: 2rem;
 
   @include breakpoint(tablet) {
     grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
     margin-bottom: 5rem !important;
-    grid-gap: 4rem;
   }
 
   @include breakpoint(small-tablet) {
@@ -70,8 +68,11 @@
 }
 
 .gl-personal-page-name-wrapper {
+  margin-right: 2rem;
+
   @include breakpoint(tablet) {
     margin-bottom: 4rem;
+    margin-right: 4rem;
   }
 
   @include breakpoint(small-tablet) {
