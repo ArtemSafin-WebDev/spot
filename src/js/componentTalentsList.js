@@ -7,6 +7,8 @@ export default function componentTalentsList() {
     const linkElems = hostElem.querySelectorAll('.talents__item-link');
     const talentsContentElem = hostElem.querySelector('.talents__content');
     const photoElems = hostElem.querySelectorAll('.talents__item-photo');
+    const talentsContainerElem = document.querySelector('.talents');
+    const headerElem = document.querySelector('.header');
 
     let activeLink;
 
@@ -14,22 +16,17 @@ export default function componentTalentsList() {
       link.addEventListener('mouseenter', () => {
         if (activeLink !== link) {
           activeLink = link;
-          console.log(`calc(50vw + ${ window.pageYOffset }px`)
           photoElems[i].style.top = `calc(50vh + ${ window.pageYOffset }px`;
-
-          // const cloneLink = link.cloneNode(true);
-          // cloneLink.classList.add('js-pseudo-element')
-          // cloneLink.classList.add('talents__pseudo-link')
-          // cloneLink.style.top = `${ link.getBoundingClientRect().y }px`;
-          // cloneLink.style.left = `${ link.getBoundingClientRect().x }px`;
-          // layoutWrapperElem.prepend(cloneLink);
-
-          // cloneLink.onmouseleave = () => {
-          //   console.log(2)
-          //   cloneLink.remove();
-          // };
         }
       })
+    })
+
+    document.addEventListener('scroll', () => {
+      if (window.pageYOffset >= headerElem.clientHeight) {
+        talentsContainerElem.style.position = 'initial';
+      } else {
+        talentsContainerElem.style.position = 'relative';
+      }
     })
 
     commonDarkeningLinks(linkElems, talentsContentElem);
