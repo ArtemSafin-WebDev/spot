@@ -21,7 +21,7 @@
 
   <div class="gl-catalog">
     <ul class="gl-catalog__list">
-      <li class="gl-catalog__item gl-catalog__item--video-large">
+      <li class="gl-catalog__item gl-catalog__item--video-large" data-modal-title="Здесь будет название видео 1" data-modal-video="https://player.vimeo.com/video/584985260?h=4cd90bc17c">
         <div class="gl-catalog__card-media-wrapper gl-catalog__content">
 
           <!-- fixme vimeo-->
@@ -38,7 +38,7 @@
           </span>
         </h3>
       </li>
-      <li class="gl-catalog__item gl-catalog__item--video-small">
+      <li class="gl-catalog__item gl-catalog__item--video-small" data-modal-title="Здесь будет название видео 2" data-modal-video="https://player.vimeo.com/video/584985260?h=4cd90bc17c">
         <div class="gl-catalog__card-media-wrapper gl-catalog__content">
           <!-- fixme vimeo-->
           <div data-plyr-provider="vimeo"
@@ -54,13 +54,14 @@
           </span>
         </h3>
       </li>
-      <li class="gl-catalog__item gl-catalog__item--video-small">
+      <li class="gl-catalog__item gl-catalog__item--video-small" data-modal-title="Здесь будет название видео 3" data-modal-video="https://player.vimeo.com/video/584985260?h=4cd90bc17c">
         <div class="gl-catalog__card-media-wrapper gl-catalog__content">
-          <!-- fixme MP4-->
-          <video id="player" playsinline controls class="gl-catalog__card-video">
-            <source src="assets/mp4/video-2.mp4" type="video/mp4"/>
-          </video>
-          <!-- fixme MP4-->
+          <!-- fixme vimeo-->
+          <div data-plyr-provider="vimeo"
+               data-plyr-embed-id="https://player.vimeo.com/video/584985260?h=4cd90bc17c"
+               class="gl-catalog__card-video">
+          </div>
+          <!-- fixme vimeo-->
         </div>
         <h3 class="gl-catalog__card-title-wrapper">
           <span class="gl-catalog__card-title-number"></span>
@@ -71,4 +72,6 @@
       </li>
     </ul>
   </div>
+
+  {{> modal-video }}
 </section>

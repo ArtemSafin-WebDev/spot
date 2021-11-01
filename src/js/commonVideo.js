@@ -10,6 +10,7 @@ export default function commonVideo(hostElem) {
       loadSprite: false,
       volume: 0
     });
+    console.log(plyr)
 
     plyr.muted = true;
 

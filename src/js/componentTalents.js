@@ -1,5 +1,6 @@
 import commonCatalog from './commonCatalog';
 import commonVideo from './commonVideo';
+import { ModalVideo } from './modalVideo';
 
 export default function componentTalents() {
   const hostElem = document.querySelector('#talent-host');
@@ -8,6 +9,7 @@ export default function componentTalents() {
     const descriptionPhoto = hostElem.querySelector('.talent__description-photo');
     const titleContainerElem = hostElem.querySelector('.gl-personal-page-name-wrapper');
     const titleElem = hostElem.querySelector('.talent__title');
+    const videoItemElems = hostElem.querySelectorAll('.gl-catalog__item');
 
     commonCatalog(hostElem);
     commonVideo(hostElem);
@@ -35,5 +37,14 @@ export default function componentTalents() {
         }
       }, 2);
     }
+
+    videoItemElems.forEach(video => {
+      video.onclick = () => {
+        const videoLink = video.getAttribute('data-modal-video');
+        const videoTitle = video.getAttribute('data-modal-title');
+        const modal = new ModalVideo();
+        modal.onOpenModal(videoLink, videoTitle);
+      }
+    })
   }
 }
