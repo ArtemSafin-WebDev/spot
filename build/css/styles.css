@@ -6042,7 +6042,7 @@ body.no-touch .talents {
       opacity: 1;
       text-decoration: initial; }
     .talents__item-link:hover + .talents__item-photo {
-      right: 22%;
+      right: 0;
       -webkit-transform: translateY(-50%) rotate(-6.33deg);
               transform: translateY(-50%) rotate(-6.33deg);
       opacity: 1;
