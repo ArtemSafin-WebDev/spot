@@ -5318,6 +5318,10 @@ a.plyr__control {
       -ms-flex-direction: column;
           flex-direction: column; }
 
+body.mod-no-scroll {
+  overflow: hidden;
+  height: 100vh; }
+
 .gl-title {
   font-size: 5.6rem;
   line-height: 6rem;
