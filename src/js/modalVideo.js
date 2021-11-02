@@ -16,6 +16,7 @@ export class ModalVideo {
     this.hostElem = document.querySelector('#modal-host');
     this.videosTitle = this.hostElem.querySelector('.js-title');
     this.btnClose = this.hostElem.querySelector('.js-btn-close');
+    this.modalContainer = this.hostElem.querySelector('.js-modal-container');
     this.modalContent = this.hostElem.querySelector('.js-modal-content');
     this.bodyElem = document.querySelector('body');
   }
@@ -28,11 +29,27 @@ export class ModalVideo {
          class="js-video-modal">
       </div>
     `;
+
     this.modalContent.appendChild(this.newElem);
     this.videosElems = this.hostElem.querySelector('.js-video-modal');
     this.plyr = new Plyr(this.videosElems, {
       volume: 0
     });
+    const containerMaxWidth = window.innerWidth - 30;
+    const containerMaxHeight = window.innerHeight - 30;
+    const contentWidth = this.modalContent.offsetWidth;
+    const contentHeight = this.modalContent.offsetHeight;
+
+    if ((containerMaxWidth / containerMaxHeight) < (contentWidth / contentHeight)) {
+      // по ширине
+      this.modalContainer.style.width= `${ containerMaxWidth }px`;
+      this.modalContainer.style.height = `${ contentHeight * containerMaxWidth / contentWidth }px`;
+    } else {
+      // по высоте
+      this.modalContainer.style.height = `${ containerMaxHeight }px`;
+      this.modalContainer.style.width = `${ contentWidth * containerMaxHeight / contentHeight }px`;
+    }
+
     this.videosTitle.innerText = videoTitle;
 
     this.plyr.on('playing', event => {
