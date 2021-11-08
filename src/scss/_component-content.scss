@@ -154,9 +154,16 @@ $line-width-laptop: 8rem;
 
 .content__main-block {
   grid-column: 2 / 4;
+  transition: opacity 300ms;
+  opacity: 1;
 
   &.mod-hide {
     display: none;
+  }
+
+  &.mod-opacity {
+    opacity: 0;
+    transition: opacity 300ms;
   }
 
   h1, h2, h3, p, img {
@@ -207,8 +214,8 @@ $line-width-laptop: 8rem;
   }
 
   img {
-    height: 58rem;
-    max-width: 100%;
+    max-height: 58rem;
+    width: 100%;
     object-fit: contain;
 
     @include breakpoint(tablet) {

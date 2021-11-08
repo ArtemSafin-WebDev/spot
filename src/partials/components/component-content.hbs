@@ -6,7 +6,7 @@
           {{#each tabsListGroups }}
             <div class="swiper-slide">
               {{#each this }}
-                <a href="" class="content__tab-menu js-tab-menu-desk">{{ this.text }}</a>
+                <a href="" class="content__tab-menu js-tab-menu-desk {{#if isActive}}mod-active{{/if}}">{{ this.text }}</a>
               {{/each}}
             </div>
           {{/each}}
@@ -33,7 +33,7 @@
       <ul class="js-mobile-menu-list">
         {{#each tabsList }}
           <li class="content__menu-item">
-            <a href="" class="content__tab-menu js-tab-menu-mobile">{{ this.text }}</a>
+            <a href="" class="content__tab-menu js-tab-menu-mobile {{#if isActive}}mod-active{{/if}}">{{ this.text }}</a>
           </li>
         {{/each}}
       </ul>

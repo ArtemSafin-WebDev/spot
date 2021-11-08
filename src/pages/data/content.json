@@ -55,6 +55,7 @@
         "value": "content-11"
       },
       {
+        "isActive": true,
         "text": "text-12",
         "value": "content-12"
       }
@@ -86,6 +87,7 @@
       "value": "content-6"
     },
     {
+      "isActive": true,
       "text": "text-7",
       "value": "content-7"
     },

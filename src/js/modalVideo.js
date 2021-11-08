@@ -84,6 +84,8 @@ export class ModalVideo {
     this.videosTitle.classList.remove('mod-hide');
     this.plyr = null;
     this.newElem.remove();
+    document.removeEventListener('click', this.checkClickByModal);
+    document.removeEventListener('keydown', this.onCloseModal);
   }
 
   checkClickByModal(event) {
