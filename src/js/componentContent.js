@@ -10,6 +10,7 @@ export default function componentContent() {
   const btnPrev = hostElem.querySelector('.js-btn-prev');
   const btnNext = hostElem.querySelector('.js-btn-next');
   const mobileBtnControlMenu = hostElem.querySelector('.js-mobile-btn-control-menu');
+  const mobileBtnControlMenuLines = hostElem.querySelector('.content__btn-control-menu');
   const mobileMenuContainerElem = hostElem.querySelector('.js-mobile-menu-list-container');
   const mobileMenuElem = hostElem.querySelector('.js-mobile-menu-list');
   const contentBlockElem = hostElem.querySelector('.js-content-block');
@@ -36,11 +37,8 @@ export default function componentContent() {
   })
 
   mobileBtnControlMenu.onclick = () => {
-    let timeoutClassAdd;
-
-
     if (isOpenMenu) {
-      mobileBtnControlMenu.classList.remove('mod-close-btn');
+      mobileBtnControlMenuLines.classList.remove('mod-close-btn');
       mobileMenuElem.classList.remove('mod-show');
       mobileMenuContainerElem.style.maxHeight = '0';
       contentBlockElem.classList.remove('mod-hide');
@@ -48,7 +46,7 @@ export default function componentContent() {
         contentBlockElem.classList.remove('mod-opacity');
       })
     } else {
-      mobileBtnControlMenu.classList.add('mod-close-btn');
+      mobileBtnControlMenuLines.classList.add('mod-close-btn');
       mobileMenuElem.classList.add('mod-show');
       mobileMenuContainerElem.style.maxHeight = `${ mobileMenuElem.offsetHeight }px`;
       contentBlockElem.classList.add('mod-opacity');
