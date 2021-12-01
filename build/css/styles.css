@@ -5413,6 +5413,19 @@ body.mod-no-scroll {
   .gl-catalog {
     margin-bottom: 1rem; } }
 
+.gl-catalog__content {
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .gl-catalog__content .plyr {
+    width: 100%; }
+
 .gl-catalog__list {
   margin-bottom: -2rem; }
   @media only screen and (max-width: 576px) {
@@ -5473,7 +5486,7 @@ body.mod-no-scroll {
   overflow: hidden; }
 
 .gl-catalog__card-solid-grey {
-  background-color: #141414;
+  background-color: #000;
   height: 100%; }
 
 .gl-catalog__card-solid-transparent {
@@ -6381,6 +6394,8 @@ body.no-touch .talents {
   @media only screen and (max-width: 1200px) {
     .content__btn-nav-wrapper {
       padding-right: 8rem; } }
+  .content__btn-nav-wrapper.mod-hide {
+    display: none; }
 
 .content__btn-nav {
   display: -webkit-box;

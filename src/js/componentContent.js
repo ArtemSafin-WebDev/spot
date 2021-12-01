@@ -15,7 +15,7 @@ export default function componentContent() {
   const mobileMenuElem = hostElem.querySelector('.js-mobile-menu-list');
   const contentBlockElem = hostElem.querySelector('.js-content-block');
   const tabMenuDeskElems = hostElem.querySelectorAll('.js-tab-menu-desk');
-  const tabMenuMobileElems = hostElem.querySelectorAll('.js-tab-menu-mobile');
+  const btnNavWrapper = hostElem.querySelector('.content__btn-nav-wrapper');
 
   let isOpenMenu = false;
 
@@ -29,6 +29,10 @@ export default function componentContent() {
       nextEl: btnNext
     }
   })
+
+  if (tabMenuDeskElems.length <= 5) {
+    btnNavWrapper.classList.add('mod-hide');
+  }
 
   tabMenuDeskElems.forEach((tab, i) => {
     if (tab.className.includes('mod-active')) {

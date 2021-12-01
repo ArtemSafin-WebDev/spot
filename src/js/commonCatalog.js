@@ -4,6 +4,7 @@ import window from 'inputmask/lib/global/window';
 export default function commonCatalog(hostElem) {
   const GRID_GAP = 20;
   const RATIO_VIDEO = 0.5625 // 9/16
+  const RATIO_VIDEO_LONG = 0.3745 // широкоформатн
   const RATIO_POSTER_VERTICAL = 1.38 // 690 / 500
 
   const catalogListElem = hostElem.querySelector('.gl-catalog__list');
@@ -134,21 +135,33 @@ export default function commonCatalog(hostElem) {
           } else {
             columnLength = 0.5;
           }
-          ratio = 1;
+          ratio = 0.57; // 2 / 3.5 (перудмали делать квадрат)
           break;
 
         case elem.className.includes('gl-catalog__item--video-small'): // fixme маленькое видео
           columnLength = 1;
-          ratio = RATIO_VIDEO; // 280 / 500;
+          if (elem.className.includes('gl-catalog__item--long')) {
+            ratio = RATIO_VIDEO_LONG;
+          } else {
+            ratio = RATIO_VIDEO; // 280 / 500;
+          }
           break;
 
         case elem.className.includes('gl-catalog__item--video-medium'): // fixme среднее видео
-          ratio = RATIO_VIDEO; // 600 / 1020;
+          if (elem.className.includes('gl-catalog__item--long')) {
+            ratio = RATIO_VIDEO_LONG;
+          } else {
+            ratio = RATIO_VIDEO; // 600 / 1020;
+          }
           columnLength = window.innerWidth > 576 ? 2 : 1;
           break;
 
         case elem.className.includes('gl-catalog__item--video-large'): // fixme большое видео
-          ratio = RATIO_VIDEO; // 875 / 1540;
+          if (elem.className.includes('gl-catalog__item--long')) {
+            ratio = RATIO_VIDEO_LONG;
+          } else {
+            ratio = RATIO_VIDEO; // 875 / 1540;
+          }
           if (window.innerWidth > 1024) {
             columnLength = 3;
           } else if (window.innerWidth > 576) {

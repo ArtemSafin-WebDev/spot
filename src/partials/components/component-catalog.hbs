@@ -3,7 +3,7 @@
     {{#each cardList}}
       {{#if this.size }}
         <li class="gl-catalog__item gl-catalog__item--{{ this.size }} {{#if
-          this.type }}gl-catalog-{{ this.type }}{{/if}}">
+          this.type }}gl-catalog-{{ this.type }}{{/if}} {{#if isLong }}gl-catalog__item--long{{/if}}">
           <a href="talent-page.html" class="gl-catalog__link-wrapper">
             <div class="gl-catalog__card-media-wrapper gl-catalog__content">
               {{#if this.img }}

@@ -106,6 +106,10 @@ $line-width-laptop: 8rem;
   @include breakpoint(laptop) {
     padding-right: $line-width-laptop;
   }
+
+  &.mod-hide {
+    display: none;
+  }
 }
 
 .content__btn-nav {

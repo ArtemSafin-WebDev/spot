@@ -4,6 +4,16 @@
   }
 }
 
+.gl-catalog__content {
+  height: min-content;
+  display: flex;
+  align-items: center;
+
+  .plyr {
+    width: 100%;
+  }
+}
+
 .gl-catalog__list {
   margin-bottom: -2rem;
 
@@ -55,7 +65,7 @@
 }
 
 .gl-catalog__card-solid-grey {
-  background-color: #141414;
+  background-color: #000;
   height: 100%;
 }
 
