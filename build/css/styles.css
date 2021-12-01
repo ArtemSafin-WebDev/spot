@@ -6158,7 +6158,6 @@ body.no-touch .talents {
 
 .video-works__title {
   grid-column: 2 / 4;
-  max-width: 500px;
   margin-bottom: 6px; }
   @media only screen and (max-width: 768px) {
     .video-works__title {

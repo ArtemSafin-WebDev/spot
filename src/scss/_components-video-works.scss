@@ -20,7 +20,6 @@
 
 .video-works__title {
   grid-column: 2 / 4;
-  max-width: 500px;
   margin-bottom: 6px;
 
   @include breakpoint(small-tablet) {
