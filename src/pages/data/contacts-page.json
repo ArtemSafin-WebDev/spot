@@ -2,7 +2,7 @@
   "title": "Contacts",
   "isContactsPage": true,
   "linkPrev": {
-    "text": "Main Page",
+    "text": "back",
     "link": "/"
   }
 }

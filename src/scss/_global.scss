@@ -1,3 +1,10 @@
+body {
+  &.mod-no-scroll {
+    overflow: hidden;
+    height: 100vh;
+  }
+}
+
 .gl-title {
   font-size: 5.6rem;
   line-height: 6rem;
@@ -59,7 +66,6 @@
   @include breakpoint(tablet) {
     grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
     margin-bottom: 5rem !important;
-    grid-gap: 4rem;
   }
 
   @include breakpoint(small-tablet) {
@@ -69,8 +75,11 @@
 }
 
 .gl-personal-page-name-wrapper {
+  margin-right: 2rem;
+
   @include breakpoint(tablet) {
     margin-bottom: 4rem;
+    margin-right: 4rem;
   }
 
   @include breakpoint(small-tablet) {

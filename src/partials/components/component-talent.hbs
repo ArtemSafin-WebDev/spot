@@ -1,15 +1,16 @@
 <section class="talent container" id="talent-host">
   <div class="gl-personal-page-content">
     <div class="gl-personal-page-name-wrapper gl-personal-page-item">
-      <div class="gl-title">
-        Rinat Tyukmaev
+      <div class="gl-title talent__title">
+        <span class="nowrap">Rinat</span>
+        <span class="nowrap">Sharifullin</span>
       </div>
       <div class="gl-caption">
         Director
       </div>
     </div>
 
-    <div class="gl-main-text gl-personal-page-item">
+    <div class="gl-main-text gl-personal-page-item talent__center-item">
       Director and Photographer Rinat Tyukmaev makes work that evokes emotion at the very core. His ability to connect
       with and capture the human condition defines his award-winning storytelling. An eye for the physicality of dance
       and sport adds the perfect layer to his commercial work.
@@ -20,7 +21,7 @@
 
   <div class="gl-catalog">
     <ul class="gl-catalog__list">
-      <li class="gl-catalog__item gl-catalog__item--video-large">
+      <li class="gl-catalog__item gl-catalog__item--video-small" data-modal-title="Здесь будет название видео 1" data-modal-video="https://player.vimeo.com/video/584985260?h=4cd90bc17c">
         <div class="gl-catalog__card-media-wrapper gl-catalog__content">
 
           <!-- fixme vimeo-->
@@ -30,14 +31,42 @@
           </div>
           <!-- fixme vimeo-->
         </div>
-        <h3 class="gl-catalog__card-title-wrapper">
-          <span class="gl-catalog__card-title-number"></span>
-          <span class="gl-catalog__card-title-content">
-            <b class="gl-catalog__mark">Unlimint</b> Ready for tomorrow
-          </span>
-        </h3>
+        <div class="gl-catalog__card-title-wrapper">
+          <div class="gl-catalog__card-title-main-content">
+            <div class="gl-catalog__card-title-number"></div>
+            <div class="gl-catalog__card-title-text">
+              <span class="mark">Unlimint</span> Ready for tomorrow
+            </div>
+          </div>
+
+          <div class="gl-small-mobile-hide gl-catalog__card-title-mark">
+            film
+          </div>
+        </div>
       </li>
-      <li class="gl-catalog__item gl-catalog__item--video-small">
+      <li class="gl-catalog__item gl-catalog__item--video-small" data-modal-title="Здесь будет название видео 2" data-modal-video="https://vimeo.com/340325689">
+        <div class="gl-catalog__card-media-wrapper gl-catalog__content">
+          <!-- fixme vimeo-->
+          <div data-plyr-provider="vimeo"
+               data-plyr-embed-id="https://vimeo.com/340325689"
+               class="gl-catalog__card-video">
+          </div>
+          <!-- fixme vimeo-->
+        </div>
+        <div class="gl-catalog__card-title-wrapper">
+          <div class="gl-catalog__card-title-main-content">
+            <div class="gl-catalog__card-title-number"></div>
+            <div class="gl-catalog__card-title-text">
+              <span class="mark">Unlimint</span> Ready for tomorrow
+            </div>
+          </div>
+
+          <div class="gl-small-mobile-hide gl-catalog__card-title-mark">
+            film
+          </div>
+        </div>
+      </li>
+      <li class="gl-catalog__item gl-catalog__item--video-small" data-modal-title="Здесь будет название видео 3" data-modal-video="https://player.vimeo.com/video/584985260?h=4cd90bc17c">
         <div class="gl-catalog__card-media-wrapper gl-catalog__content">
           <!-- fixme vimeo-->
           <div data-plyr-provider="vimeo"
@@ -46,28 +75,21 @@
           </div>
           <!-- fixme vimeo-->
         </div>
-        <h3 class="gl-catalog__card-title-wrapper">
-          <span class="gl-catalog__card-title-number"></span>
-          <span class="gl-catalog__card-title-content">
-            <b class="gl-catalog__mark">Unlimint</b> Ready for tomorrow
-          </span>
-        </h3>
-      </li>
-      <li class="gl-catalog__item gl-catalog__item--video-small">
-        <div class="gl-catalog__card-media-wrapper gl-catalog__content">
-          <!-- fixme MP4-->
-          <video id="player" playsinline controls class="gl-catalog__card-video">
-            <source src="assets/mp4/video-2.mp4" type="video/mp4"/>
-          </video>
-          <!-- fixme MP4-->
+        <div class="gl-catalog__card-title-wrapper">
+          <div class="gl-catalog__card-title-main-content">
+            <div class="gl-catalog__card-title-number"></div>
+            <div class="gl-catalog__card-title-text">
+              <span class="mark">Unlimint</span> Ready for tomorrow
+            </div>
+          </div>
+
+          <div class="gl-small-mobile-hide gl-catalog__card-title-mark">
+            film
+          </div>
         </div>
-        <h3 class="gl-catalog__card-title-wrapper">
-          <span class="gl-catalog__card-title-number"></span>
-          <span class="gl-catalog__card-title-content">
-            <b class="gl-catalog__mark">Unlimint</b> Ready for tomorrow
-          </span>
-        </h3>
       </li>
     </ul>
   </div>
+
+  {{> modal-video }}
 </section>

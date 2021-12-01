@@ -20,6 +20,7 @@
   margin-bottom: 2rem;
   height: min-content;
   transition: opacity 700ms;
+  cursor: pointer;
 
   &.mod-anim-hide {
     opacity: 0;
