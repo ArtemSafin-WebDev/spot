@@ -6,14 +6,18 @@ export default function commonVideo(hostElem) {
     videosElems.forEach(elem => {
         const parent = elem.parentElement.parentElement;
         const wrapper = elem.parentElement;
-        const loader = parent.querySelector('.gl-catalog__card-video-loader')
+        const loader = parent.querySelector('.gl-catalog__card-video-loader');
 
         let plyr = null;
 
         let ready = false;
 
+        let hovered = false;
+
         parent.onmouseenter = () => {
             console.log('Mouseentered');
+
+            hovered = true;
             loader.classList.add('active');
             if (!plyr) {
                 plyr = new Plyr(parent.querySelector('.gl-catalog__card-video'), {
@@ -28,15 +32,28 @@ export default function commonVideo(hostElem) {
             const play = () => {
                 const playPromise = plyr.play();
                 if (playPromise) {
-                    playPromise.then(() => {
-                        wrapper.classList.add('active');
-                        loader.classList.remove('active');
-                    });
+                    playPromise
+                        .then(() => {
+                            wrapper.classList.add('active');
+                            loader.classList.remove('active');
+                        })
+                        .catch(err => {
+                            console.log(err);
+                        });
                 }
             };
             plyr.on('ready', event => {
-                play();
+                if (plyr && hovered) {
+                    play();
+                }
+
                 ready = true;
+
+                if (!hovered && plyr) {
+                    plyr.destroy();
+                    plyr = null;
+                    ready = false;
+                }
             });
 
             if (ready) {
@@ -45,15 +62,20 @@ export default function commonVideo(hostElem) {
         };
 
         parent.onmouseleave = () => {
-            if (!plyr) return;
+            hovered = false;
+            if (plyr) {
+                plyr.stop();
+            }
 
             const onTransitionEnd = () => {
-                plyr.destroy();
-                plyr = null;
+                if (plyr && !hovered) {
+                    plyr.destroy();
+                    plyr = null;
+                    ready = false;
+                }
                 wrapper.removeEventListener('transitionend', onTransitionEnd);
-                
             };
-            plyr.stop();
+
             wrapper.addEventListener('transitionend', onTransitionEnd);
             wrapper.classList.remove('active');
             loader.classList.remove('active');
