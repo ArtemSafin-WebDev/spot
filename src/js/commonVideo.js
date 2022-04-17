@@ -1,6 +1,8 @@
 import Plyr from 'plyr';
+import { primaryInput } from 'detect-it';
 
 export default function commonVideo(hostElem) {
+    if (primaryInput === 'touch') return;
     const videosElems = hostElem.querySelectorAll('.gl-catalog__card-video');
 
     videosElems.forEach(elem => {
