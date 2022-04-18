@@ -21,11 +21,11 @@ export class ModalVideo {
     this.bodyElem = document.querySelector('body');
   }
 
-  onOpenModal(videoLink, videoTitle) {
+  onOpenModal(videoLink, videoTitle, videoProvider = 'vimeo') {
     this.hostElem.classList.add('mod-show');
     this.newElem = document.createElement('div');
     this.newElem.innerHTML = `
-      <div data-plyr-provider="vimeo" data-plyr-embed-id="${ videoLink }"
+      <div data-plyr-provider="${videoProvider}" data-plyr-embed-id="${ videoLink }"
          class="js-video-modal">
       </div>
     `;

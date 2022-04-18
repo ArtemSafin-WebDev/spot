@@ -42,8 +42,9 @@ export default function componentTalents() {
       video.onclick = () => {
         const videoLink = video.getAttribute('data-modal-video');
         const videoTitle = video.getAttribute('data-modal-title');
+        const videoProvider = video.getAttribute('data-modal-video-provider');
         const modal = new ModalVideo();
-        modal.onOpenModal(videoLink, videoTitle);
+        modal.onOpenModal(videoLink, videoTitle, videoProvider);
       }
     })
   }
