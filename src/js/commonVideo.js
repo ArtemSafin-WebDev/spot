@@ -1,14 +1,65 @@
 import Plyr from 'plyr';
 import { primaryInput } from 'detect-it';
+import axios from 'axios';
+import getVideoId from 'get-video-id';
 
 export default function commonVideo(hostElem) {
-    if (primaryInput === 'touch') return;
     const videosElems = hostElem.querySelectorAll('.gl-catalog__card-video');
 
     videosElems.forEach(elem => {
         const parent = elem.parentElement.parentElement;
         const wrapper = elem.parentElement;
+        const provider = elem.getAttribute('data-plyr-provider');
+        const previewImage = document.createElement('img');
+        previewImage.className = 'gl-catalog__card-video-preview lazyload';
+        previewImage.setAttribute('data-sizes', 'auto');
+        let videoId = elem.getAttribute('data-plyr-embed-id');
         const loader = parent.querySelector('.gl-catalog__card-video-loader');
+        const VIMEO_ACCESS_TOKEN = '789cd673e927f06aa64ab27f4c06ce19';
+
+        console.log('Video ID', videoId);
+
+        if (videoId.includes('vimeo') || videoId.includes('youtu')) {
+            videoId = getVideoId(videoId).id;
+        } 
+
+        if (provider === 'vimeo') {
+            axios
+                .get(`https://api.vimeo.com/videos/${videoId}`, {
+                    headers: {
+                        Authorization: `bearer ${VIMEO_ACCESS_TOKEN}`,
+                        Accept: 'application/vnd.vimeo.*+json;version=3.4'
+                    }
+                })
+                .then(res => {
+                    // console.log('Video info', res.data);
+
+                    const sizes = res.data.pictures.sizes;
+
+                    if (sizes.length) {
+                        const maximumSize = sizes[sizes.length - 1];
+
+                        console.log('Maximum size', maximumSize);
+
+                        previewImage.dataset.src = maximumSize.link;
+                        const srcSet = sizes.map(size => `${size.link} ${size.width}w`).join(',');
+
+                        previewImage.dataset.srcset = srcSet;
+
+                        // console.log(srcSet)
+
+                        parent.insertBefore(previewImage, loader);
+                    }
+                })
+                .catch(err => {
+                    console.error(err);
+                });
+        } else if (provider === 'youtube') {
+            previewImage.dataset.src = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
+            parent.insertBefore(previewImage, loader);
+        }
+
+        if (primaryInput === 'touch') return;
 
         let plyr = null;
 

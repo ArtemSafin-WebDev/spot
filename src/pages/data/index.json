@@ -12,20 +12,20 @@
       "size": "video-small",
       "type": "branded",
       "mark": "Music video",
-      "video": "https://vimeo.com/340325689"
+      "video": "340325689"
     },
     {
       "size": "video-small",
       "type": "music",
       "mark": "Music video",
-      "video": "https://vimeo.com/31082430"
+      "video": "31082430"
     },
     {
       "size": "video-medium",
       "type": "film",
       "mark": "Film",
       "isLong": true,
-      "video": "https://player.vimeo.com/video/380885719?loop=false&autoplay=false&muted=true&gesture=media&playsinline=true&byline=false&portrait=false&title=false&speed=true&transparent=false&customControls=true"
+      "video": "380885719"
     },
     {
       "isInstagram": true
@@ -34,13 +34,13 @@
       "size": "video-small",
       "type": "branded",
       "mark": "Music video",
-      "video": "https://vimeo.com/340325689"
+      "video": "340325689"
     },
     {
       "size": "video-small",
       "type": "music",
       "mark": "Music video",
-      "video": "https://vimeo.com/31082430"
+      "video": "31082430"
     },
     {
       "isFacebook": true
@@ -55,19 +55,19 @@
       "size": "video-small",
       "type": "branded",
       "mark": "Music video",
-      "video": "https://vimeo.com/340325689"
+      "video": "340325689"
     },
     {
       "size": "video-small",
       "type": "branded",
       "mark": "Music video",
-      "video": "https://vimeo.com/340325689"
+      "video": "340325689"
     },
     {
       "size": "video-medium",
       "type": "film",
       "mark": "Film",
-      "video": "https://player.vimeo.com/video/584985260?h=4cd90bc17c"
+      "video": "584985260"
     },
     {
       "size": "poster-square",
@@ -78,7 +78,7 @@
       "size": "video-large",
       "type": "music",
       "mark": "Music video",
-      "video": "https://vimeo.com/31082430"
+      "video": "31082430"
     }
   ]
 }

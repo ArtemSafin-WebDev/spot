@@ -16,6 +16,7 @@
     "not ie <= 9"
   ],
   "dependencies": {
+    "axios": "^0.26.1",
     "body-scroll-lock": "^3.1.5",
     "choices.js": "^9.0.1",
     "classlist-polyfill": "^1.2.0",
@@ -23,6 +24,7 @@
     "custom-event-polyfill": "^1.0.7",
     "dayjs": "^1.10.4",
     "detect-it": "^4.0.1",
+    "get-video-id": "^3.5.3",
     "inputmask": "^5.0.5",
     "lazysizes": "^5.2.0",
     "lodash": "^4.17.21",
