@@ -42,7 +42,7 @@ export default function componentTalents() {
       video.onclick = () => {
         const videoLink = video.getAttribute('data-modal-video');
         const videoTitle = video.getAttribute('data-modal-title');
-        const videoProvider = video.getAttribute('data-modal-video-provider');
+        const videoProvider =  video.hasAttribute('data-modal-video-provider') ? video.getAttribute('data-modal-video-provider') : 'vimeo';
         const modal = new ModalVideo();
         modal.onOpenModal(videoLink, videoTitle, videoProvider);
       }
