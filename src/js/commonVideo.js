@@ -17,11 +17,11 @@ export default function commonVideo(hostElem) {
         const loader = parent.querySelector('.gl-catalog__card-video-loader');
         const VIMEO_ACCESS_TOKEN = '789cd673e927f06aa64ab27f4c06ce19';
 
-        console.log('Video ID', videoId);
+        // console.log('Video ID', videoId);
 
         if (videoId.includes('vimeo') || videoId.includes('youtu')) {
             videoId = getVideoId(videoId).id;
-        } 
+        }
 
         if (provider === 'vimeo') {
             axios
@@ -68,7 +68,7 @@ export default function commonVideo(hostElem) {
         let hovered = false;
 
         parent.onmouseenter = () => {
-            console.log('Mouseentered');
+            // console.log('Mouseentered');
 
             hovered = true;
             loader.classList.add('active');
@@ -84,15 +84,26 @@ export default function commonVideo(hostElem) {
 
             const play = () => {
                 const playPromise = plyr.play();
+
+                // console.log('Play promise', playPromise);
                 if (playPromise) {
                     playPromise
                         .then(() => {
                             wrapper.classList.add('active');
                             loader.classList.remove('active');
+                            previewImage.classList.add('hidden');
                         })
                         .catch(err => {
                             console.log(err);
                         });
+                } else {
+                    setTimeout(() => {
+                        if (hovered) {
+                            wrapper.classList.add('active');
+                            loader.classList.remove('active');
+                            previewImage.classList.add('hidden');
+                        }
+                    }, 1500);
                 }
             };
             plyr.on('ready', event => {
@@ -125,6 +136,9 @@ export default function commonVideo(hostElem) {
                     plyr.destroy();
                     plyr = null;
                     ready = false;
+                    wrapper.classList.remove('active');
+                    loader.classList.remove('active');
+                    previewImage.classList.remove('hidden');
                 }
                 wrapper.removeEventListener('transitionend', onTransitionEnd);
             };
@@ -132,6 +146,7 @@ export default function commonVideo(hostElem) {
             wrapper.addEventListener('transitionend', onTransitionEnd);
             wrapper.classList.remove('active');
             loader.classList.remove('active');
+            previewImage.classList.remove('hidden');
         };
     });
 }
