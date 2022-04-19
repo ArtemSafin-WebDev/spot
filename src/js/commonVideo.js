@@ -24,36 +24,59 @@ export default function commonVideo(hostElem) {
         }
 
         if (provider === 'vimeo') {
-            axios
-                .get(`https://api.vimeo.com/videos/${videoId}?fields=pictures`, {
-                    headers: {
-                        Authorization: `bearer ${VIMEO_ACCESS_TOKEN}`,
-                        Accept: 'application/vnd.vimeo.*+json;version=3.4'
-                    }
-                })
-                .then(res => {
-                    // console.log('Video info', res.data);
+            const addVimeoPreview = sizes => {
+                if (sizes.length) {
+                    const maximumSize = sizes[sizes.length - 1];
 
-                    const sizes = res.data.pictures.sizes;
+                    console.log('Maximum size', maximumSize);
 
-                    if (sizes.length) {
-                        const maximumSize = sizes[sizes.length - 1];
+                    previewImage.dataset.src = maximumSize.link;
+                    const srcSet = sizes.map(size => `${size.link} ${size.width}w`).join(',');
 
-                        console.log('Maximum size', maximumSize);
+                    previewImage.dataset.srcset = srcSet;
 
-                        previewImage.dataset.src = maximumSize.link;
-                        const srcSet = sizes.map(size => `${size.link} ${size.width}w`).join(',');
+                    parent.insertBefore(previewImage, loader);
+                }
+            };
 
-                        previewImage.dataset.srcset = srcSet;
+            if (localStorage.getItem(videoId.toString()) !== null) {
+                let sizes = localStorage.getItem(videoId.toString());
+                sizes = JSON.parse(sizes);
 
-                        // console.log(srcSet)
+                console.log('Getting preview from cache');
 
-                        parent.insertBefore(previewImage, loader);
-                    }
-                })
-                .catch(err => {
-                    console.error(err);
-                });
+                addVimeoPreview(sizes);
+            } else {
+                axios
+                    .get(`https://api.vimeo.com/videos/${videoId}?fields=pictures`, {
+                        headers: {
+                            Authorization: `bearer ${VIMEO_ACCESS_TOKEN}`,
+                            Accept: 'application/vnd.vimeo.*+json;version=3.4'
+                        }
+                    })
+                    .then(res => {
+                        // console.log('Video info', res.data);
+
+                        const sizes = res.data.pictures.sizes;
+
+                        addVimeoPreview(sizes);
+
+                        const stringifiedSizes = JSON.stringify(sizes);
+
+                        localStorage.setItem(videoId.toString(), stringifiedSizes);
+                    })
+                    .catch(err => {
+                        console.error(err);
+
+                        axios.get(`http://vimeo.com/api/v2/video/${videoId}.json`).then(res => {
+                            const largeSize = res.data[0].thumbnail_large;
+
+                            previewImage.dataset.src = largeSize;
+                            parent.insertBefore(previewImage, loader);
+
+                        })
+                    });
+            }
         } else if (provider === 'youtube') {
             previewImage.dataset.src = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
             parent.insertBefore(previewImage, loader);
