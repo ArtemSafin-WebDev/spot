@@ -25,7 +25,7 @@ export default function commonVideo(hostElem) {
 
         if (provider === 'vimeo') {
             axios
-                .get(`https://api.vimeo.com/videos/${videoId}`, {
+                .get(`https://api.vimeo.com/videos/${videoId}?fields=pictures`, {
                     headers: {
                         Authorization: `bearer ${VIMEO_ACCESS_TOKEN}`,
                         Accept: 'application/vnd.vimeo.*+json;version=3.4'
