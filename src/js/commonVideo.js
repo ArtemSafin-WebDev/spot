@@ -73,8 +73,7 @@ export default function commonVideo(hostElem) {
 
                             previewImage.dataset.src = largeSize;
                             parent.insertBefore(previewImage, loader);
-
-                        })
+                        });
                     });
             }
         } else if (provider === 'youtube') {
@@ -90,11 +89,31 @@ export default function commonVideo(hostElem) {
 
         let hovered = false;
 
-        parent.onmouseenter = () => {
-            // console.log('Mouseentered');
+        const play = () => {
+            const playPromise = plyr.play();
 
-            hovered = true;
-            loader.classList.add('active');
+            if (playPromise) {
+                playPromise
+                    .then(() => {
+                        wrapper.classList.add('active');
+                        loader.classList.remove('active');
+                        previewImage.classList.add('hidden');
+                    })
+                    .catch(err => {
+                        console.log(err);
+                    });
+            } else {
+                setTimeout(() => {
+                    if (hovered) {
+                        wrapper.classList.add('active');
+                        loader.classList.remove('active');
+                        previewImage.classList.add('hidden');
+                    }
+                }, 1500);
+            }
+        };
+
+        const initializePlyr = () => {
             if (!plyr) {
                 plyr = new Plyr(parent.querySelector('.gl-catalog__card-video'), {
                     controls: [],
@@ -103,45 +122,42 @@ export default function commonVideo(hostElem) {
                 });
 
                 plyr.muted = true;
+
+                plyr.on('ready', event => {
+                    if (plyr && hovered) {
+                        play();
+                    }
+
+                    ready = true;
+
+                    // if (!hovered && plyr) {
+                    //     plyr.destroy();
+                    //     plyr = null;
+                    //     ready = false;
+                    // }
+                });
             }
+        };
 
-            const play = () => {
-                const playPromise = plyr.play();
-
-                // console.log('Play promise', playPromise);
-                if (playPromise) {
-                    playPromise
-                        .then(() => {
-                            wrapper.classList.add('active');
-                            loader.classList.remove('active');
-                            previewImage.classList.add('hidden');
-                        })
-                        .catch(err => {
-                            console.log(err);
-                        });
-                } else {
-                    setTimeout(() => {
-                        if (hovered) {
-                            wrapper.classList.add('active');
-                            loader.classList.remove('active');
-                            previewImage.classList.add('hidden');
-                        }
-                    }, 1500);
+        if (window.requestIdleCallback) {
+            window.requestIdleCallback(
+                () => {
+                    console.log('Running idle callback')
+                    initializePlyr();
+                },
+                {
+                    timeout: 8000
                 }
-            };
-            plyr.on('ready', event => {
-                if (plyr && hovered) {
-                    play();
-                }
+            );
+        }
 
-                ready = true;
+        parent.onmouseenter = () => {
+            // console.log('Mouseentered');
 
-                if (!hovered && plyr) {
-                    plyr.destroy();
-                    plyr = null;
-                    ready = false;
-                }
-            });
+            hovered = true;
+            loader.classList.add('active');
+
+            initializePlyr();
 
             if (ready) {
                 play();
@@ -156,12 +172,12 @@ export default function commonVideo(hostElem) {
 
             const onTransitionEnd = () => {
                 if (plyr && !hovered) {
-                    plyr.destroy();
-                    plyr = null;
-                    ready = false;
-                    wrapper.classList.remove('active');
-                    loader.classList.remove('active');
-                    previewImage.classList.remove('hidden');
+                    // plyr.destroy();
+                    // plyr = null;
+                    // ready = false;
+                    // wrapper.classList.remove('active');
+                    // loader.classList.remove('active');
+                    // previewImage.classList.remove('hidden');
                 }
                 wrapper.removeEventListener('transitionend', onTransitionEnd);
             };
